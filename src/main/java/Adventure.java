@@ -25,6 +25,7 @@ public class Adventure {
         room9 = new Room("Room 9", "The second room.");
 
         room1.setRooms(null,room4,null,room2);
+
     }
 
 }
