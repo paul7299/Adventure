@@ -18,6 +18,7 @@ public class UserInterface {
             System.out.println("Choose an action");
             userInput = sc.nextLine();
 
+            //Todo lav en løkke rundt om switch hvis noget går galt
             switch (userInput) {
                 case "North":
                     action = "North";
@@ -32,6 +33,8 @@ public class UserInterface {
                 case "West":
                     System.out.println("going west");
                     break;
+                case "Look":
+                    System.out.println(adventure.look());
                 default:
                     break;
             }
