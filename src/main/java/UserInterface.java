@@ -4,15 +4,14 @@ public class UserInterface {
    private Adventure adventure = new Adventure();
    private Scanner sc = new Scanner(System.in);
 
+    //TODO lav en readString() til at tage sig af case følsomhed
+
     public void startProgram() {
-        String direction; //TODO lav en readString() til at tage sig af case følsomhed
-
         System.out.println("Welcome to the game. let's start");
-
-
+        command();
         }
 
-        private String command(){
+        private void command(){
         String userInput;
         String action;
             System.out.println("Choose an action");
@@ -21,9 +20,7 @@ public class UserInterface {
             //Todo lav en løkke rundt om switch hvis noget går galt
             switch (userInput) {
                 case "North":
-                    action = "North";
                     System.out.println("Going north");
-                    return action;
                 case "South":
                     System.out.println("Going south");
                     break;
@@ -38,7 +35,6 @@ public class UserInterface {
                 default:
                     break;
             }
-        return null;
     }
 }
 
