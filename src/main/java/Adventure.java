@@ -40,4 +40,8 @@ public class Adventure {
         }
  }
 
+ public String look(){
+        return currentRoom.getRoomDescription();
+ }
+
 }

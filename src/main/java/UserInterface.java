@@ -32,6 +32,8 @@ public class UserInterface {
                 case "West":
                     System.out.println("going west");
                     break;
+                case "Look":
+                    System.out.println(adventure.look());
                 default:
                     break;
             }
