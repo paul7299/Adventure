@@ -19,22 +19,28 @@ public class UserInterface {
 
             //Todo lav en løkke rundt om switch hvis noget går galt
             switch (userInput) {
-                case "North":
+                case "north":
                     System.out.println("Going north");
-                case "South":
+                    break;
+                case "south":
                     System.out.println("Going south");
                     break;
-                case "East":
+                case "east":
                     System.out.println("Going east");
                     break;
-                case "West":
+                case "west":
                     System.out.println("going west");
                     break;
-                case "Look":
+                case "look":
                     System.out.println(adventure.look());
                 default:
                     break;
             }
+    }
+//TODO ændre case til lowercase
+    //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
+    public String readString(String input){
+        return input.toLowerCase();
     }
 }
 
