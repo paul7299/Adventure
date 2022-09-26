@@ -1,5 +1,6 @@
 public class Adventure {
 
+    Room currentRoom;
     Room room1;
     Room room2;
     Room room3;

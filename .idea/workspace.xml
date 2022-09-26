@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Har oprettet createMap i Adventure">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1st commit">
+      <change beforePath="$PROJECT_DIR$/src/main/java/RoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RoomTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,14 +94,7 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1664186894202</updated>
     </task>
-    <task id="LOCAL-00003" summary="Har oprettet createMap i Adventure">
-      <created>1664189397872</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1664189397872</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +114,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
     <MESSAGE value="Oprettet Main, Room, UI og Adventure objekter" />
-    <MESSAGE value="Har oprettet createMap i Adventure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Har oprettet createMap i Adventure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oprettet Main, Room, UI og Adventure objekter" />
   </component>
 </project>
