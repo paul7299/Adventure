@@ -25,6 +25,7 @@ public class Adventure {
         room8 = new Room("Room 8", "The second room.");
         room9 = new Room("Room 9", "The second room.");
 
+        //TODO set room for alle rooms
         room1.setRooms(null,room4,room2,null);
 
         this.currentRoom = room1;
