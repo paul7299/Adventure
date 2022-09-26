@@ -9,27 +9,34 @@ public class UserInterface {
 
         System.out.println("Welcome to the game. let's start");
 
-        System.out.println("Choose a direction");
-        direction = sc.nextLine();
 
-        switch (direction) {
-            case "North":
-                System.out.println("Going north");
-                break;
-            case "South":
-                System.out.println("Going south");
-                break;
-            case "East":
-                System.out.println("Going east");
-                break;
-            case "West":
-                System.out.println("going west");
-                break;
-            default:
-                break;
-        }
         }
 
+        private String command(){
+        String userInput;
+        String action;
+            System.out.println("Choose an action");
+            userInput = sc.nextLine();
+
+            switch (userInput) {
+                case "North":
+                    action = "North";
+                    System.out.println("Going north");
+                    return action;
+                case "South":
+                    System.out.println("Going south");
+                    break;
+                case "East":
+                    System.out.println("Going east");
+                    break;
+                case "West":
+                    System.out.println("going west");
+                    break;
+                default:
+                    break;
+            }
+        return null;
     }
+}
 
 
