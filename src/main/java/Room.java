@@ -12,6 +12,10 @@ public class Room {
         this.roomDescription = roomDescription;
     }
 
+    public Room getRoomEast() {
+        return roomEast;
+    }
+
     public void setRooms(Room roomNorth, Room roomSouth, Room roomEast, Room roomWest) {
         roomNorth = roomNorth;
         roomSouth = roomSouth;
