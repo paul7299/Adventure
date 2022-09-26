@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1st commit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RoomTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Lagt testClass i test-folder" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,11 +49,31 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AdventureTest.goEast">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Adventure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdventureTest.goEast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Adventure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdventureTest" />
+      <option name="METHOD_NAME" value="goEast" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoomTest.setRooms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Adventure" />
       <option name="PACKAGE_NAME" value="" />
@@ -68,6 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdventureTest.goEast" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RoomTest.setRooms" />
       </list>
     </recent_temporary>
@@ -94,7 +114,21 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1664186894202</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lavet test af setRooms">
+      <created>1664190151502</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664190151502</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu">
+      <created>1664190990671</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664190990671</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +148,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
     <MESSAGE value="Oprettet Main, Room, UI og Adventure objekter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Oprettet Main, Room, UI og Adventure objekter" />
+    <MESSAGE value="Lavet test af setRooms" />
+    <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
+    <option name="LAST_COMMIT_MESSAGE" value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
   </component>
 </project>

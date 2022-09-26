@@ -25,8 +25,24 @@ public class Adventure {
         room8 = new Room("Room 8", "The second room.");
         room9 = new Room("Room 9", "The second room.");
 
-        room1.setRooms(null,room4,null,room2);
+        //TODO set room for alle rooms
+        room1.setRooms(null,room4,room2,null);
 
+        this.currentRoom = room1;
     }
+
+    //TODO lav denne metode for alle retninger
+ public void goEast(){
+        if(currentRoom.getRoomEast() == null){
+            System.out.println("You cannot go east from here");
+        }
+        else{
+            currentRoom = currentRoom.getRoomEast();
+        }
+ }
+
+ public String look(){
+        return currentRoom.getRoomDescription();
+ }
 
 }

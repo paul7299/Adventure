@@ -22,6 +22,9 @@ public class Room {
     public String getRoomName() {
         return roomName;
     }
+    public String getRoomDescription(){
+        return roomDescription;
+    }
 
     public void setRooms(Room roomNorth, Room roomSouth, Room roomEast, Room roomWest) {
         this.roomNorth = roomNorth;
