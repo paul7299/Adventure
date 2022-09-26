@@ -15,12 +15,19 @@ public class Room {
     public Room getRoomEast() {
         return roomEast;
     }
+    public Room getRoomSouth(){
+        return roomSouth;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
 
     public void setRooms(Room roomNorth, Room roomSouth, Room roomEast, Room roomWest) {
-        roomNorth = roomNorth;
-        roomSouth = roomSouth;
-        roomEast = roomEast;
-        roomWest = roomWest;
+        this.roomNorth = roomNorth;
+        this.roomSouth = roomSouth;
+        this.roomEast = roomEast;
+        this.roomWest = roomWest;
     }
 
 }
