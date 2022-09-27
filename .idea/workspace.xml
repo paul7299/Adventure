@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Lagt testClass i test-folder">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Lavet loop til input/switch, samt exit + wrong input. Sat metodekald ind i command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,13 @@
       <option name="project" value="LOCAL" />
       <updated>1664190990671</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Lavet loop til input/switch, samt exit + wrong input. Sat metodekald ind i command">
+      <created>1664220801723</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1664220801723</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +159,7 @@
     <MESSAGE value="Oprettet Main, Room, UI og Adventure objekter" />
     <MESSAGE value="Lavet test af setRooms" />
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
-    <option name="LAST_COMMIT_MESSAGE" value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
+    <MESSAGE value="Lavet loop til input/switch, samt exit + wrong input. Sat metodekald ind i command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lavet loop til input/switch, samt exit + wrong input. Sat metodekald ind i command" />
   </component>
 </project>
