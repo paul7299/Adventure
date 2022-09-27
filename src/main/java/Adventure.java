@@ -25,13 +25,19 @@ public class Adventure {
         room8 = new Room("Room 8", "The second room.");
         room9 = new Room("Room 9", "The second room.");
 
-        //TODO set room for alle rooms
         room1.setRooms(null,room4,room2,null);
+        room2.setRooms(null,null,room3,room1);
+        room3.setRooms(null,room6,null,room2);
+        room4.setRooms(room1,room7,null,null);
+        room5.setRooms(null,room8,null,null);
+        room6.setRooms(room3,room9,null,null);
+        room7.setRooms(room4,null,room8,null);
+        room8.setRooms(room5,null,room9,room7);
+        room9.setRooms(room6,null,null,room8);
 
         this.currentRoom = room1;
     }
 
-    //TODO lav denne metode for alle retninger
  public void goEast(){
         if(currentRoom.getRoomEast() == null){
             System.out.println("You cannot go east from here");
@@ -42,29 +48,29 @@ public class Adventure {
  }
 
     public void goNorth(){
-        if(currentRoom.getRoomEast() == null){
-            System.out.println("You cannot go east from here");
+        if(currentRoom.getRoomNorth() == null){
+            System.out.println("You cannot go north from here");
         }
         else{
-            currentRoom = currentRoom.getRoomEast();
+            currentRoom = currentRoom.getRoomNorth();
         }
     }
 
     public void goSouth(){
-        if(currentRoom.getRoomEast() == null){
-            System.out.println("You cannot go east from here");
+        if(currentRoom.getRoomSouth() == null){
+            System.out.println("You cannot go south from here");
         }
         else{
-            currentRoom = currentRoom.getRoomEast();
+            currentRoom = currentRoom.getRoomSouth();
         }
     }
 
     public void goWest(){
-        if(currentRoom.getRoomEast() == null){
-            System.out.println("You cannot go east from here");
+        if(currentRoom.getRoomWest() == null){
+            System.out.println("You cannot go west from here");
         }
         else{
-            currentRoom = currentRoom.getRoomEast();
+            currentRoom = currentRoom.getRoomWest();
         }
     }
 

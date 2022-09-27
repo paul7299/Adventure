@@ -18,6 +18,12 @@ public class Room {
     public Room getRoomSouth(){
         return roomSouth;
     }
+    public Room getRoomNorth(){
+        return roomNorth;
+    }
+    public Room getRoomWest(){
+        return roomWest;
+    }
 
     public String getRoomName() {
         return roomName;
