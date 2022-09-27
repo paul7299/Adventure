@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Door.java" beforeDir="false" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Push med ny fil struktur, og nogle kommentarer i koden">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +176,14 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1664282635603</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Push med ny fil struktur, og nogle kommentarer i koden">
+      <created>1664283451739</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664283451739</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +209,8 @@
     <MESSAGE value="test push" />
     <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
-    <option name="LAST_COMMIT_MESSAGE" value="slettet en lille ting" />
+    <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push med ny fil struktur, og nogle kommentarer i koden" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
