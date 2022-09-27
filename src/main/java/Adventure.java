@@ -17,13 +17,13 @@ public class Adventure {
     public void createMap(){
         room1 = new Room("Room 1", "The first room.");
         room2 = new Room("Room 2", "The second room.");
-        room3 = new Room("Room 3", "The second room.");
-        room4 = new Room("Room 4", "The second room.");
-        room5 = new Room("Room 5", "The second room.");
-        room6 = new Room("Room 6", "The second room.");
-        room7 = new Room("Room 7", "The second room.");
-        room8 = new Room("Room 8", "The second room.");
-        room9 = new Room("Room 9", "The second room.");
+        room3 = new Room("Room 3", "The third room.");
+        room4 = new Room("Room 4", "The fourth room.");
+        room5 = new Room("Room 5", "The fifth room.");
+        room6 = new Room("Room 6", "The sixth room.");
+        room7 = new Room("Room 7", "The seventh room.");
+        room8 = new Room("Room 8", "The eight room.");
+        room9 = new Room("Room 9", "The ninth room.");
 
         room1.setRooms(null,room4,room2,null);
         room2.setRooms(null,null,room3,room1);
