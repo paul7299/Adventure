@@ -10,7 +10,6 @@ public class UserInterface {
         adventure.createMap();
 
         System.out.println("Welcome to the game. let's start");
-        System.out.println(adventure.currentRoom.getRoomName() + "\n" + adventure.currentRoom.getRoomDescription());
 
         String userInput = "x";
 
