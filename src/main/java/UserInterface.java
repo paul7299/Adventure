@@ -15,6 +15,7 @@ public class UserInterface {
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
+            currentRoomName();
             System.out.println("Choose an action");
             userInput = readString();
 
@@ -28,6 +29,7 @@ public class UserInterface {
             case "north", "n":
                 System.out.println("Going north");
                 adventure.goNorth();
+                currentRoomName();
                 break;
             case "south", "s":
                 System.out.println("Going south");
@@ -46,7 +48,7 @@ public class UserInterface {
                 System.out.println(adventure.look());
                 break;
             case "help":
-                System.out.println("Commands available: ");
+                System.out.println(adventure.getHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -64,8 +66,9 @@ public class UserInterface {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
+
+    public void currentRoomName(){
+        System.out.println("You have entered " + adventure.getCurrentRoomName());
+    }
 }
-
-
-// Her er en lille push/pull
 
