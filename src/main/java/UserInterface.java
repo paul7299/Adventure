@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    private Adventure adventure = new Adventure();
-    private Scanner sc = new Scanner(System.in);
+   private Adventure adventure = new Adventure();
+   private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
         adventure.createMap();
@@ -31,7 +31,7 @@ public class UserInterface {
         }
     }
 
-    private void command(String userInput) {
+    private void command(String userInput){
 
         switch (userInput) {
             case "north", "n":
@@ -65,7 +65,7 @@ public class UserInterface {
             default:
                 System.out.println("*Wrong input*");
                 break;
-        }
+            }
 
     }
 

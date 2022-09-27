@@ -1,3 +1,5 @@
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +33,6 @@ class AdventureTest {
             currentRoom = currentRoom.getRoomEast();
         }
 
-        assertEquals(expectedRoomName,currentRoom.getRoomName());
+        Assertions.assertEquals(expectedRoomName,currentRoom.getRoomName());
     }
 }
