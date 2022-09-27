@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Har oprettet createMap i Adventure" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="TODO// metode for alle retninger og set room for alle rooms">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664190990671</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TODO// metode for alle retninger og set room for alle rooms">
+      <created>1664270961723</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664270961723</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +161,7 @@
     <MESSAGE value="Oprettet Main, Room, UI og Adventure objekter" />
     <MESSAGE value="Lavet test af setRooms" />
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
-    <option name="LAST_COMMIT_MESSAGE" value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
+    <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO// metode for alle retninger og set room for alle rooms" />
   </component>
 </project>

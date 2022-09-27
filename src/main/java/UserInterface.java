@@ -17,6 +17,7 @@ public class UserInterface {
             userInput = readString();
 
             command(userInput);
+            System.out.println("");
         }
     }
 
@@ -64,4 +65,6 @@ public class UserInterface {
     }
 }
 
+
+// Her er en lille push/pull
 
