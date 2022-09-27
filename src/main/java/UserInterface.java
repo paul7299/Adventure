@@ -45,7 +45,7 @@ public class UserInterface {
                 System.out.println(adventure.look());
                 break;
             case "help":
-                System.out.println("Commands available: ");
+                System.out.println(adventure.getHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -64,7 +64,4 @@ public class UserInterface {
         return stringToLowercase.toLowerCase();
     }
 }
-
-
-// Her er en lille push/pull
 

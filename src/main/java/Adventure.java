@@ -78,4 +78,16 @@ public class Adventure {
         return currentRoom.getRoomDescription();
  }
 
+ public String getHelp() {
+        return
+     """
+ * Help - list of commands: *
+ - Go north:        north / s
+ - Go south:        south / s
+ - Go east:         east / e
+ - Go west:         west / w
+ - Look around:     look / l
+ - Exit:            exit / e
+""";
+ }
 }
