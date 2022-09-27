@@ -26,7 +26,6 @@ public class UserInterface {
             case "north", "n":
                 System.out.println("Going north");
                 adventure.goNorth();
-                currentRoomName();
                 break;
             case "south", "s":
                 System.out.println("Going south");
