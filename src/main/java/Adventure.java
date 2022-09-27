@@ -78,6 +78,7 @@ public class Adventure {
         return currentRoom.getRoomDescription();
  }
 
+
     public String getCurrentRoomName() {
         return currentRoom.getRoomName();
     }
@@ -94,5 +95,11 @@ public class Adventure {
         if (currentRoom.getRoomWest() != null){
             System.out.println("There is a door west");
         }
+    }
+public void setHasVisitedStatusToTrue(){
+        currentRoom.setHasVisitedToTrue();
+}
+    public Boolean hasVisitedStatus(){
+       return currentRoom.getHasVisited();
     }
 }

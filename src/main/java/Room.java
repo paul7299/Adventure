@@ -7,9 +7,12 @@ public class Room {
     private Room roomEast;
     private Room roomWest;
 
+    private Boolean hasVisited;
+
     public Room(String roomName, String roomDescription) {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
+        this.hasVisited = false;
     }
 
     public Room getRoomEast() {
@@ -30,6 +33,13 @@ public class Room {
     }
     public String getRoomDescription(){
         return roomDescription;
+    }
+
+    public Boolean getHasVisited(){
+        return hasVisited;
+    }
+    public void setHasVisitedToTrue(){
+        hasVisited = true;
     }
 
     public void setRooms(Room roomNorth, Room roomSouth, Room roomEast, Room roomWest) {
