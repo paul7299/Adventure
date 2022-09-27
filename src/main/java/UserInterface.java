@@ -13,6 +13,10 @@ public class UserInterface {
 
         while (!userInput.equalsIgnoreCase("exit")) {
             currentRoomName();
+            if(!adventure.hasVisitedStatus()){
+                System.out.println(adventure.look());
+                adventure.setHasVisitedStatusToTrue();
+            }
             System.out.println("Choose an action");
             userInput = readString();
 
@@ -56,7 +60,7 @@ public class UserInterface {
             }
 
     }
-//TODO ændre case til lowercase
+
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString(){
         String stringToLowercase = sc.nextLine();
@@ -81,5 +85,4 @@ public class UserInterface {
     }
 
 }
-
 
