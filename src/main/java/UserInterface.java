@@ -16,6 +16,7 @@ public class UserInterface {
                 """);
 
 
+
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
@@ -49,6 +50,7 @@ public class UserInterface {
             case "look", "l":
                 System.out.println("You are observing the room:");
                 System.out.println(adventure.look());
+                adventure.getCurrentRoomDoors();
                 break;
             case "help":
                 System.out.println(getHelp());

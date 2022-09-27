@@ -78,8 +78,21 @@ public class Adventure {
         return currentRoom.getRoomDescription();
  }
 
-
     public String getCurrentRoomName() {
         return currentRoom.getRoomName();
+    }
+    public void getCurrentRoomDoors(){
+        if (currentRoom.getRoomNorth() != null){
+            System.out.println("There is a door north");
+        }
+        if (currentRoom.getRoomSouth() != null){
+            System.out.println("There is a door south");
+        }
+        if (currentRoom.getRoomEast() != null){
+            System.out.println("There is a door east");
+        }
+        if (currentRoom.getRoomWest() != null){
+            System.out.println("There is a door west");
+        }
     }
 }
