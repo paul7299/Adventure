@@ -9,7 +9,6 @@ public class UserInterface {
 
         System.out.println("Welcome to the game. let's start");
 
-
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
@@ -27,7 +26,6 @@ public class UserInterface {
             case "north", "n":
                 System.out.println("Going north");
                 adventure.goNorth();
-                currentRoomName();
                 break;
             case "south", "s":
                 System.out.println("Going south");
