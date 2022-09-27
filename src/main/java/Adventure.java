@@ -11,6 +11,7 @@ public class Adventure {
     Room room8;
     Room room9;
 
+
     public Adventure() {
     }
 
@@ -42,16 +43,17 @@ public class Adventure {
         if(currentRoom.getRoomEast() == null){
             System.out.println("You cannot go east from here");
         }
-        else{
-            currentRoom = currentRoom.getRoomEast();
+        else {
+                currentRoom = currentRoom.getRoomEast();
+            }
         }
- }
+
 
     public void goNorth(){
         if(currentRoom.getRoomNorth() == null){
             System.out.println("You cannot go north from here");
         }
-        else{
+        else {
             currentRoom = currentRoom.getRoomNorth();
         }
     }
@@ -60,8 +62,8 @@ public class Adventure {
         if(currentRoom.getRoomSouth() == null){
             System.out.println("You cannot go south from here");
         }
-        else{
-            currentRoom = currentRoom.getRoomSouth();
+        else {
+                currentRoom = currentRoom.getRoomSouth();
         }
     }
 
