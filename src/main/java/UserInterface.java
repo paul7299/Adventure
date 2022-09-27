@@ -7,8 +7,10 @@ public class UserInterface {
     //TODO lav en readString() til at tage sig af case følsomhed
 
     public void startProgram() {
+        adventure.createMap();
 
         System.out.println("Welcome to the game. let's start");
+
 
         String userInput = "x";
 
