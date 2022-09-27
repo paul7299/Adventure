@@ -17,6 +17,7 @@ public class UserInterface {
             userInput = sc.nextLine();
 
             command(userInput);
+            System.out.println("");
         }
     }
 
