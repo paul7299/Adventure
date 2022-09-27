@@ -18,27 +18,32 @@ public class Room {
     public Room getRoomEast() {
         return roomEast;
     }
-    public Room getRoomSouth(){
+
+    public Room getRoomSouth() {
         return roomSouth;
     }
-    public Room getRoomNorth(){
+
+    public Room getRoomNorth() {
         return roomNorth;
     }
-    public Room getRoomWest(){
+
+    public Room getRoomWest() {
         return roomWest;
     }
 
     public String getRoomName() {
         return roomName;
     }
-    public String getRoomDescription(){
+
+    public String getRoomDescription() {
         return roomDescription;
     }
 
-    public Boolean getHasVisited(){
+    public Boolean getHasVisited() {
         return hasVisited;
     }
-    public void setHasVisitedToTrue(){
+
+    public void setHasVisitedToTrue() {
         hasVisited = true;
     }
 

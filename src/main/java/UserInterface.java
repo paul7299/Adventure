@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class UserInterface {
-   private Adventure adventure = new Adventure();
-   private Scanner sc = new Scanner(System.in);
+    private Adventure adventure = new Adventure();
+    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
         adventure.createMap();
@@ -16,12 +16,11 @@ public class UserInterface {
                 """);
 
 
-
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
             currentRoomName();
-            if(!adventure.hasVisitedStatus()){
+            if (!adventure.hasVisitedStatus()) {
                 System.out.println(adventure.look());
                 adventure.setHasVisitedStatusToTrue();
             }
@@ -32,7 +31,7 @@ public class UserInterface {
         }
     }
 
-    private void command(String userInput){
+    private void command(String userInput) {
 
         switch (userInput) {
             case "north", "n":
@@ -66,31 +65,31 @@ public class UserInterface {
             default:
                 System.out.println("*Wrong input*");
                 break;
-            }
+        }
 
     }
 
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-    public String readString(){
+    public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
 
-    public void currentRoomName(){
+    public void currentRoomName() {
         System.out.println("You are in " + adventure.getCurrentRoomName());
     }
 
     public String getHelp() {
         return
                 """
-            * Help - list of commands: *
-            - Go north:        north / s
-            - Go south:        south / s
-            - Go east:         east / e
-            - Go west:         west / w
-            - Look around:     look / l
-            - Exit:            exit / e
-           """;
+                         * Help - list of commands: *
+                         - Go north:        north / s
+                         - Go south:        south / s
+                         - Go east:         east / e
+                         - Go west:         west / w
+                         - Look around:     look / l
+                         - Exit:            exit / e
+                        """;
     }
 
 }

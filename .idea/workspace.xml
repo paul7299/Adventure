@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Nu bliver hasVisited tjekket i while løkken i start og bliver også lavet true der." />
+    <list default="true" id="c128815a-c38f-4c46-ad5b-9cd2ce57bd2c" name="Changes" comment="Nu bliver hasVisited tjekket i while løkken i start og bliver også lavet true der." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
