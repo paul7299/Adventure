@@ -93,4 +93,10 @@ public class Adventure {
     public String getCurrentRoomName() {
         return currentRoom.getRoomName();
     }
+public void setHasVisitedStatusToTrue(){
+        currentRoom.setHasVisitedToTrue();
+}
+    public Boolean hasVisitedStatus(){
+       return currentRoom.getHasVisited();
+    }
 }
