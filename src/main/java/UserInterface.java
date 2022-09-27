@@ -20,7 +20,6 @@ public class UserInterface {
             userInput = readString();
 
             command(userInput);
-            System.out.println("");
         }
     }
 
@@ -49,7 +48,7 @@ public class UserInterface {
                 System.out.println(adventure.look());
                 break;
             case "help":
-                System.out.println("Commands available: ");
+                System.out.println(adventure.getHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -72,7 +71,4 @@ public class UserInterface {
         System.out.println("You have entered " + adventure.getCurrentRoomName());
     }
 }
-
-
-// Her er en lille push/pull
 
