@@ -4,13 +4,10 @@ public class UserInterface {
    private Adventure adventure = new Adventure();
    private Scanner sc = new Scanner(System.in);
 
-    //TODO lav en readString() til at tage sig af case følsomhed
-
     public void startProgram() {
         adventure.createMap();
 
         System.out.println("Welcome to the game. let's start");
-
 
         String userInput = "x";
 
@@ -51,7 +48,7 @@ public class UserInterface {
                 System.out.println(adventure.look());
                 break;
             case "help":
-                System.out.println(adventure.getHelp());
+                System.out.println(getHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -72,6 +69,19 @@ public class UserInterface {
 
     public void currentRoomName(){
         System.out.println("You have entered " + adventure.getCurrentRoomName());
+    }
+
+    public String getHelp() {
+        return
+                """
+            * Help - list of commands: *
+            - Go north:        north / s
+            - Go south:        south / s
+            - Go east:         east / e
+            - Go west:         west / w
+            - Look around:     look / l
+            - Exit:            exit / e
+           """;
     }
 
 }

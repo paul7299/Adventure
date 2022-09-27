@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Har lavet en if løkke i start, så den tjekker om hasVisited er true. Hvis den er false vil de automatisk bruge look metoden.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="slettet en lille ting" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="caddf7e2546437267a0d3002e9f4ac7aa5ba7f16" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -92,8 +92,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AdventureTest.goEast" />
         <item itemvalue="JUnit.RoomTest.setRooms" />
+        <item itemvalue="JUnit.AdventureTest.goEast" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AdventureTest.goEast" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +150,19 @@
       <option name="project" value="LOCAL" />
       <updated>1664275950734</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="1">
+      <created>1664277897695</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1664277897695</updated>
+    </task>
+    <task id="LOCAL−00008" summary="1">
+      <created>1664278636150</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1664278636150</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,8 +186,8 @@
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
     <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
     <MESSAGE value="test push" />
-    <MESSAGE value="HAr tilføjet en boolean der fortæller om man har besøgt et rum, den sættes default til false. Så snart man besøger et rum første gang sættes den til true" />
-    <MESSAGE value="Har lavet en if løkke i start, så den tjekker om hasVisited er true. Hvis den er false vil de automatisk bruge look metoden." />
-    <option name="LAST_COMMIT_MESSAGE" value="Har lavet en if løkke i start, så den tjekker om hasVisited er true. Hvis den er false vil de automatisk bruge look metoden." />
+    <MESSAGE value="1" />
+    <MESSAGE value="slettet en lille ting" />
+    <option name="LAST_COMMIT_MESSAGE" value="slettet en lille ting" />
   </component>
 </project>
