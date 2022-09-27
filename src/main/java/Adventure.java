@@ -16,15 +16,15 @@ public class Adventure {
     }
 
     public void createMap(){
-        room1 = new Room("Room 1", "The first room.", 0, 1, 2, 0);
-        room2 = new Room("Room 2", "The second room.", 0, 0, 1, 2);
-        room3 = new Room("Room 3", "The third room.", 0, 1, 0, 1);
-        room4 = new Room("Room 4", "The fourth room.", 1, 1, 0, 0);
-        room5 = new Room("Room 5", "The fifth room.", 0, 1, 0, 0);
-        room6 = new Room("Room 6", "The sixth room.", 1, 1, 0, 0);
-        room7 = new Room("Room 7", "The seventh room.", 1, 0, 1, 0);
-        room8 = new Room("Room 8", "The eight room.", 1, 0, 1, 1);
-        room9 = new Room("Room 9", "The ninth room.", 1, 0, 0, 1);
+        room1 = new Room("Room 1", "The first room.");
+        room2 = new Room("Room 2", "The second room.");
+        room3 = new Room("Room 3", "The third room.");
+        room4 = new Room("Room 4", "The fourth room.");
+        room5 = new Room("Room 5", "The fifth room.");
+        room6 = new Room("Room 6", "The sixth room.");
+        room7 = new Room("Room 7", "The seventh room.");
+        room8 = new Room("Room 8", "The eight room.");
+        room9 = new Room("Room 9", "The ninth room.");
 
         room1.setRooms(null,room4,room2,null);
         room2.setRooms(null,null,room3,room1);
@@ -44,14 +44,10 @@ public class Adventure {
             System.out.println("You cannot go east from here");
         }
         else {
-            if (currentRoom.getDoorEast() == 1) {
                 currentRoom = currentRoom.getRoomEast();
-
-            } else if (currentRoom.getDoorEast() == 2) {
-                System.out.println("This door is locked. Maybe you can find a key somewhere.");
             }
         }
-    }
+
 
     public void goNorth(){
         if(currentRoom.getRoomNorth() == null){
@@ -67,13 +63,7 @@ public class Adventure {
             System.out.println("You cannot go south from here");
         }
         else {
-            if (currentRoom.getDoorSouth() == 1) {
                 currentRoom = currentRoom.getRoomSouth();
-
-            } else if (currentRoom.getDoorSouth() == 2) {
-                System.out.println("This door is locked. Maybe you can find a key somewhere.");
-            }
-
         }
     }
 
