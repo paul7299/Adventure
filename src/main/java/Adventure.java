@@ -15,7 +15,7 @@ public class Adventure {
     }
 
     public void createMap(){
-        room1 = new Room("Room 1", "The first room1.");
+        room1 = new Room("Room 1", "The first room.");
         room2 = new Room("Room 2", "The second room.");
         room3 = new Room("Room 3", "The third room.");
         room4 = new Room("Room 4", "The fourth room.");
@@ -90,4 +90,7 @@ public class Adventure {
  - Exit:            exit / e
 """;
  }
+    public String getCurrentRoomName() {
+        return currentRoom.getRoomName();
+    }
 }
