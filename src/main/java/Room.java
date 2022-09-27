@@ -6,13 +6,12 @@ public class Room {
     private Room roomSouth;
     private Room roomEast;
     private Room roomWest;
-
-    private Boolean hasVisited;
+    private Boolean hasVisited; //Denne bolean vil sige noget om man har besøget et rum før
 
     public Room(String roomName, String roomDescription) {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
-        this.hasVisited = false;
+        this.hasVisited = false; //hasVisited sættes false ved default fordi man ikke har besøgt et rum til at starte med
     }
 
     public Room getRoomEast() {

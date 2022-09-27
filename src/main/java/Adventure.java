@@ -38,17 +38,17 @@ public class Adventure {
         this.currentRoom = room1;
     }
 
-    public void goEast() {
-        if (currentRoom.getRoomEast() == null) {
+ public void goEast(){
+        if(currentRoom.getRoomEast() == null){
             System.out.println("You cannot go east from here");
-        } else {
+        }
+        else{
             currentRoom = currentRoom.getRoomEast();
         }
-    }
+ }
 
-
-    public void goNorth() {
-        if (currentRoom.getRoomNorth() == null) {
+    public void goNorth(){
+        if(currentRoom.getRoomNorth() == null){
             System.out.println("You cannot go north from here");
         } else {
             currentRoom = currentRoom.getRoomNorth();
@@ -80,6 +80,9 @@ public class Adventure {
         return currentRoom.getRoomName();
     }
 
+    //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
+    public void setHasVisitedStatusToTrue() {
+
     public void getCurrentRoomDoors() {
         if (currentRoom.getRoomNorth() != null) {
             System.out.println("There is a door north");
@@ -99,6 +102,7 @@ public class Adventure {
         currentRoom.setHasVisitedToTrue();
     }
 
+    //bruges til at tjekke om man har besøgt et rum før
     public Boolean hasVisitedStatus() {
         return currentRoom.getHasVisited();
     }
