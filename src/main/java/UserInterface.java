@@ -14,7 +14,7 @@ public class UserInterface {
 
         while (!userInput.equalsIgnoreCase("exit")) {
             System.out.println("Choose an action");
-            userInput = sc.nextLine();
+            userInput = readString();
 
             command(userInput);
             System.out.println("");
@@ -24,25 +24,28 @@ public class UserInterface {
     private void command(String userInput){
 
         switch (userInput) {
-            case "north":
+            case "north", "n":
                 System.out.println("Going north");
                 adventure.goNorth();
                 break;
-            case "south":
+            case "south", "s":
                 System.out.println("Going south");
                 adventure.goSouth();
                 break;
-            case "east":
+            case "east", "e":
                 System.out.println("Going east");
                 adventure.goEast();
                 break;
-            case "west":
+            case "west", "w":
                 System.out.println("going west");
                 adventure.goWest();
                 break;
-            case "look":
+            case "look", "l":
                 System.out.println("You are observing the room:");
                 System.out.println(adventure.look());
+                break;
+            case "help":
+                System.out.println("Commands available: ");
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -56,9 +59,12 @@ public class UserInterface {
     }
 //TODO ændre case til lowercase
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-    public String readString(String input){
-        return input.toLowerCase();
+    public String readString(){
+        String stringToLowercase = sc.nextLine();
+        return stringToLowercase.toLowerCase();
     }
 }
 
+
+// Her er en lille push/pull
 
