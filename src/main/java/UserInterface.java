@@ -1,18 +1,29 @@
 import java.util.Scanner;
 
 public class UserInterface {
-   private Adventure adventure = new Adventure();
-   private Scanner sc = new Scanner(System.in);
+    private Adventure adventure = new Adventure();
+    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
         adventure.createMap();
 
-        System.out.println("Welcome to the game. let's start");
+        System.out.println("""
+                Welcome to the game! Let's begin
+                You are stuck in a maze. The objective of the game is to reach room 5.
+                You navigate through the game using the commands Go north, Go east, Go south and Go west.
+                To view your current room, type "look"
+                If you forget the commands, type "help".
+                """);
+
 
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
             currentRoomName();
+            if (!adventure.hasVisitedStatus()) {
+                System.out.println(adventure.look());
+                adventure.setHasVisitedStatusToTrue();
+            }
             System.out.println("Choose an action");
             userInput = readString();
 
@@ -20,7 +31,7 @@ public class UserInterface {
         }
     }
 
-    private void command(String userInput){
+    private void command(String userInput) {
 
         switch (userInput) {
             case "north", "n":
@@ -42,6 +53,7 @@ public class UserInterface {
             case "look", "l":
                 System.out.println("You are observing the room:");
                 System.out.println(adventure.look());
+                adventure.getCurrentRoomDoors();
                 break;
             case "help":
                 System.out.println(getHelp());
@@ -53,33 +65,32 @@ public class UserInterface {
             default:
                 System.out.println("*Wrong input*");
                 break;
-            }
+        }
 
     }
-//TODO ændre case til lowercase
+
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-    public String readString(){
+    public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
 
-    public void currentRoomName(){
-        System.out.println("You have entered " + adventure.getCurrentRoomName());
+    public void currentRoomName() {
+        System.out.println("You are in " + adventure.getCurrentRoomName());
     }
 
     public String getHelp() {
         return
                 """
-            * Help - list of commands: *
-            - Go north:        north / s
-            - Go south:        south / s
-            - Go east:         east / e
-            - Go west:         west / w
-            - Look around:     look / l
-            - Exit:            exit / e
-           """;
+                         * Help - list of commands: *
+                         - Go north:        north / s
+                         - Go south:        south / s
+                         - Go east:         east / e
+                         - Go west:         west / w
+                         - Look around:     look / l
+                         - Exit:            exit / e
+                        """;
     }
 
 }
-
 
