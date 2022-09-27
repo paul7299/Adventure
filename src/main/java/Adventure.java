@@ -38,17 +38,16 @@ public class Adventure {
         this.currentRoom = room1;
     }
 
- public void goEast(){
-        if(currentRoom.getRoomEast() == null){
+    public void goEast() {
+        if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
-        }
-        else{
+        } else {
             currentRoom = currentRoom.getRoomEast();
         }
- }
+    }
 
-    public void goNorth(){
-        if(currentRoom.getRoomNorth() == null){
+    public void goNorth() {
+        if (currentRoom.getRoomNorth() == null) {
             System.out.println("You cannot go north from here");
         } else {
             currentRoom = currentRoom.getRoomNorth();
@@ -81,29 +80,32 @@ public class Adventure {
     }
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
-    public void setHasVisitedStatusToTrue() {
 
-    public void getCurrentRoomDoors() {
-        if (currentRoom.getRoomNorth() != null) {
-            System.out.println("There is a door north");
+
+        public void getCurrentRoomDoors() {
+            if (currentRoom.getRoomNorth() != null) {
+                System.out.println("There is a door north");
+            }
+            if (currentRoom.getRoomSouth() != null) {
+                System.out.println("There is a door south");
+            }
+            if (currentRoom.getRoomEast() != null) {
+                System.out.println("There is a door east");
+            }
+            if (currentRoom.getRoomWest() != null) {
+                System.out.println("There is a door west");
+            }
         }
-        if (currentRoom.getRoomSouth() != null) {
-            System.out.println("There is a door south");
+
+
+        public void setHasVisitedStatusToTrue() {
+            currentRoom.setHasVisitedToTrue();
         }
-        if (currentRoom.getRoomEast() != null) {
-            System.out.println("There is a door east");
+
+        //bruges til at tjekke om man har besøgt et rum før
+        public Boolean hasVisitedStatus() {
+            return currentRoom.getHasVisited();
         }
-        if (currentRoom.getRoomWest() != null) {
-            System.out.println("There is a door west");
-        }
+
     }
 
-    public void setHasVisitedStatusToTrue() {
-        currentRoom.setHasVisitedToTrue();
-    }
-
-    //bruges til at tjekke om man har besøgt et rum før
-    public Boolean hasVisitedStatus() {
-        return currentRoom.getHasVisited();
-    }
-}
