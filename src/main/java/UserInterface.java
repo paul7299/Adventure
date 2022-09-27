@@ -7,34 +7,56 @@ public class UserInterface {
     //TODO lav en readString() til at tage sig af case følsomhed
 
     public void startProgram() {
-        System.out.println("Welcome to the game. let's start");
-        command();
-        }
 
-        private void command(){
-        String userInput;
-        String action;
+        System.out.println("Welcome to the game. let's start");
+
+        String userInput = "x";
+
+        while (!userInput.equalsIgnoreCase("exit")) {
             System.out.println("Choose an action");
             userInput = sc.nextLine();
 
-            //Todo lav en løkke rundt om switch hvis noget går galt
-            switch (userInput) {
-                case "North":
-                    System.out.println("Going north");
-                case "South":
-                    System.out.println("Going south");
-                    break;
-                case "East":
-                    System.out.println("Going east");
-                    break;
-                case "West":
-                    System.out.println("going west");
-                    break;
-                case "Look":
-                    System.out.println(adventure.look());
-                default:
-                    break;
+            command(userInput);
+        }
+    }
+
+    private void command(String userInput){
+
+        switch (userInput) {
+            case "north":
+                System.out.println("Going north");
+                adventure.goNorth();
+                break;
+            case "south":
+                System.out.println("Going south");
+                adventure.goSouth();
+                break;
+            case "east":
+                System.out.println("Going east");
+                adventure.goEast();
+                break;
+            case "west":
+                System.out.println("going west");
+                adventure.goWest();
+                break;
+            case "look":
+                System.out.println("You are observing the room:");
+                System.out.println(adventure.look());
+                break;
+            case "exit":
+                System.out.println("*Exiting game*");
+                System.exit(0);
+                break;
+            default:
+                System.out.println("*Wrong input*");
+                break;
             }
+
+    }
+//TODO ændre case til lowercase
+    //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
+    public String readString(String input){
+        return input.toLowerCase();
     }
 }
 

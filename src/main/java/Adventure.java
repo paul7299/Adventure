@@ -41,6 +41,33 @@ public class Adventure {
         }
  }
 
+    public void goNorth(){
+        if(currentRoom.getRoomEast() == null){
+            System.out.println("You cannot go east from here");
+        }
+        else{
+            currentRoom = currentRoom.getRoomEast();
+        }
+    }
+
+    public void goSouth(){
+        if(currentRoom.getRoomEast() == null){
+            System.out.println("You cannot go east from here");
+        }
+        else{
+            currentRoom = currentRoom.getRoomEast();
+        }
+    }
+
+    public void goWest(){
+        if(currentRoom.getRoomEast() == null){
+            System.out.println("You cannot go east from here");
+        }
+        else{
+            currentRoom = currentRoom.getRoomEast();
+        }
+    }
+
  public String look(){
         return currentRoom.getRoomDescription();
  }
