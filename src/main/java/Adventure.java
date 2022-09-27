@@ -15,7 +15,7 @@ public class Adventure {
     }
 
     public void createMap(){
-        room1 = new Room("Room 1", "The first room.");
+        room1 = new Room("Room 1", "The first room1.");
         room2 = new Room("Room 2", "The second room.");
         room3 = new Room("Room 3", "The third room.");
         room4 = new Room("Room 4", "The fourth room.");
@@ -78,4 +78,16 @@ public class Adventure {
         return currentRoom.getRoomDescription();
  }
 
+ public String getHelp() {
+        return
+     """
+ * Help - list of commands: *
+ - Go north:        north / s
+ - Go south:        south / s
+ - Go east:         east / e
+ - Go west:         west / w
+ - Look around:     look / l
+ - Exit:            exit / e
+""";
+ }
 }
