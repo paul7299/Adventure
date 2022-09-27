@@ -17,7 +17,6 @@ public class UserInterface {
             userInput = readString();
 
             command(userInput);
-            System.out.println("");
         }
     }
 
