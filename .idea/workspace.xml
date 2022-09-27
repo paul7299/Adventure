@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="slettet en lille ting" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Nu bliver hasVisited tjekket i while løkken i start og bliver også lavet true der." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,5 +189,16 @@
     <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
     <option name="LAST_COMMIT_MESSAGE" value="slettet en lille ting" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/UserInterface.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

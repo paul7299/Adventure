@@ -14,7 +14,7 @@ public class UserInterface {
         while (!userInput.equalsIgnoreCase("exit")) {
             currentRoomName();
             if(!adventure.hasVisitedStatus()){
-                adventure.look();
+                System.out.println(adventure.look());
                 adventure.setHasVisitedStatusToTrue();
             }
             System.out.println("Choose an action");
