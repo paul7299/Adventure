@@ -1,7 +1,8 @@
-public class AdventureController {
+public class AdventureController extends Player {
+
 
     //TODO Mohamed currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
-    Room currentRoom; // skal slettes
+
     //TODO Asger de 9 rum til adventure creator
     Room room1;
     Room room2;
@@ -52,48 +53,7 @@ public class AdventureController {
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
 
-        this.currentRoom = room1;
-    }
-
-    //TODO Jonathan flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
-    public void goEast() {
-        if (player.getCurrentRoom.getRoomEast() == null) {
-            System.out.println("You cannot go east from here");
-        } else {
-            player.getCurrentRoom = player.getCurrentRoom.getRoomEast();
-        }
-    }
-
-    public void goNorth() {
-        if (player.getCurrentRoom.getRoomNorth() == null) {
-            System.out.println("You cannot go north from here");
-        } else {
-            player.getCurrentRoom = player.getCurrentRoom.getRoomNorth();
-        }
-    }
-
-    public void goSouth() {
-        if (player.GetCurrentRoom.getRoomSouth() == null) {
-            System.out.println("You cannot go south from here");
-        } else {
-            player.getCurrentRoom = player.getCurrentRoom.getRoomSouth();
-        }
-    }
-
-    public void goWest() {
-        if (player.getCurrentRoom.getRoomWest() == null) {
-            System.out.println("You cannot go west from here");
-        } else {
-            currentRoom = player.getCurrentRoom.getRoomWest();
-        }
-    }
-    //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
-    public String look() {
-        return player.getCurrentRoom.getRoomDescription();
-    }
-
-    public String getCurrentRoomName() {
-        return player.getCurrentRoom.getRoomName();
+        this.player.currentRoom = room1;
     }
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
