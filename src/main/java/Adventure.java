@@ -28,7 +28,7 @@ public class Adventure {
     //room 1 bliver sat til west for room 2
     //i metoden refererer vi til room1 med this
 
-    //TODO flyt createMap() til adventureCreator
+    //TODO Asger flyt createMap() til adventureCreator
     public void createMap() {
         room1 = new Room("Room 1", "The first room.");
         room2 = new Room("Room 2", "The second room.");
