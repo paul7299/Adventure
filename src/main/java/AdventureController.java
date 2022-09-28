@@ -1,9 +1,9 @@
-//TODO Refactor til AdventureController
-public class Adventure {
+public class AdventureController extends Player {
 
-    //TODO currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
-    Room currentRoom;
-    //TODO de 9 rum ti adventure creator
+
+    //TODO Mohamed currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
+
+    //TODO Asger de 9 rum til adventure creator
     Room room1;
     Room room2;
     Room room3;
@@ -14,7 +14,10 @@ public class Adventure {
     Room room8;
     Room room9;
 
-    public Adventure() {
+    Player player;
+
+    public AdventureController() {
+        this.player = new Player();
     }
 
     //TODO bruger en setter til east,north osv. med parameter nabo room
@@ -28,7 +31,7 @@ public class Adventure {
     //room 1 bliver sat til west for room 2
     //i metoden refererer vi til room1 med this
 
-    //TODO flyt createMap() til adventureCreator
+    //TODO Asger flyt createMap() til adventureCreator
     public void createMap() {
         room1 = new Room("Room 1", "The first room.");
         room2 = new Room("Room 2", "The second room.");
@@ -50,79 +53,34 @@ public class Adventure {
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
 
-        this.currentRoom = room1;
-    }
-
-    //TODO flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
-    public void goEast() {
-        if (currentRoom.getRoomEast() == null) {
-            System.out.println("You cannot go east from here");
-        } else {
-            currentRoom = currentRoom.getRoomEast();
-        }
-    }
-
-    public void goNorth() {
-        if (currentRoom.getRoomNorth() == null) {
-            System.out.println("You cannot go north from here");
-        } else {
-            currentRoom = currentRoom.getRoomNorth();
-        }
-    }
-
-    public void goSouth() {
-        if (currentRoom.getRoomSouth() == null) {
-            System.out.println("You cannot go south from here");
-        } else {
-            currentRoom = currentRoom.getRoomSouth();
-        }
-    }
-
-    public void goWest() {
-        if (currentRoom.getRoomWest() == null) {
-            System.out.println("You cannot go west from here");
-        } else {
-            currentRoom = currentRoom.getRoomWest();
-        }
-    }
-    //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
-    public String look() {
-        return currentRoom.getRoomDescription();
-    }
-
-//TODO skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
-    public String getCurrentRoomName() {
-        return currentRoom.getRoomName();
+        this.player.currentRoom = room1;
     }
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
 
     //Skal bruges senere til døre
-    //TODO skal kalde på players current room
     public void getCurrentRoomDoors() {
-        if (currentRoom.getRoomNorth() != null) {
+        if (player.getCurrentRoom().getRoomNorth() != null) {
             System.out.println("There is a door north");
         }
-        if (currentRoom.getRoomSouth() != null) {
+        if (player.getCurrentRoom().getRoomSouth() != null) {
             System.out.println("There is a door south");
         }
-        if (currentRoom.getRoomEast() != null) {
+        if (player.getCurrentRoom().getRoomEast() != null) {
             System.out.println("There is a door east");
         }
-        if (currentRoom.getRoomWest() != null) {
+        if (player.getCurrentRoom().getRoomWest() != null) {
             System.out.println("There is a door west");
         }
     }
 
-    //TODO skal kalde på players current room
     public void setHasVisitedStatusToTrue() {
-        currentRoom.setHasVisitedToTrue();
+        player.getCurrentRoom().setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
-    //TODO skal kalde på players currentRoom
     public Boolean hasVisitedStatus() {
-        return currentRoom.getHasVisited();
+        return player.getCurrentRoom().getHasVisited();
     }
 
 }
