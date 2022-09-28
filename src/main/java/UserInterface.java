@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class UserInterface {
    private AdventureController adventureController = new AdventureController();
+   private Adventure_creator adventureCreator = new Adventure_creator();
+   private Player player = new Player();
    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
-        adventureController.createMap();
+        adventureCreator.createMap();
 
         System.out.println("""
                 Welcome to the game! Let's begin
@@ -76,7 +78,7 @@ public class UserInterface {
     }
 
     public void printCurrentRoomName() {
-        System.out.println("You are in " + adventureController.getCurrentRoomNameFromPlayer());
+        System.out.println("You are in " + player.getCurrentRoomNameFromPlayer());
     }
 
     public String printHelp() {
