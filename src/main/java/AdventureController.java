@@ -1,8 +1,7 @@
-//TODO Mohamed Refactor til AdventureController
 public class AdventureController {
 
     //TODO Mohamed currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
-    Room currentRoom;
+    Room currentRoom; // skal slettes
     //TODO Asger de 9 rum til adventure creator
     Room room1;
     Room room2;
@@ -14,7 +13,10 @@ public class AdventureController {
     Room room8;
     Room room9;
 
+    Player player;
+
     public AdventureController() {
+        this.player = new Player();
     }
 
     //TODO bruger en setter til east,north osv. med parameter nabo room
@@ -55,74 +57,70 @@ public class AdventureController {
 
     //TODO Jonathan flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
     public void goEast() {
-        if (currentRoom.getRoomEast() == null) {
+        if (player.getCurrentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
         } else {
-            currentRoom = currentRoom.getRoomEast();
+            player.getCurrentRoom = player.getCurrentRoom.getRoomEast();
         }
     }
 
     public void goNorth() {
-        if (currentRoom.getRoomNorth() == null) {
+        if (player.getCurrentRoom.getRoomNorth() == null) {
             System.out.println("You cannot go north from here");
         } else {
-            currentRoom = currentRoom.getRoomNorth();
+            player.getCurrentRoom = player.getCurrentRoom.getRoomNorth();
         }
     }
 
     public void goSouth() {
-        if (currentRoom.getRoomSouth() == null) {
+        if (player.GetCurrentRoom.getRoomSouth() == null) {
             System.out.println("You cannot go south from here");
         } else {
-            currentRoom = currentRoom.getRoomSouth();
+            player.getCurrentRoom = player.getCurrentRoom.getRoomSouth();
         }
     }
 
     public void goWest() {
-        if (currentRoom.getRoomWest() == null) {
+        if (player.getCurrentRoom.getRoomWest() == null) {
             System.out.println("You cannot go west from here");
         } else {
-            currentRoom = currentRoom.getRoomWest();
+            currentRoom = player.getCurrentRoom.getRoomWest();
         }
     }
     //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
     public String look() {
-        return currentRoom.getRoomDescription();
+        return player.getCurrentRoom.getRoomDescription();
     }
 
-//TODO Mohamed skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
     public String getCurrentRoomName() {
-        return currentRoom.getRoomName();
+        return player.getCurrentRoom.getRoomName();
     }
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
 
     //Skal bruges senere til døre
-    //TODO Mohamed skal kalde på players current room
     public void getCurrentRoomDoors() {
-        if (currentRoom.getRoomNorth() != null) {
+        if (player.getCurrentRoom.getRoomNorth() != null) {
             System.out.println("There is a door north");
         }
-        if (currentRoom.getRoomSouth() != null) {
+        if (player.getCurrentRoom.getRoomSouth() != null) {
             System.out.println("There is a door south");
         }
-        if (currentRoom.getRoomEast() != null) {
+        if (player.getCurrentRoom.getRoomEast() != null) {
             System.out.println("There is a door east");
         }
-        if (currentRoom.getRoomWest() != null) {
+        if (player.getCurrentRoom.getRoomWest() != null) {
             System.out.println("There is a door west");
         }
     }
 
-    //TODO Mohamed skal kalde på players current room
     public void setHasVisitedStatusToTrue() {
-        currentRoom.setHasVisitedToTrue();
+        player.getCurrentRoom.setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
-    //TODO Mohamed skal kalde på players currentRoom
     public Boolean hasVisitedStatus() {
-        return currentRoom.getHasVisited();
+        return player.getCurrentRoom.getHasVisited();
     }
 
 }

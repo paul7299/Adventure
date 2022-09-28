@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Tilføjet hvem der står for TODOs" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+    </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +229,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664360801082</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Omdøb Adventure til AdventureController, og omdøbt adventure objektet i UserInterface til adventureController">
+      <created>1664361420670</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664361420670</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Omdøbt getHelp til printHelp()">
+      <created>1664361481209</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664361481209</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +275,8 @@
     <MESSAGE value="Changes by paulk" />
     <MESSAGE value="Tilføjet hvem der står for TODOs" />
     <MESSAGE value="Changes by Asger_studie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Asger_studie" />
+    <MESSAGE value="Omdøb Adventure til AdventureController, og omdøbt adventure objektet i UserInterface til adventureController" />
+    <MESSAGE value="Omdøbt getHelp til printHelp()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Omdøbt getHelp til printHelp()" />
   </component>
 </project>
