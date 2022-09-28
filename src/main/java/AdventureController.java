@@ -1,5 +1,5 @@
 //TODO Mohamed Refactor til AdventureController
-public class Adventure {
+public class AdventureController {
 
     //TODO Mohamed currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
     Room currentRoom;
@@ -14,7 +14,7 @@ public class Adventure {
     Room room8;
     Room room9;
 
-    public Adventure() {
+    public AdventureController() {
     }
 
     //TODO bruger en setter til east,north osv. med parameter nabo room
