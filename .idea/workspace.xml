@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Push med ny fil struktur, og nogle kommentarer i koden">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -183,11 +184,12 @@
       <option name="project" value="LOCAL" />
       <updated>1664283451739</updated>
     </task>
-    <task id="LOCAL−00012" summary="1">
-      <created>1664353631128</created>
-      <option name="number" value="LOCAL−00012" />
-      <option name="presentableId" value="LOCAL−00012" />
-      <updated>1664353631128</updated>
+    <task id="LOCAL-00012" summary=".">
+      <created>1664347643454</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664347643454</updated>
     </task>
     <option name="localTasksCounter" value="13" />
     <servers />
@@ -213,9 +215,10 @@
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
     <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
     <MESSAGE value="test push" />
+    <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

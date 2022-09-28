@@ -83,7 +83,7 @@ public class UserInterface {
         return
                 """
                          * Help - list of commands: *
-                         - Go north:        north / s
+                         - Go north:        north / n
                          - Go south:        south / s
                          - Go east:         east / e
                          - Go west:         west / w
