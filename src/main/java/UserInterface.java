@@ -75,10 +75,11 @@ public class UserInterface {
         return stringToLowercase.toLowerCase();
     }
 
-    public void currentRoomName() {
+    public void printCurrentRoomName() {
         System.out.println("You are in " + adventure.getCurrentRoomName());
     }
 
+    //TODO rename til printHelp()
     public String getHelp() {
         return
                 """
