@@ -1,9 +1,5 @@
 public class AdventureController extends Player {
-
-
     //TODO Mohamed currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
-
-    //TODO Asger de 9 rum til adventure creator
     Player player;
 
     public AdventureController() {
@@ -21,33 +17,29 @@ public class AdventureController extends Player {
     //room 1 bliver sat til west for room 2
     //i metoden refererer vi til room1 med this
 
-    //TODO Asger flyt createMap() til adventureCreator
-
-    //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
-
     //Skal bruges senere til døre
     public void getCurrentRoomDoors() {
-        if (player.getCurrentRoom().getRoomNorth() != null) {
+        if (getCurrentRoom().getRoomNorth() != null) {
             System.out.println("There is a door north");
         }
-        if (player.getCurrentRoom().getRoomSouth() != null) {
+        if (getCurrentRoom().getRoomSouth() != null) {
             System.out.println("There is a door south");
         }
-        if (player.getCurrentRoom().getRoomEast() != null) {
+        if (getCurrentRoom().getRoomEast() != null) {
             System.out.println("There is a door east");
         }
-        if (player.getCurrentRoom().getRoomWest() != null) {
+        if (getCurrentRoom().getRoomWest() != null) {
             System.out.println("There is a door west");
         }
     }
 
     public void setHasVisitedStatusToTrue() {
-        player.getCurrentRoom().setHasVisitedToTrue();
+        getCurrentRoom().setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
     public Boolean hasVisitedStatus() {
-        return player.getCurrentRoom().getHasVisited();
+        return getCurrentRoom().getHasVisited();
     }
 
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class UserInterface {
    private AdventureController adventureController = new AdventureController();
-   private Adventure_creator adventureCreator = new Adventure_creator();
+   private AdventureCreator adventureCreator = new AdventureCreator();
    private Player player = new Player();
    private Scanner sc = new Scanner(System.in);
 
