@@ -1,5 +1,5 @@
 public class Player {
 
-    //TODO skal have currentRoom og goEast/North/South/West()
+    //TODO Jonathan, skal have currentRoom og goEast/North/South/West()
 
 }

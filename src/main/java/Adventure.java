@@ -1,9 +1,9 @@
-//TODO Refactor til AdventureController
+//TODO Mohamed Refactor til AdventureController
 public class Adventure {
 
-    //TODO currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
+    //TODO Mohamed currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
     Room currentRoom;
-    //TODO de 9 rum ti adventure creator
+    //TODO Asger de 9 rum til adventure creator
     Room room1;
     Room room2;
     Room room3;
@@ -53,7 +53,7 @@ public class Adventure {
         this.currentRoom = room1;
     }
 
-    //TODO flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
+    //TODO Jonathan flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
@@ -90,7 +90,7 @@ public class Adventure {
         return currentRoom.getRoomDescription();
     }
 
-//TODO skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
+//TODO Mohamed skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
     public String getCurrentRoomName() {
         return currentRoom.getRoomName();
     }
@@ -98,7 +98,7 @@ public class Adventure {
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
 
     //Skal bruges senere til døre
-    //TODO skal kalde på players current room
+    //TODO Mohamed skal kalde på players current room
     public void getCurrentRoomDoors() {
         if (currentRoom.getRoomNorth() != null) {
             System.out.println("There is a door north");
@@ -114,13 +114,13 @@ public class Adventure {
         }
     }
 
-    //TODO skal kalde på players current room
+    //TODO Mohamed skal kalde på players current room
     public void setHasVisitedStatusToTrue() {
         currentRoom.setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
-    //TODO skal kalde på players currentRoom
+    //TODO Mohamed skal kalde på players currentRoom
     public Boolean hasVisitedStatus() {
         return currentRoom.getHasVisited();
     }

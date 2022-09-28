@@ -7,20 +7,15 @@
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="">
+    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie">
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="43841363-4d8e-4044-911f-d05991a87fa0" name="Changes by jonat" comment="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-    </list>
-    <list id="3a6edaf0-ecec-4e10-80a9-2969f008076b" name="Changes by paulk" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" afterDir="false" />
-    </list>
+    <list id="3a6edaf0-ecec-4e10-80a9-2969f008076b" name="Changes by paulk" comment="Changes by paulk" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,26 +38,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="21" end1="22" start2="21" end2="22" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
-        <range start1="77" end1="78" start2="77" end2="78" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="81" end1="81" start2="81" end2="82" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/Adventure.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="2" end1="2" start2="3" end2="4" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="3" end1="3" start2="5" end2="6" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="27" end1="28" start2="30" end2="31" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="52" end1="52" start2="55" end2="56" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
-        <range start1="83" end1="84" start2="87" end2="88" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="88" end1="89" start2="92" end2="93" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="95" end1="110" start2="99" end2="115" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
-        <range start1="111" end1="115" start2="116" end2="120" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
-        <range start1="116" end1="120" start2="121" end2="126" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
-        <range start1="121" end1="122" start2="127" end2="128" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
+        <range start1="0" end1="1" start2="0" end2="1" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="3" end1="4" start2="3" end2="4" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="5" end1="6" start2="5" end2="6" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="30" end1="31" start2="30" end2="31" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
+        <range start1="55" end1="56" start2="55" end2="56" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="92" end1="93" start2="92" end2="93" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="100" end1="101" start2="100" end2="101" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="116" end1="117" start2="116" end2="117" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="122" end1="123" start2="122" end2="123" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
       </ranges>
     </file>
   </component>
@@ -80,6 +66,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -222,7 +209,35 @@
       <option name="project" value="LOCAL" />
       <updated>1664283451739</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave">
+      <created>1664359910476</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664359910476</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by Asger_studie">
+      <created>1664359930815</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664359930815</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring.">
+      <created>1664359940910</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664359940910</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changes by paulk">
+      <created>1664359953793</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664359953793</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +264,10 @@
     <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
+    <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
+    <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
+    <MESSAGE value="Changes by paulk" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by paulk" />
   </component>
 </project>
