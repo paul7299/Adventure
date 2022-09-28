@@ -53,34 +53,34 @@ public class AdventureController extends Player {
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
 
-        this.player.currentRoom = room1;
+        currentRoom = room1;
     }
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
 
     //Skal bruges senere til døre
     public void getCurrentRoomDoors() {
-        if (player.getCurrentRoom().getRoomNorth() != null) {
+        if (getCurrentRoom().getRoomNorth() != null) {
             System.out.println("There is a door north");
         }
-        if (player.getCurrentRoom().getRoomSouth() != null) {
+        if (getCurrentRoom().getRoomSouth() != null) {
             System.out.println("There is a door south");
         }
-        if (player.getCurrentRoom().getRoomEast() != null) {
+        if (getCurrentRoom().getRoomEast() != null) {
             System.out.println("There is a door east");
         }
-        if (player.getCurrentRoom().getRoomWest() != null) {
+        if (getCurrentRoom().getRoomWest() != null) {
             System.out.println("There is a door west");
         }
     }
 
     public void setHasVisitedStatusToTrue() {
-        player.getCurrentRoom().setHasVisitedToTrue();
+        getCurrentRoom().setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
     public Boolean hasVisitedStatus() {
-        return player.getCurrentRoom().getHasVisited();
+        return getCurrentRoom().getHasVisited();
     }
 
 }

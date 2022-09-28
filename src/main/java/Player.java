@@ -1,5 +1,6 @@
 public class Player {
     Room currentRoom;
+
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
