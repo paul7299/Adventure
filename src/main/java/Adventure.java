@@ -53,6 +53,7 @@ public class Adventure {
         this.currentRoom = room1;
     }
 
+    //TODO flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
@@ -96,31 +97,33 @@ public class Adventure {
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
 
-
-        public void getCurrentRoomDoors() {
-            if (currentRoom.getRoomNorth() != null) {
-                System.out.println("There is a door north");
-            }
-            if (currentRoom.getRoomSouth() != null) {
-                System.out.println("There is a door south");
-            }
-            if (currentRoom.getRoomEast() != null) {
-                System.out.println("There is a door east");
-            }
-            if (currentRoom.getRoomWest() != null) {
-                System.out.println("There is a door west");
-            }
+    //Skal bruges senere til døre
+    //TODO skal kalde på players current room
+    public void getCurrentRoomDoors() {
+        if (currentRoom.getRoomNorth() != null) {
+            System.out.println("There is a door north");
         }
-
-
-        public void setHasVisitedStatusToTrue() {
-            currentRoom.setHasVisitedToTrue();
+        if (currentRoom.getRoomSouth() != null) {
+            System.out.println("There is a door south");
         }
-
-        //bruges til at tjekke om man har besøgt et rum før
-        public Boolean hasVisitedStatus() {
-            return currentRoom.getHasVisited();
+        if (currentRoom.getRoomEast() != null) {
+            System.out.println("There is a door east");
         }
-
+        if (currentRoom.getRoomWest() != null) {
+            System.out.println("There is a door west");
+        }
     }
+
+    //TODO skal kalde på players current room
+    public void setHasVisitedStatusToTrue() {
+        currentRoom.setHasVisitedToTrue();
+    }
+
+    //bruges til at tjekke om man har besøgt et rum før
+    //TODO skal kalde på players currentRoom
+    public Boolean hasVisitedStatus() {
+        return currentRoom.getHasVisited();
+    }
+
+}
 
