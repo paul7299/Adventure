@@ -76,7 +76,7 @@ public class UserInterface {
     }
 
     public void printCurrentRoomName() {
-        System.out.println("You are in " + adventureController.getCurrentRoomName());
+        System.out.println("You are in " + adventureController.getCurrentRoomNameFromPlayer());
     }
 
     public String printHelp() {

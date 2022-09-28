@@ -1,5 +1,4 @@
 public class Player {
-    //TODO skal have currentRoom og goEast/North/South/West()
     Room currentRoom;
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
@@ -33,8 +32,6 @@ public class Player {
     public String look() {
         return currentRoom.getRoomDescription();
     }
-
-    //TODO skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
