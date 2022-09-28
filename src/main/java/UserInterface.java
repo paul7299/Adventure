@@ -56,7 +56,7 @@ public class UserInterface {
                 adventureController.getCurrentRoomDoors();
                 break;
             case "help":
-                System.out.println(getHelp());
+                System.out.println(printHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -79,8 +79,7 @@ public class UserInterface {
         System.out.println("You are in " + adventureController.getCurrentRoomName());
     }
 
-    //TODO Mohamed rename til printHelp()
-    public String getHelp() {
+    public String printHelp() {
         return
                 """
                          * Help - list of commands: *
