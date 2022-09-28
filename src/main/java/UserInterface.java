@@ -19,7 +19,7 @@ public class UserInterface {
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
-            currentRoomName();
+            printCurrentRoomName();
             if (!adventure.hasVisitedStatus()) {
                 System.out.println(adventure.look());
                 adventure.setHasVisitedStatusToTrue();
@@ -75,10 +75,11 @@ public class UserInterface {
         return stringToLowercase.toLowerCase();
     }
 
-    public void currentRoomName() {
+    public void printCurrentRoomName() {
         System.out.println("You are in " + adventure.getCurrentRoomName());
     }
 
+    //TODO rename til printHelp()
     public String getHelp() {
         return
                 """

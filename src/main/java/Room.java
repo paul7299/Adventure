@@ -52,5 +52,5 @@ public class Room {
         this.roomEast = roomEast;
         this.roomWest = roomWest;
     }
-
+//TODO - ik akut, lav setRoom op på Tines metode
 }

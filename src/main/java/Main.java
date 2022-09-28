@@ -5,6 +5,4 @@ public class Main {
         UserInterface ui = new UserInterface();
         ui.startProgram();
     }
-
-    // TODO spørg om workspace.xml
 }

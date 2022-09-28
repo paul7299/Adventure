@@ -1,6 +1,9 @@
+//TODO Refactor til AdventureController
 public class Adventure {
 
+    //TODO currentRoom flyttes til player. Alle steder man kalder currentroom, skal man i stedet kalde player.getCurrentRoom.
     Room currentRoom;
+    //TODO de 9 rum ti adventure creator
     Room room1;
     Room room2;
     Room room3;
@@ -25,7 +28,7 @@ public class Adventure {
     //room 1 bliver sat til west for room 2
     //i metoden refererer vi til room1 med this
 
-
+    //TODO flyt createMap() til adventureCreator
     public void createMap() {
         room1 = new Room("Room 1", "The first room.");
         room2 = new Room("Room 2", "The second room.");
@@ -50,6 +53,7 @@ public class Adventure {
         this.currentRoom = room1;
     }
 
+    //TODO flyt goEast(),goNorth(), goSouth(), goWest() og look() til player
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
@@ -81,43 +85,45 @@ public class Adventure {
             currentRoom = currentRoom.getRoomWest();
         }
     }
-
+    //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
     public String look() {
         return currentRoom.getRoomDescription();
     }
 
-
+//TODO skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
     public String getCurrentRoomName() {
         return currentRoom.getRoomName();
     }
 
     //Opdaterer status for om man har besøgt et rum. True = Har besøgt et rum
 
-
-        public void getCurrentRoomDoors() {
-            if (currentRoom.getRoomNorth() != null) {
-                System.out.println("There is a door north");
-            }
-            if (currentRoom.getRoomSouth() != null) {
-                System.out.println("There is a door south");
-            }
-            if (currentRoom.getRoomEast() != null) {
-                System.out.println("There is a door east");
-            }
-            if (currentRoom.getRoomWest() != null) {
-                System.out.println("There is a door west");
-            }
+    //Skal bruges senere til døre
+    //TODO skal kalde på players current room
+    public void getCurrentRoomDoors() {
+        if (currentRoom.getRoomNorth() != null) {
+            System.out.println("There is a door north");
         }
-
-
-        public void setHasVisitedStatusToTrue() {
-            currentRoom.setHasVisitedToTrue();
+        if (currentRoom.getRoomSouth() != null) {
+            System.out.println("There is a door south");
         }
-
-        //bruges til at tjekke om man har besøgt et rum før
-        public Boolean hasVisitedStatus() {
-            return currentRoom.getHasVisited();
+        if (currentRoom.getRoomEast() != null) {
+            System.out.println("There is a door east");
         }
-
+        if (currentRoom.getRoomWest() != null) {
+            System.out.println("There is a door west");
+        }
     }
+
+    //TODO skal kalde på players current room
+    public void setHasVisitedStatusToTrue() {
+        currentRoom.setHasVisitedToTrue();
+    }
+
+    //bruges til at tjekke om man har besøgt et rum før
+    //TODO skal kalde på players currentRoom
+    public Boolean hasVisitedStatus() {
+        return currentRoom.getHasVisited();
+    }
+
+}
 
