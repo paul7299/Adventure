@@ -2,6 +2,7 @@ public class AdventureCreator {
 
     //TODO Asger indsæt rum 1-9
     //TODO Asger indsæt createMap()
+
     Room room1;
     Room room2;
     Room room3;
@@ -11,7 +12,8 @@ public class AdventureCreator {
     Room room7;
     Room room8;
     Room room9;
-    Player player;
+    Player player = new Player();
+
 
     public void createMap() {
         room1 = new Room("Room 1", "The first room.");
@@ -34,8 +36,6 @@ public class AdventureCreator {
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
 
-        this.player.currentRoom = room1;
-
+        player.currentRoom = room1;
     }
-
 }
