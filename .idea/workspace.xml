@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Refactoring færdiggjort">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="fikset små ting">
       <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
-    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
     <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,7 @@
       <workItem from="1664185957055" duration="2357000" />
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
-      <workItem from="1664451044886" duration="3796000" />
+      <workItem from="1664451044886" duration="4407000" />
     </task>
     <task id="LOCAL−00001" summary="1st commit">
       <created>1664186218398</created>
@@ -291,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664455492943</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fikset små ting">
+      <created>1664455697424</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455697424</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +333,8 @@
     <MESSAGE value="Changes by jonat" />
     <MESSAGE value="Refactoring færdiggjort" />
     <MESSAGE value="Changes by paulk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by paulk" />
+    <MESSAGE value="fikset små ting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fikset små ting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
