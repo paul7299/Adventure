@@ -1,11 +1,13 @@
 public class Player {
     Room currentRoom;
 
-    //TODO constructor? (paul)
     // Constructor
-    public Player(Room currentRoom) {
-        this.currentRoom = currentRoom;
+    public Player(Room startRoom) {
+        currentRoom = startRoom;
     }
+    //Loadbearing Constructor
+        public Player(){}
+
 
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
@@ -39,6 +41,7 @@ public class Player {
     public String look() {
         return currentRoom.getRoomDescription();
     }
+
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
