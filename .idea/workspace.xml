@@ -6,8 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
-    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
+    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    </list>
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +46,37 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+      <ranges>
+        <range start1="3" end1="8" start2="3" end2="10" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="41" end1="41" start2="43" end2="44" changelist="2096efe7-2e59-4a5e-88fa-b49b50f35d95" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/AdventureCreator.java">
+      <ranges>
+        <range start1="4" end1="14" start2="4" end2="13" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
+        <range start1="35" end1="38" start2="34" end2="34" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="39" end1="40" start2="35" end2="39" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
+      <ranges>
+        <range start1="3" end1="6" start2="3" end2="4" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="9" end1="10" start2="7" end2="8" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="23" end1="24" start2="21" end2="22" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="25" end1="26" start2="23" end2="24" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="40" end1="41" start2="38" end2="39" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="44" end1="45" start2="42" end2="43" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="48" end1="49" start2="46" end2="47" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="52" end1="53" start2="50" end2="51" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="56" end1="57" start2="54" end2="55" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="79" end1="79" start2="77" end2="80" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="80" end1="81" start2="81" end2="82" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
+        <range start1="82" end1="82" start2="83" end2="84" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,6 +164,7 @@
       <workItem from="1664185957055" duration="2357000" />
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
+      <workItem from="1664451044886" duration="3068000" />
     </task>
     <task id="LOCAL−00001" summary="1st commit">
       <created>1664186218398</created>
@@ -286,6 +336,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Player.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
