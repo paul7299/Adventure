@@ -19,7 +19,7 @@ public class UserInterface {
         String userInput = "x";
 
         while (!userInput.equalsIgnoreCase("exit")) {
-            adventureController.getCurrentRoomName();
+            printCurrentRoomName();
             if (!adventureController.hasVisitedStatus()) {
                System.out.println(adventureController.player.look());
                 adventureController.setHasVisitedStatusToTrue();
