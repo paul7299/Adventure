@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +250,13 @@
       <option name="presentableId" value="LOCAL−00020" />
       <updated>1664450298008</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL−00021" summary="1">
+      <created>1664452076223</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1664452076223</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
