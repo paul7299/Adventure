@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Adventure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Door.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +247,13 @@
       <option name="project" value="LOCAL" />
       <updated>1664361481209</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL−00020" summary="1">
+      <created>1664450298008</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1664450298008</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +277,6 @@
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
     <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
     <MESSAGE value="test push" />
-    <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
@@ -282,7 +286,8 @@
     <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Omdøb Adventure til AdventureController, og omdøbt adventure objektet i UserInterface til adventureController" />
     <MESSAGE value="Omdøbt getHelp til printHelp()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Omdøbt getHelp til printHelp()" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

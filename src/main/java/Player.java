@@ -2,10 +2,10 @@ public class Player {
     Room currentRoom;
 
     //TODO constructor? (paul)
-    /* Constructor
+    // Constructor
     public Player(Room currentRoom) {
         this.currentRoom = currentRoom;
-    } */
+    }
 
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
