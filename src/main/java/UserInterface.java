@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
 public class UserInterface {
-   private Adventure adventure = new Adventure();
+   private AdventureController adventureController = new AdventureController();
+   private AdventureCreator adventureCreator = new AdventureCreator();
+   private Player player = new Player();
    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
-        adventure.createMap();
+        adventureCreator.createMap();
 
         System.out.println("""
                 Welcome to the game! Let's begin
@@ -20,9 +22,9 @@ public class UserInterface {
 
         while (!userInput.equalsIgnoreCase("exit")) {
             printCurrentRoomName();
-            if (!adventure.hasVisitedStatus()) {
-                System.out.println(adventure.look());
-                adventure.setHasVisitedStatusToTrue();
+            if (!adventureController.hasVisitedStatus()) {
+                System.out.println(adventureController.look());
+                adventureController.setHasVisitedStatusToTrue();
             }
             System.out.println("Choose an action");
             userInput = readString();
@@ -36,27 +38,27 @@ public class UserInterface {
         switch (userInput) {
             case "north", "n":
                 System.out.println("Going north");
-                adventure.goNorth();
+                adventureController.goNorth();
                 break;
             case "south", "s":
                 System.out.println("Going south");
-                adventure.goSouth();
+                adventureController.goSouth();
                 break;
             case "east", "e":
                 System.out.println("Going east");
-                adventure.goEast();
+                adventureController.goEast();
                 break;
             case "west", "w":
                 System.out.println("going west");
-                adventure.goWest();
+                adventureController.goWest();
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");
-                System.out.println(adventure.look());
-                adventure.getCurrentRoomDoors();
+                System.out.println(adventureController.look());
+                adventureController.getCurrentRoomDoors();
                 break;
             case "help":
-                System.out.println(getHelp());
+                System.out.println(printHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
@@ -76,11 +78,10 @@ public class UserInterface {
     }
 
     public void printCurrentRoomName() {
-        System.out.println("You are in " + adventure.getCurrentRoomName());
+        System.out.println("You are in " + player.getCurrentRoomNameFromPlayer());
     }
 
-    //TODO rename til printHelp()
-    public String getHelp() {
+    public String printHelp() {
         return
                 """
                          * Help - list of commands: *
