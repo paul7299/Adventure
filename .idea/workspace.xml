@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure_creator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Adventure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Door.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <option name="SHOW_DIALOG" value="false" />
