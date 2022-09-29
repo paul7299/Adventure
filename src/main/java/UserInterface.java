@@ -20,8 +20,7 @@ public class UserInterface {
 
         while (!userInput.equalsIgnoreCase("exit")) {
             printCurrentRoomName();
-            if (!adventureController.hasVisitedStatus());
-            {
+            if (!adventureController.hasVisitedStatus()) {
                System.out.println(adventureController.player.look());
                 adventureController.setHasVisitedStatusToTrue();
             }
