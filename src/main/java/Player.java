@@ -6,7 +6,7 @@ public class Player {
         currentRoom = startRoom;
     }
     //Loadbearing Constructor
-        public Player(){} 
+        public Player(){}
 
 
     public void goEast() {
