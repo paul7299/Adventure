@@ -1,13 +1,11 @@
 import java.util.Scanner;
 
 public class UserInterface {
-   private AdventureController adventureController = new AdventureController();
-   private AdventureCreator adventureCreator = new AdventureCreator();
-   private Player player = new Player();
+   private AdventureController adventureController;
    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
-        adventureCreator.createMap();
+        adventureController = new AdventureController();
 
         System.out.println("""
                 Welcome to the game! Let's begin
@@ -38,19 +36,19 @@ public class UserInterface {
         switch (userInput) {
             case "north", "n":
                 System.out.println("Going north");
-                adventureController.goNorth();
+                adventureController.player.goNorth();
                 break;
             case "south", "s":
                 System.out.println("Going south");
-                adventureController.goSouth();
+                adventureController.player.goSouth();
                 break;
             case "east", "e":
                 System.out.println("Going east");
-                adventureController.goEast();
+                adventureController.player.goEast();
                 break;
             case "west", "w":
                 System.out.println("going west");
-                adventureController.goWest();
+                adventureController.player.goWest();
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");

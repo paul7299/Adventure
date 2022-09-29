@@ -32,9 +32,6 @@ public class AdventureCreator {
         room7.setRooms(room4, null, room8, null);
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
-
-        this.player.currentRoom = room1;
-
     }
     //Denne metode bruges i AdventureController
     public Room getRoom1(){
