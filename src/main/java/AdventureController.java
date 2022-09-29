@@ -1,6 +1,7 @@
 public class AdventureController extends Player {
     Player player;
     AdventureCreator adventureCreator;
+    Room startRoom = adventureCreator.getRoom1();
 
 
     public AdventureController() {
