@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Refactoring færdiggjort">
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
-    </list>
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()" />
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
-    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
-    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
