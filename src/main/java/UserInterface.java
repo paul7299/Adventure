@@ -81,8 +81,9 @@ public class UserInterface {
    //TODO omkod
 
     public void printCurrentRoomName() {
-        System.out.println("You are in " + player.getCurrentRoomNameFromPlayer());
+        System.out.println("You are in " + adventureController.player.getCurrentRoomNameFromPlayer());
     }
+
 
     public String printHelp() {
         return

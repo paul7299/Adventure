@@ -2,16 +2,15 @@ public class AdventureCreator {
 
     //TODO Asger indsæt rum 1-9
     //TODO Asger indsæt createMap()
-    Room room1;
-    Room room2;
-    Room room3;
-    Room room4;
-    Room room5;
-    Room room6;
-    Room room7;
-    Room room8;
-    Room room9;
-    Player player;
+    private Room room1;
+    private Room room2;
+    private Room room3;
+    private Room room4;
+    private Room room5;
+    private Room room6;
+    private Room room7;
+    private Room room8;
+    private Room room9;
 
     public void createMap() {
         room1 = new Room("Room 1", "The first room.");
