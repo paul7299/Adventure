@@ -6,6 +6,7 @@ public class AdventureController extends Player {
 
     public AdventureController() {
         adventureCreator = new AdventureCreator();
+        adventureCreator.createMap();
         startRoom = adventureCreator.getRoom1();
         player = new Player(startRoom);
     }
@@ -39,3 +40,4 @@ public class AdventureController extends Player {
         return player.getCurrentRoom().getHasVisited();
     }
 }
+
