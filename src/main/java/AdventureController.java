@@ -6,7 +6,7 @@ public class AdventureController extends Player {
 
     public AdventureController() {
         adventureCreator = new AdventureCreator();
-        player = new Player(adventureCreator.getRoom1());
+        player = new Player(startRoom);
     }
 
     public String getCurrentRoomName(){
