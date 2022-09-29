@@ -37,5 +37,8 @@ public class AdventureCreator {
         this.player.currentRoom = room1;
 
     }
-
+    //Denne metode bruges i AdventureController
+    public Room getRoom1(){
+        return room1;
+    }
 }
