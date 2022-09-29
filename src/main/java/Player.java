@@ -1,6 +1,12 @@
 public class Player {
     Room currentRoom;
 
+    //TODO constructor? (paul)
+    /* Constructor
+    public Player(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    } */
+
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");

@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Adventure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Door.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,8 +120,6 @@
       <workItem from="1664185957055" duration="2357000" />
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
-      <workItem from="1664397554856" duration="19000" />
-      <workItem from="1664447686979" duration="3944000" />
     </task>
     <task id="LOCAL−00001" summary="1st commit">
       <created>1664186218398</created>
@@ -245,35 +248,7 @@
       <option name="project" value="LOCAL" />
       <updated>1664361481209</updated>
     </task>
-    <task id="LOCAL-00020" summary="AdventureController player. fejl opdateret så værdierne ikke er null">
-      <created>1664393003925</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1664393003925</updated>
-    </task>
-    <task id="LOCAL-00021" summary="AdventureController player. fejl opdateret så værdierne ikke er null">
-      <created>1664393025851</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1664393025851</updated>
-    </task>
-    <task id="LOCAL-00022" summary="stavefejl ændret">
-      <created>1664393329464</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1664393329464</updated>
-    </task>
-    <task id="LOCAL-00023" summary="1">
-      <created>1664451898724</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1664451898724</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +272,7 @@
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
     <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
     <MESSAGE value="test push" />
+    <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
@@ -306,10 +282,7 @@
     <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Omdøb Adventure til AdventureController, og omdøbt adventure objektet i UserInterface til adventureController" />
     <MESSAGE value="Omdøbt getHelp til printHelp()" />
-    <MESSAGE value="AdventureController player. fejl opdateret så værdierne ikke er null" />
-    <MESSAGE value="stavefejl ændret" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Omdøbt getHelp til printHelp()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
