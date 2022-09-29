@@ -1,6 +1,6 @@
 public class Player {
-    //TODO skal have currentRoom og goEast/North/South/West()
     Room currentRoom;
+
     public void goEast() {
         if (currentRoom.getRoomEast() == null) {
             System.out.println("You cannot go east from here");
@@ -33,8 +33,6 @@ public class Player {
     public String look() {
         return currentRoom.getRoomDescription();
     }
-
-    //TODO skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
