@@ -93,7 +93,10 @@ public class UserInterface {
                          - Go east:         east / e
                          - Go west:         west / w
                          - Look around:     look / l
-                         - Exit:            exit / e
+                         - Take item        take / t
+                         - Drop item        drop / d
+                         - view inventory   view i / i
+                         - Exit:            exit
                         """;
     }
 

@@ -44,7 +44,7 @@ public class Player {
             currentRoom = currentRoom.getRoomWest();
         }
     }
-    //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
+
     public String look() {
         return currentRoom.getRoomDescription();
     }
