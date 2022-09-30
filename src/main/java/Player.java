@@ -1,5 +1,12 @@
+import java.util.ArrayList;
+
 public class Player {
     Room currentRoom;
+
+    private ArrayList<Item> inventory = new ArrayList<>();
+    public ArrayList<Item> showInventory(){
+        return inventory;
+    }
 
     // Constructor
     public Player(Room startRoom) {
@@ -37,9 +44,13 @@ public class Player {
             currentRoom = currentRoom.getRoomWest();
         }
     }
-    //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
+
     public String look() {
-        return currentRoom.getRoomDescription();
+        if(currentRoom.getItemsInRoom().isEmpty())
+            return currentRoom.getRoomDescription() + "\n" + "there are no items in the room";
+        else
+            return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom();
+
     }
 
     public String getCurrentRoomNameFromPlayer() {
