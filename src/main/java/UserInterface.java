@@ -63,6 +63,19 @@ public class UserInterface {
                 System.out.println("*Exiting game*");
                 System.exit(0);
                 break;
+            case "take", "t":
+                System.out.println("Which item do you want to pick up?");
+                String takeName = sc.nextLine();
+                adventureController.pickUpItem(takeName);
+                break;
+            case "drop":
+                System.out.println("which item do you want to drop?");
+                String dropName = sc.nextLine();
+                adventureController.dropItem(dropName);
+                break;
+            case "View i", "i":
+                System.out.println("Your inventory contains: " + adventureController.player.showInventory());
+                break;
             default:
                 System.out.println("*Wrong input*");
                 break;
