@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Room {
 
     private String roomName;
@@ -7,6 +9,7 @@ public class Room {
     private Room roomEast;
     private Room roomWest;
     private Boolean hasVisited; //Denne bolean vil sige noget om man har besøget et rum før
+    private ArrayList<Item> itemsInRoom;
 
     public Room(String roomName, String roomDescription) {
         this.roomName = roomName;
@@ -29,6 +32,10 @@ public class Room {
         itemsInRoom.remove(foundIndex);
     }
 
+
+    public ArrayList<Item> getItemsInRoom() {
+        return itemsInRoom;
+    }
 
     public Room getRoomEast() {
         return roomEast;
@@ -68,6 +75,8 @@ public class Room {
         this.roomEast = roomEast;
         this.roomWest = roomWest;
     }
+
+
 //TODO Paul ik akut, lav setRoom op på Tines metode
     //Starter mmed at bruge en setter eks. seteast til at forbinde det valte rum med et rum i paramteren
     // Tjekker at det valgte rum (this) ikke er forbundet til parameter rummet (eks. setEast), this er ikke west

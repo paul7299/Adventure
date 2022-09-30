@@ -56,7 +56,7 @@ public class UserInterface {
                 System.out.println(adventureController.player.look());
                 adventureController.getCurrentRoomDoors();
                 break;
-            case "help":
+            case "help", "h":
                 System.out.println(printHelp());
                 break;
             case "exit":

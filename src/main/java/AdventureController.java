@@ -13,6 +13,14 @@ public class AdventureController extends Player {
         player = new Player(startRoom);
     }
 
+    public Item searchForItem(String searchName, ArrayList<Item> searchItemList) {
+        for (Item n : searchItemList) {
+            if (n.getItemName().contains(searchName)) {
+                return n;
+            }
+        } return null;
+    }
+
     public String getCurrentRoomName(){
         return player.getCurrentRoomNameFromPlayer();
     }

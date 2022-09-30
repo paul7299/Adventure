@@ -46,7 +46,11 @@ public class Player {
     }
 
     public String look() {
-        return currentRoom.getRoomDescription();
+        if(currentRoom.getItemsInRoom().isEmpty())
+            return currentRoom.getRoomDescription() + "\n" + "there are no items in the room";
+        else
+            return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom();
+
     }
 
     public String getCurrentRoomNameFromPlayer() {
