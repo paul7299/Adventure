@@ -1,5 +1,12 @@
+import java.util.ArrayList;
+
 public class Player {
     Room currentRoom;
+
+    private ArrayList<Item> inventory = new ArrayList<>();
+    public ArrayList<Item> showInventory(){
+        return inventory;
+    }
 
     // Constructor
     public Player(Room startRoom) {

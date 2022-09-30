@@ -16,7 +16,8 @@ public class UserInterface {
                 """);
 
 
-        String userInput = "x";
+        String userInput = " ";
+
 
         while (!userInput.equalsIgnoreCase("exit")) {
             printCurrentRoomName();

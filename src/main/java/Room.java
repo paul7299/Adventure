@@ -12,7 +12,23 @@ public class Room {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
         this.hasVisited = false; //hasVisited sættes false ved default fordi man ikke har besøgt et rum til at starte med
+        itemsInRoom = new ArrayList<Item>();
     }
+
+    public void addItemToRoom(String name){
+        itemsInRoom.add(new Item(name));
+    }
+
+    public void deleteItemFromRoom(String name){
+        int foundIndex = -1;
+        for (int i = 0; i < itemsInRoom.size(); i++) {
+            if (itemsInRoom.get(i).getItemName().contains(name)) {
+                foundIndex = i;
+            }
+        }
+        itemsInRoom.remove(foundIndex);
+    }
+
 
     public Room getRoomEast() {
         return roomEast;
