@@ -7,30 +7,23 @@
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Room.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
-    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
-    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat">
+    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie">
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk">
       <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,36 +48,51 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/main/java/Player.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="2" end1="2" start2="4" end2="9" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="39" end1="40" start2="46" end2="47" changelist="2096efe7-2e59-4a5e-88fa-b49b50f35d95" />
-        <range start1="41" end1="42" start2="48" end2="53" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Room.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="9" end1="9" start2="11" end2="12" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="14" end1="14" start2="17" end2="18" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="15" end1="15" start2="19" end2="34" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="16" end1="16" start2="35" end2="39" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="54" end1="54" start2="77" end2="79" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+        <range start1="3" end1="4" start2="3" end2="4" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="18" end1="26" start2="18" end2="20" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="27" end1="28" start2="21" end2="22" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="29" end1="29" start2="23" end2="24" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="30" end1="31" start2="25" end2="26" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="32" end1="33" start2="27" end2="30" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="34" end1="35" start2="31" end2="32" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="36" end1="36" start2="33" end2="34" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="37" end1="38" start2="35" end2="36" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="39" end1="40" start2="37" end2="50" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="41" end1="41" start2="51" end2="52" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="43" end1="43" start2="54" end2="55" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="44" end1="45" start2="56" end2="57" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="58" end1="58" start2="70" end2="74" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="62" end1="62" start2="78" end2="116" changelist="e69926f4-db78-4423-b548-04f7641fb5c7" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/java/AdventureController.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="13" end1="13" start2="15" end2="23" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="16" end1="16" start2="26" end2="50" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="41" end1="41" start2="75" end2="78" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="2" end1="3" start2="2" end2="3" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="12" end1="13" start2="12" end2="13" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="15" end1="21" start2="15" end2="25" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="22" end1="22" start2="26" end2="31" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="26" end1="50" start2="35" end2="35" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="68" end1="69" start2="53" end2="54" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="73" end1="74" start2="58" end2="59" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="76" end1="77" start2="61" end2="70" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
       <ranges>
-        <range start1="18" end1="19" start2="18" end2="20" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="57" end1="58" start2="58" end2="59" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="64" end1="64" start2="65" end2="78" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
-        <range start1="94" end1="95" start2="108" end2="112" changelist="2096efe7-2e59-4a5e-88fa-b49b50f35d95" />
+        <range start1="3" end1="5" start2="3" end2="5" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="24" end1="25" start2="24" end2="25" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="34" end1="35" start2="34" end2="35" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="38" end1="40" start2="38" end2="39" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="42" end1="44" start2="41" end2="42" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="46" end1="48" start2="44" end2="46" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="51" end1="52" start2="49" end2="50" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="55" end1="56" start2="53" end2="54" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="81" end1="82" start2="79" end2="80" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="85" end1="90" start2="83" end2="88" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="92" end1="93" start2="90" end2="91" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="94" end1="97" start2="92" end2="95" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="99" end1="115" start2="97" end2="112" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="116" end1="116" start2="113" end2="114" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
       </ranges>
     </file>
   </component>
@@ -108,6 +116,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/paulk/KEA Programmer/TLLoevkilde Adventure",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

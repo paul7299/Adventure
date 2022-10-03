@@ -36,20 +36,16 @@ public class UserInterface {
 
         switch (userInput) {
             case "north", "n":
-                System.out.println("Going north");
-                adventureController.player.goNorth();
+                System.out.println(adventureController.playerGoNorth());
                 break;
             case "south", "s":
-                System.out.println("Going south");
-                adventureController.player.goSouth();
+                System.out.println(adventureController.playerGoSouth());
                 break;
             case "east", "e":
-                System.out.println("Going east");
-                adventureController.player.goEast();
+                System.out.println(adventureController.playerGoEast());
                 break;
             case "west", "w":
-                System.out.println("going west");
-                adventureController.player.goWest();
+                System.out.println(adventureController.playerGoWest());
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");
@@ -79,7 +75,7 @@ public class UserInterface {
             default:
                 System.out.println("*Wrong input*");
                 break;
-            }
+        }
 
     }
 

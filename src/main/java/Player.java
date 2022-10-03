@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Player {
-    Room currentRoom;
+    private Room currentRoom;
 
     private ArrayList<Item> inventory = new ArrayList<>();
     public ArrayList<Item> showInventory(){
@@ -16,33 +16,45 @@ public class Player {
         public Player(){}
 
 
-    public void goEast() {
-        if (currentRoom.getRoomEast() == null) {
-            System.out.println("You cannot go east from here");
-        } else {
-            currentRoom = currentRoom.getRoomEast();
-        }
-    }
-    public void goNorth() {
+    public String goNorth() {
+        String goingNorth;
         if (currentRoom.getRoomNorth() == null) {
-            System.out.println("You cannot go north from here");
+            goingNorth = "* You cannot go north from here *";
         } else {
+            goingNorth = "* Going north *";
             currentRoom = currentRoom.getRoomNorth();
-        }
+        } return goingNorth;
     }
-    public void goSouth() {
+
+    public String goSouth() {
+        String goingSouth;
         if (currentRoom.getRoomSouth() == null) {
-            System.out.println("You cannot go south from here");
+            goingSouth = "* You cannot go south from here *";
         } else {
+            goingSouth = "* Going south *";
             currentRoom = currentRoom.getRoomSouth();
-        }
+        } return goingSouth;
     }
-    public void goWest() {
+
+    public String goEast() {
+        String goingEast;
+        if (currentRoom.getRoomEast() == null) {
+            goingEast = "* You cannot go east from here *";
+        } else {
+            goingEast = "* Going east *";
+            currentRoom = currentRoom.getRoomEast();
+        } return goingEast;
+    }
+
+    public String goWest() {
+        String goingWest;
         if (currentRoom.getRoomWest() == null) {
+            goingWest = "* You cannot go west from here *";
             System.out.println("You cannot go west from here");
         } else {
+            goingWest = "* Going west *";
             currentRoom = currentRoom.getRoomWest();
-        }
+        } return goingWest;
     }
 
     public String look() {

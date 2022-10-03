@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class AdventureController extends Player {
+public class AdventureController {
     Player player;
     AdventureCreator adventureCreator;
     Room startRoom;
@@ -10,43 +10,28 @@ public class AdventureController extends Player {
         adventureCreator = new AdventureCreator();
         adventureCreator.createMap();
         startRoom = adventureCreator.getRoom1();
-        player = new Player(startRoom);
+        player = new Player( startRoom);
     }
 
-    public Item searchForItem(String searchName, ArrayList<Item> searchItemList) {
-        for (Item n : searchItemList) {
-            if (n.getItemName().contains(searchName)) {
-                return n;
-            }
-        } return null;
+    public String playerGoNorth() {
+        return player.goNorth();
     }
+
+    public String playerGoSouth() {
+        return player.goSouth();
+    }
+
+    public String playerGoEast() {
+        return player.goEast();
+    }
+
+    public String playerGoWest() {
+        return player.goWest();
+    }
+
 
     public String getCurrentRoomName(){
         return player.getCurrentRoomNameFromPlayer();
-    }
-
-    public void dropItem(String name) {
-        Item itemToTransfer = searchForItem(name, player.showInventory());
-        if(itemToTransfer == null){
-            System.out.println("No item found");
-        }
-        else {
-            player.showInventory().remove(itemToTransfer);
-            player.getCurrentRoom().getItemsInRoom().add(itemToTransfer);
-            System.out.println("You have dropped " + itemToTransfer.getItemName() + " in " + player.currentRoom.getRoomName());
-        }
-    }
-
-    public void pickUpItem(String name) {
-
-        Item itemToTransfer = searchForItem(name, player.getCurrentRoom().getItemsInRoom());
-        if (itemToTransfer == null) {
-            System.out.println("No item found");
-        } else {
-            player.showInventory().add(itemToTransfer);
-            player.getCurrentRoom().getItemsInRoom().remove(itemToTransfer);
-            System.out.println("You have picked up " + itemToTransfer.getItemName());
-        }
     }
 
     //Skal bruges senere til døre
@@ -74,7 +59,15 @@ public class AdventureController extends Player {
         return player.getCurrentRoom().getHasVisited();
     }
 
-
+    public String look(){
+       return player.look();
+    }
+    public String pickUpItem(String name){
+        return player.pickUpItem(name);
+    }
+    public String dropItem(String name){
+        return player.dropItem(name);
+    }
 
 }
 
