@@ -77,5 +77,43 @@ public class Player {
         return currentRoom;
     }
 
+    public boolean getHasVisitedStatus(){
+        return currentRoom.getHasVisited();
+    }
+
+    public Item searchForItem(String searchName) {
+        for (Item n : inventory) {
+            if (n.getItemName().contains(searchName)) {
+                return n;
+            }
+        }
+        return null;
+    }
+// TODO Asger
+    public String pickUpItem(String name) {
+        Item itemToTransfer = searchForItem(name);
+        String e;
+        if (itemToTransfer == null) {
+            e = "No item found";
+        } else {
+            inventory.add(itemToTransfer);
+            currentRoom.getItemsInRoom().remove(itemToTransfer);
+            e = ("You have picked up " + itemToTransfer.getItemName());
+        }
+        return e;
+    }
+    // TODO Asger
+    public String dropItem(String name) {
+        Item itemToTransfer = searchForItem(name);
+        if (itemToTransfer == null) {
+            return "No item found";
+        } else {
+            inventory.remove(itemToTransfer);
+            currentRoom.getItemsInRoom().add(itemToTransfer);
+            return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName());
+        }
+    }
+
+
 
 }
