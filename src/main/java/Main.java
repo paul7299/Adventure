@@ -12,7 +12,7 @@ public class Main {
 /* TODO
 
 
-    Klasse: Item
+        Klasse: Item
 
         arraylist item room
         arraylist item player (inventory)
