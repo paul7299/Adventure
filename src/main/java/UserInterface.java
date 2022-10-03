@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class UserInterface {
-   private AdventureController adventureController;
-   private Scanner sc = new Scanner(System.in);
+    private AdventureController adventureController;
+    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
         adventureController = new AdventureController();
@@ -22,7 +22,7 @@ public class UserInterface {
         while (!userInput.equalsIgnoreCase("exit")) {
             printCurrentRoomName();
             if (!adventureController.hasVisitedStatus()) {
-               System.out.println(adventureController.player.look());
+                System.out.println(adventureController.look());
                 adventureController.setHasVisitedStatusToTrue();
             }
             System.out.println("Choose an action");
@@ -32,7 +32,7 @@ public class UserInterface {
         }
     }
 
-    private void command(String userInput){
+    private void command(String userInput) {
 
         switch (userInput) {
             case "north", "n":
@@ -49,7 +49,7 @@ public class UserInterface {
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");
-                System.out.println(adventureController.player.look());
+                System.out.println("\t" + adventureController.look());
                 adventureController.getCurrentRoomDoors();
                 break;
             case "help", "h":
@@ -79,35 +79,35 @@ public class UserInterface {
 
     }
 
-    //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-    public String readString() {
-        String stringToLowercase = sc.nextLine();
-        return stringToLowercase.toLowerCase();
-    }
+        //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
+        public String readString () {
+            String stringToLowercase = sc.nextLine();
+            return stringToLowercase.toLowerCase();
+        }
 
 
-   //TODO omkod
+        //TODO omkod
 
-    public void printCurrentRoomName() {
-        System.out.println("You are in " + adventureController.player.getCurrentRoomNameFromPlayer());
-    }
+        public void printCurrentRoomName () {
+            System.out.println("You are in " + adventureController.getCurrentRoomName());
+        }
 
 
-    public String printHelp() {
-        return
-                """
-                         * Help - list of commands: *
-                         - Go north:        north / n
-                         - Go south:        south / s
-                         - Go east:         east / e
-                         - Go west:         west / w
-                         - Look around:     look / l
-                         - Take item        take / t
-                         - Drop item        drop / d
-                         - view inventory   view i / i
-                         - Exit:            exit
-                        """;
-    }
-
+        public String printHelp () {
+            return
+                    """
+                             * Help - list of commands: *
+                             - Go north:        north / n
+                             - Go south:        south / s
+                             - Go east:         east / e
+                             - Go west:         west / w
+                             - Look around:     look / l
+                             - Take item        take / t
+                             - Drop item        drop / d
+                             - view inventory   view i / i
+                             - Exit:            exit
+                            """;
+        }
 }
+
 

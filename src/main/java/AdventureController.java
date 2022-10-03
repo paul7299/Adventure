@@ -51,12 +51,12 @@ public class AdventureController {
     }
 
     public void setHasVisitedStatusToTrue() {
-        player.getCurrentRoom().setHasVisitedToTrue();
+        player.setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
     public Boolean hasVisitedStatus() {
-        return player.getCurrentRoom().getHasVisited();
+        return player.getHasVisitedStatus();
     }
 
     public String look(){

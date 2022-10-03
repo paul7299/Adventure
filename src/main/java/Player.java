@@ -69,6 +69,10 @@ public class Player {
         return currentRoom.getRoomName();
     }
 
+    public void setHasVisitedToTrue(){
+        currentRoom.setHasVisitedToTrue();
+    }
+
     public Room getCurrentRoom(){
         return currentRoom;
     }
