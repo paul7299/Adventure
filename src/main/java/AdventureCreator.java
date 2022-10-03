@@ -32,6 +32,18 @@ public class AdventureCreator {
         room7.setRooms(room4, null, room8, null);
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
+
+        room1.getItemsInRoom().add(new Item("lamp"));
+        room2.getItemsInRoom().add(new Item("terning"));
+        room3.getItemsInRoom().add(new Item("a big green tuborg"));
+        room4.getItemsInRoom().add(new Item("a bloody axe"));
+        room5.getItemsInRoom().add(new Item("lampe"));
+        room6.getItemsInRoom().add(new Item("lampe"));
+        room7.getItemsInRoom().add(new Item("lampe"));
+        room8.getItemsInRoom().add(new Item("lampe"));
+        room9.getItemsInRoom().add(new Item("lampe"));
+
+
     }
     //Denne metode bruges i AdventureController
     public Room getRoom1(){
