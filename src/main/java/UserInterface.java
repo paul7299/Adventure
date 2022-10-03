@@ -20,9 +20,11 @@ public class UserInterface {
 
 
         while (!userInput.equalsIgnoreCase("exit")) {
-            printCurrentRoomName();
+
+            System.out.println("You are in " + adventureController.getCurrentRoomName());
+
             if (!adventureController.hasVisitedStatus()) {
-                System.out.println(adventureController.look());
+                System.out.println(adventureController.playerLook());
                 adventureController.setHasVisitedStatusToTrue();
             }
             System.out.println("Choose an action");
@@ -49,7 +51,7 @@ public class UserInterface {
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");
-                System.out.println("\t" + adventureController.look());
+                System.out.println("\t" + adventureController.playerLook());
                 adventureController.getCurrentRoomDoors();
                 break;
             case "help", "h":
@@ -83,13 +85,6 @@ public class UserInterface {
         public String readString () {
             String stringToLowercase = sc.nextLine();
             return stringToLowercase.toLowerCase();
-        }
-
-
-        //TODO omkod
-
-        public void printCurrentRoomName () {
-            System.out.println("You are in " + adventureController.getCurrentRoomName());
         }
 
 

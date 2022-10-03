@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 
 public class Player {
-    private Room currentRoom;
 
+    private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
+
     public ArrayList<Item> showInventory(){
         return inventory;
     }
@@ -17,44 +18,43 @@ public class Player {
 
 
     public String goNorth() {
-        String goingNorth;
+        String goingNorthResult;
         if (currentRoom.getRoomNorth() == null) {
-            goingNorth = "* You cannot go north from here *";
+            goingNorthResult = "* You cannot go north from here *";
         } else {
-            goingNorth = "* Going north *";
+            goingNorthResult = "* Going north *";
             currentRoom = currentRoom.getRoomNorth();
-        } return goingNorth;
+        } return goingNorthResult;
     }
 
     public String goSouth() {
-        String goingSouth;
+        String goingSouthResult;
         if (currentRoom.getRoomSouth() == null) {
-            goingSouth = "* You cannot go south from here *";
+            goingSouthResult = "* You cannot go south from here *";
         } else {
-            goingSouth = "* Going south *";
+            goingSouthResult = "* Going south *";
             currentRoom = currentRoom.getRoomSouth();
-        } return goingSouth;
+        } return goingSouthResult;
     }
 
     public String goEast() {
-        String goingEast;
+        String goingEastResult;
         if (currentRoom.getRoomEast() == null) {
-            goingEast = "* You cannot go east from here *";
+            goingEastResult = "* You cannot go east from here *";
         } else {
-            goingEast = "* Going east *";
+            goingEastResult = "* Going east *";
             currentRoom = currentRoom.getRoomEast();
-        } return goingEast;
+        } return goingEastResult;
     }
 
     public String goWest() {
-        String goingWest;
+        String goingWestResult;
         if (currentRoom.getRoomWest() == null) {
-            goingWest = "* You cannot go west from here *";
-            System.out.println("You cannot go west from here");
+            goingWestResult = "* You cannot go west from here *";
         } else {
-            goingWest = "* Going west *";
+            goingWestResult = "* Going west *";
             currentRoom = currentRoom.getRoomWest();
-        } return goingWest;
+        } return goingWestResult;
     }
 
     public String look() {
@@ -89,6 +89,7 @@ public class Player {
         }
         return null;
     }
+
 // TODO Asger
     public String pickUpItem(String name) {
         Item itemToTransfer = searchForItem(name);

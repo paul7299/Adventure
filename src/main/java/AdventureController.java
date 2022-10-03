@@ -59,7 +59,7 @@ public class AdventureController {
         return player.getHasVisitedStatus();
     }
 
-    public String look(){
+    public String playerLook(){
        return player.look();
     }
     public String pickUpItem(String name){

@@ -18,6 +18,8 @@ public class Room {
         itemsInRoom = new ArrayList<Item>();
     }
 
+
+    // TODO vi bruger ikke disse 2 metoder?
     public void addItemToRoom(String name){
         itemsInRoom.add(new Item(name));
     }
