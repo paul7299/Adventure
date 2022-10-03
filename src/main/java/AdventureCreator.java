@@ -33,15 +33,16 @@ public class AdventureCreator {
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
 
-        room1.getItemsInRoom().add(new Item("lamp"));
-        room2.getItemsInRoom().add(new Item("terning"));
-        room3.getItemsInRoom().add(new Item("a big green tuborg"));
-        room4.getItemsInRoom().add(new Item("a bloody axe"));
-        room5.getItemsInRoom().add(new Item("lampe"));
-        room6.getItemsInRoom().add(new Item("lampe"));
-        room7.getItemsInRoom().add(new Item("lampe"));
-        room8.getItemsInRoom().add(new Item("lampe"));
-        room9.getItemsInRoom().add(new Item("lampe"));
+        room1.getItemsInRoom().add(new Item("lamp", "an incrediby boring lamp"));
+        room1.getItemsInRoom().add(new Item("coins", "10 danish crowns"));
+        room2.getItemsInRoom().add(new Item("terning", "a danish terning"));
+        room3.getItemsInRoom().add(new Item("a tuborg", "a green bottle of stale beer"));
+        room4.getItemsInRoom().add(new Item("an axe", "an old rusty axe"));
+        room5.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
+        room6.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
+        room7.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
+        room8.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
+        room9.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
 
 
     }

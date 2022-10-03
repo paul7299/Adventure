@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class AdventureController {
     Player player;
     AdventureCreator adventureCreator;
@@ -30,7 +28,7 @@ public class AdventureController {
     }
 
 
-    public String getCurrentRoomName(){
+    public String getplayerCurrentRoomName(){
         return player.getCurrentRoomNameFromPlayer();
     }
 

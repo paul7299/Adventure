@@ -20,7 +20,7 @@ public class Room {
 
 
     // TODO vi bruger ikke disse 2 metoder?
-    public void addItemToRoom(String name){
+     /* public void addItemToRoom(String name){
         itemsInRoom.add(new Item(name));
     }
 
@@ -32,7 +32,7 @@ public class Room {
             }
         }
         itemsInRoom.remove(foundIndex);
-    }
+    } */
 
 
     public ArrayList<Item> getItemsInRoom() {

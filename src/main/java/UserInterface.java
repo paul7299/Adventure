@@ -21,7 +21,7 @@ public class UserInterface {
 
         while (!userInput.equalsIgnoreCase("exit")) {
 
-            System.out.println("You are in " + adventureController.getCurrentRoomName());
+            System.out.println("You are in " + adventureController.getplayerCurrentRoomName());
 
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
@@ -64,12 +64,12 @@ public class UserInterface {
             case "take", "t":
                 System.out.println("Which item do you want to pick up?");
                 String takeName = sc.nextLine();
-                adventureController.pickUpItem(takeName);
+                System.out.println(adventureController.pickUpItem(takeName));
                 break;
             case "drop":
-                System.out.println("which item do you want to drop?");
+                System.out.println("Which item do you want to drop?");
                 String dropName = sc.nextLine();
-                adventureController.dropItem(dropName);
+                System.out.println(adventureController.dropItem(dropName));
                 break;
             case "View i", "i":
                 System.out.println("Your inventory contains: " + adventureController.player.showInventory());
