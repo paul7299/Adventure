@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -18,19 +19,26 @@ public class UserInterface {
 
         String userInput = " ";
 
-
         while (!userInput.equalsIgnoreCase("exit")) {
 
-            System.out.println("You are in " + adventureController.getplayerCurrentRoomName());
+            System.out.println("You are in " + adventureController.getPlayerCurrentRoomName());
+
+
+            System.out.println("Choose an action");
+            userInput = readString();
+
+            command(userInput);
 
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
                 adventureController.setHasVisitedStatusToTrue();
             }
-            System.out.println("Choose an action");
-            userInput = readString();
+            if (adventureController.hasVisitedStatus()) {
+                for (String s : adventureController.getCurrentRoomDoors()) {
+                    if (s != null) System.out.println(s);
+                }
+            }
 
-            command(userInput);
         }
     }
 
@@ -71,8 +79,8 @@ public class UserInterface {
                 String dropName = sc.nextLine();
                 System.out.println(adventureController.dropItem(dropName));
                 break;
-            case "View i", "i":
-                System.out.println("Your inventory contains: " + adventureController.player.showInventory());
+            case "Inventory", "i":
+                System.out.println("Your inventory contains: " + adventureController.showInventory());
                 break;
             default:
                 System.out.println("*Wrong input*");
@@ -81,28 +89,27 @@ public class UserInterface {
 
     }
 
-        //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-        public String readString () {
-            String stringToLowercase = sc.nextLine();
-            return stringToLowercase.toLowerCase();
-        }
+    //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
+    public String readString() {
+        String stringToLowercase = sc.nextLine();
+        return stringToLowercase.toLowerCase();
+    }
 
 
-        public String printHelp () {
-            return
-                    """
-                             * Help - list of commands: *
-                             - Go north:        north / n
-                             - Go south:        south / s
-                             - Go east:         east / e
-                             - Go west:         west / w
-                             - Look around:     look / l
-                             - Take item        take / t
-                             - Drop item        drop / d
-                             - view inventory   view i / i
-                             - Exit:            exit
-                            """;
-        }
+    public String printHelp() {
+        return """
+                 * Help - list of commands: *
+                 - Go north:        north / n
+                 - Go south:        south / s
+                 - Go east:         east / e
+                 - Go west:         west / w
+                 - Look around:     look / l
+                 - Take item        take / t
+                 - Drop item        drop / d
+                 - view inventory   inventory / i
+                 - Exit:            exit
+                """;
+    }
 }
 
 

@@ -22,16 +22,6 @@ public class Room {
     // TODO vi bruger ikke disse 2 metoder?
      /* public void addItemToRoom(String name){
         itemsInRoom.add(new Item(name));
-    }
-
-    public void deleteItemFromRoom(String name){
-        int foundIndex = -1;
-        for (int i = 0; i < itemsInRoom.size(); i++) {
-            if (itemsInRoom.get(i).getItemName().contains(name)) {
-                foundIndex = i;
-            }
-        }
-        itemsInRoom.remove(foundIndex);
     } */
 
 

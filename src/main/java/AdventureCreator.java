@@ -1,7 +1,5 @@
 public class AdventureCreator {
 
-    //TODO Asger indsæt rum 1-9
-    //TODO Asger indsæt createMap()
     private Room room1;
     private Room room2;
     private Room room3;
@@ -43,11 +41,10 @@ public class AdventureCreator {
         room7.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
         room8.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
         room9.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
-
-
     }
+
     //Denne metode bruges i AdventureController
-    public Room getRoom1(){
+    public Room getRoom1() {
         return room1;
     }
 }

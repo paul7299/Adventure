@@ -5,7 +5,7 @@ public class Player {
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
 
-    public ArrayList<Item> showInventory(){
+    public ArrayList<Item> showInventory() {
         return inventory;
     }
 
@@ -13,8 +13,10 @@ public class Player {
     public Player(Room startRoom) {
         currentRoom = startRoom;
     }
+
     //Loadbearing Constructor
-        public Player(){}
+    public Player() {
+    }
 
 
     public String goNorth() {
@@ -24,7 +26,8 @@ public class Player {
         } else {
             goingNorthResult = "* Going north *";
             currentRoom = currentRoom.getRoomNorth();
-        } return goingNorthResult;
+        }
+        return goingNorthResult;
     }
 
     public String goSouth() {
@@ -34,7 +37,8 @@ public class Player {
         } else {
             goingSouthResult = "* Going south *";
             currentRoom = currentRoom.getRoomSouth();
-        } return goingSouthResult;
+        }
+        return goingSouthResult;
     }
 
     public String goEast() {
@@ -44,7 +48,8 @@ public class Player {
         } else {
             goingEastResult = "* Going east *";
             currentRoom = currentRoom.getRoomEast();
-        } return goingEastResult;
+        }
+        return goingEastResult;
     }
 
     public String goWest() {
@@ -54,11 +59,12 @@ public class Player {
         } else {
             goingWestResult = "* Going west *";
             currentRoom = currentRoom.getRoomWest();
-        } return goingWestResult;
+        }
+        return goingWestResult;
     }
 
     public String look() {
-        if(currentRoom.getItemsInRoom().isEmpty())
+        if (currentRoom.getItemsInRoom().isEmpty())
             return currentRoom.getRoomDescription() + "\n" + "there are no items in the room";
         else
             return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom();
@@ -69,20 +75,20 @@ public class Player {
         return currentRoom.getRoomName();
     }
 
-    public void setHasVisitedToTrue(){
+    public void setHasVisitedToTrue() {
         currentRoom.setHasVisitedToTrue();
     }
 
-    public Room getCurrentRoom(){
+    public Room getCurrentRoom() {
         return currentRoom;
     }
 
-    public boolean getHasVisitedStatus(){
+    public boolean getHasVisitedStatus() {
         return currentRoom.getHasVisited();
     }
 
     public Item searchForItem(String searchName) {
-        for (Item n : inventory) {
+        for (Item n : currentRoom.getItemsInRoom()) {
             if (n.getItemName().contains(searchName)) {
                 return n;
             }
@@ -90,7 +96,7 @@ public class Player {
         return null;
     }
 
-// TODO Asger
+    // TODO Asger
     public String pickUpItem(String name) {
         Item itemToTransfer = searchForItem(name);
         String e;
@@ -103,6 +109,7 @@ public class Player {
         }
         return e;
     }
+
     // TODO Asger
     public String dropItem(String name) {
         Item itemToTransfer = searchForItem(name);
@@ -115,6 +122,27 @@ public class Player {
         }
     }
 
+    public String[] getCurrentRoomDoors() {
+        String doorNorth = null;
+        String doorSouth = null;
+        String doorEast = null;
+        String doorWest = null;
 
+        if (currentRoom.getRoomNorth() != null) {
+            doorNorth = ("There is a door North");
+        }
+        if (currentRoom.getRoomSouth() != null) {
+            doorSouth = ("There is a door South");
+        }
+        if (currentRoom.getRoomEast() != null) {
+            doorEast = ("There is a door East");
+        }
+        if (currentRoom.getRoomWest() != null) {
+            doorWest = ("There is a door West");
+        }
+
+        return new String[]{doorNorth, doorSouth, doorEast, doorWest};
+
+    }
 
 }
