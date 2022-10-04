@@ -23,12 +23,6 @@ public class UserInterface {
 
             System.out.println("You are in " + adventureController.getPlayerCurrentRoomName());
 
-
-            System.out.println("Choose an action");
-            userInput = readString();
-
-            command(userInput);
-
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
                 adventureController.setHasVisitedStatusToTrue();
@@ -37,6 +31,13 @@ public class UserInterface {
                 for (String s : adventureController.getCurrentRoomDoors()) {
                     if (s != null) System.out.println(s);
                 }
+
+            System.out.println("Choose an action");
+            userInput = readString();
+
+            command(userInput);
+
+
             }
 
         }

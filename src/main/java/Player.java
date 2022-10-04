@@ -12,6 +12,7 @@ public class Player {
     // Constructor
     public Player(Room startRoom) {
         currentRoom = startRoom;
+     //   currentRoom.setHasVisitedToTrue();
     }
 
     //Loadbearing Constructor
