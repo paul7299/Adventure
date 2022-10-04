@@ -21,7 +21,7 @@ public class UserInterface {
 
         while (!userInput.equalsIgnoreCase("exit")) {
 
-            System.out.println("You are in " + adventureController.getPlayerCurrentRoomName());
+            System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
 
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
@@ -80,8 +80,17 @@ public class UserInterface {
                 String dropName = sc.nextLine();
                 System.out.println(adventureController.dropItem(dropName));
                 break;
-            case "Inventory", "i":
+            case "inventory", "i":
                 System.out.println("Your inventory contains: " + adventureController.showInventory());
+                break;
+            case "eat food", "eat":
+                System.out.println("What do you want to eat?");
+                String eatName = sc.nextLine();
+                System.out.println(adventureController.eatFood(eatName));
+                System.out.println("\n" + adventureController.showHealth());
+                break;
+            case "player health", "health":
+                System.out.println(adventureController.showHealth());
                 break;
             default:
                 System.out.println("*Wrong input*");
@@ -108,6 +117,8 @@ public class UserInterface {
                  - Take item        take / t
                  - Drop item        drop / d
                  - view inventory   inventory / i
+                 - Eat food         Eat food / eat 
+                 - Player health    Player health / health 
                  - Exit:            exit
                 """;
     }
