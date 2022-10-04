@@ -61,6 +61,5 @@ public class AdventureController {
     public String dropItem(String name) {
         return player.dropItem(name);
     }
-
 }
 

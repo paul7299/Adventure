@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
 
+    private int playerHealth;
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
 
@@ -141,9 +142,11 @@ public class Player {
         if (currentRoom.getRoomWest() != null) {
             doorWest = ("There is a door West");
         }
-
         return new String[]{doorNorth, doorSouth, doorEast, doorWest};
+    }
 
+    public int getPlayerHealth(){
+        return playerHealth;
     }
 
 }

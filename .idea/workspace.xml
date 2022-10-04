@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FoodTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Adventure_creator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
-    <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
+    <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    </list>
     <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -34,6 +41,19 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="13" end1="15" start2="14" end2="16" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="17" end1="18" start2="18" end2="19" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="19" end1="20" start2="20" end2="22" changelist="85294b13-0b64-4501-887d-e15068d3aa21" />
+        <range start1="143" end1="144" start2="145" end2="145" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="145" end1="146" start2="146" end2="146" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="147" end1="147" start2="147" end2="151" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,6 +113,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FoodTest.eatFood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Adventure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FoodTest" />
+      <option name="METHOD_NAME" value="eatFood" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodTest.pickUpFood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Adventure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FoodTest" />
+      <option name="METHOD_NAME" value="pickUpFood" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoomTest.setRooms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Adventure" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,10 +145,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FoodTest.pickUpFood" />
+        <item itemvalue="JUnit.FoodTest.eatFood" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RoomTest.setRooms" />
-        <item itemvalue="JUnit.AdventureTest.goEast" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AdventureTest.goEast" />
       </list>
     </recent_temporary>
@@ -343,7 +383,14 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1664797539977</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="1">
+      <created>1664883568007</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664883568007</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,11 +424,11 @@
     <MESSAGE value="Changes by jonat" />
     <MESSAGE value="Refactoring færdiggjort" />
     <MESSAGE value="Changes by paulk" />
-    <MESSAGE value="1" />
     <MESSAGE value="Changes by Let me iiiiiiiiiin!" />
     <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Refactored all go-methods according to opgave 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored all go-methods according to opgave 2" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
