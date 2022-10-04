@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 
-public class AdventureController extends Player {
+public class AdventureController {
+    Room startRoom;
     Player player;
     AdventureCreator adventureCreator;
-    Room startRoom;
-
 
     public AdventureController() {
         adventureCreator = new AdventureCreator();
@@ -13,68 +12,55 @@ public class AdventureController extends Player {
         player = new Player(startRoom);
     }
 
-    public Item searchForItem(String searchName, ArrayList<Item> searchItemList) {
-        for (Item n : searchItemList) {
-            if (n.getItemName().contains(searchName)) {
-                return n;
-            }
-        } return null;
+    public String playerGoNorth() {
+        return player.goNorth();
     }
 
-    public String getCurrentRoomName(){
+    public String playerGoSouth() {
+        return player.goSouth();
+    }
+
+    public String playerGoEast() {
+        return player.goEast();
+    }
+
+    public String playerGoWest() {
+        return player.goWest();
+    }
+
+    public String getPlayerCurrentRoomName() {
         return player.getCurrentRoomNameFromPlayer();
     }
 
-    public void dropItem(String name) {
-        Item itemToTransfer = searchForItem(name, player.showInventory());
-        if(itemToTransfer == null){
-            System.out.println("No item found");
-        }
-        else {
-            player.showInventory().remove(itemToTransfer);
-            player.getCurrentRoom().getItemsInRoom().add(itemToTransfer);
-            System.out.println("You have dropped " + itemToTransfer.getItemName() + " in " + player.currentRoom.getRoomName());
-        }
-    }
-
-    public void pickUpItem(String name) {
-
-        Item itemToTransfer = searchForItem(name, player.getCurrentRoom().getItemsInRoom());
-        if (itemToTransfer == null) {
-            System.out.println("No item found");
-        } else {
-            player.showInventory().add(itemToTransfer);
-            player.getCurrentRoom().getItemsInRoom().remove(itemToTransfer);
-            System.out.println("You have picked up " + itemToTransfer.getItemName());
-        }
-    }
-
     //Skal bruges senere til døre
-    public void getCurrentRoomDoors() {
-        if (player.getCurrentRoom().getRoomNorth() != null) {
-            System.out.println("There is a door north");
-        }
-        if (player.getCurrentRoom().getRoomSouth() != null) {
-            System.out.println("There is a door south");
-        }
-        if (player.getCurrentRoom().getRoomEast() != null) {
-            System.out.println("There is a door east");
-        }
-        if (player.getCurrentRoom().getRoomWest() != null) {
-            System.out.println("There is a door west");
-        }
+    public String[] getCurrentRoomDoors() {
+        return player.getCurrentRoomDoors();
     }
 
     public void setHasVisitedStatusToTrue() {
-        player.getCurrentRoom().setHasVisitedToTrue();
+        player.setHasVisitedToTrue();
     }
 
     //bruges til at tjekke om man har besøgt et rum før
     public Boolean hasVisitedStatus() {
-        return player.getCurrentRoom().getHasVisited();
+        return player.getHasVisitedStatus();
     }
 
+    public String playerLook() {
+        return player.look();
+    }
 
+    public ArrayList<Item> showInventory() {
+        return player.showInventory();
+    }
+
+    public String pickUpItem(String name) {
+        return player.pickUpItem(name);
+    }
+
+    public String dropItem(String name) {
+        return player.dropItem(name);
+    }
 
 }
 
