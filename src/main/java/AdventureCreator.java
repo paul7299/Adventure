@@ -43,7 +43,7 @@ public class AdventureCreator {
         room9.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
 
         room1.getItemsInRoom().add(new Food("hotdog", "juicy hotdog", -10));
-        room4.getItemsInRoom().add(new Food("æble", "En pose æbler", 10));
+        room4.getItemsInRoom().add(new Food("apple", "Pink lady apple", 10));
     }
 
     //Denne metode bruges i AdventureController
