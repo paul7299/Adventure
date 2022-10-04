@@ -1,8 +1,9 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
-   private AdventureController adventureController;
-   private Scanner sc = new Scanner(System.in);
+    private AdventureController adventureController;
+    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
         adventureController = new AdventureController();
@@ -18,42 +19,47 @@ public class UserInterface {
 
         String userInput = " ";
 
-
         while (!userInput.equalsIgnoreCase("exit")) {
-            printCurrentRoomName();
-            if (!adventureController.hasVisitedStatus()) {
-               System.out.println(adventureController.player.look());
-                adventureController.setHasVisitedStatusToTrue();
-            }
+
+            System.out.println("You are in " + adventureController.getPlayerCurrentRoomName());
+
+
             System.out.println("Choose an action");
             userInput = readString();
 
             command(userInput);
+
+            if (!adventureController.hasVisitedStatus()) {
+                System.out.println(adventureController.playerLook());
+                adventureController.setHasVisitedStatusToTrue();
+            }
+            if (adventureController.hasVisitedStatus()) {
+                for (String s : adventureController.getCurrentRoomDoors()) {
+                    if (s != null) System.out.println(s);
+                }
+            }
+
         }
     }
 
-    private void command(String userInput){
+    private void command(String userInput) {
 
         switch (userInput) {
             case "north", "n":
-                System.out.println("Going north");
-                adventureController.player.goNorth();
+                System.out.println(adventureController.playerGoNorth());
                 break;
             case "south", "s":
-                System.out.println("Going south");
-                adventureController.player.goSouth();
+                System.out.println(adventureController.playerGoSouth());
                 break;
             case "east", "e":
-                System.out.println("Going east");
-                adventureController.player.goEast();
+                System.out.println(adventureController.playerGoEast());
                 break;
             case "west", "w":
-                System.out.println("going west");
-                adventureController.player.goWest();
+                System.out.println(adventureController.playerGoWest());
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");
-                System.out.println(adventureController.player.look());
+                System.out.println("\t" + adventureController.playerLook());
                 adventureController.getCurrentRoomDoors();
                 break;
             case "help", "h":
@@ -66,20 +72,20 @@ public class UserInterface {
             case "take", "t":
                 System.out.println("Which item do you want to pick up?");
                 String takeName = sc.nextLine();
-                adventureController.pickUpItem(takeName);
+                System.out.println(adventureController.pickUpItem(takeName));
                 break;
             case "drop":
-                System.out.println("which item do you want to drop?");
+                System.out.println("Which item do you want to drop?");
                 String dropName = sc.nextLine();
-                adventureController.dropItem(dropName);
+                System.out.println(adventureController.dropItem(dropName));
                 break;
-            case "View i", "i":
-                System.out.println("Your inventory contains: " + adventureController.player.showInventory());
+            case "Inventory", "i":
+                System.out.println("Your inventory contains: " + adventureController.showInventory());
                 break;
             default:
                 System.out.println("*Wrong input*");
                 break;
-            }
+        }
 
     }
 
@@ -90,28 +96,20 @@ public class UserInterface {
     }
 
 
-   //TODO omkod
-
-    public void printCurrentRoomName() {
-        System.out.println("You are in " + adventureController.player.getCurrentRoomNameFromPlayer());
-    }
-
-
     public String printHelp() {
-        return
-                """
-                         * Help - list of commands: *
-                         - Go north:        north / n
-                         - Go south:        south / s
-                         - Go east:         east / e
-                         - Go west:         west / w
-                         - Look around:     look / l
-                         - Take item        take / t
-                         - Drop item        drop / d
-                         - view inventory   view i / i
-                         - Exit:            exit
-                        """;
+        return """
+                 * Help - list of commands: *
+                 - Go north:        north / n
+                 - Go south:        south / s
+                 - Go east:         east / e
+                 - Go west:         west / w
+                 - Look around:     look / l
+                 - Take item        take / t
+                 - Drop item        drop / d
+                 - view inventory   inventory / i
+                 - Exit:            exit
+                """;
     }
-
 }
+
 
