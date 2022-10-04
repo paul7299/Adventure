@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="1">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Ordnet at look i room 1 bliver kaldt 2 gange. Har skubbet if løkken i UI til før bruger input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
@@ -343,7 +340,14 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1664797539977</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Ordnet at look i room 1 bliver kaldt 2 gange. Har skubbet if løkken i UI til før bruger input">
+      <created>1664883540711</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664883540711</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +385,8 @@
     <MESSAGE value="Changes by Let me iiiiiiiiiin!" />
     <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Refactored all go-methods according to opgave 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored all go-methods according to opgave 2" />
+    <MESSAGE value="Ordnet at look i room 1 bliver kaldt 2 gange. Har skubbet if løkken i UI til før bruger input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ordnet at look i room 1 bliver kaldt 2 gange. Har skubbet if løkken i UI til før bruger input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
