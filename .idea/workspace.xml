@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="eat food og player health metoder tilføjet i AdventureController og implementeret i switch case i ui">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
@@ -390,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664888795392</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item">
+      <created>1664889712460</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664889712460</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +433,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="test af food klassen" />
     <MESSAGE value="eat food og player health metoder tilføjet i AdventureController og implementeret i switch case i ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="eat food og player health metoder tilføjet i AdventureController og implementeret i switch case i ui" />
+    <MESSAGE value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
+    <option name="LAST_COMMIT_MESSAGE" value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
