@@ -10,4 +10,10 @@ public class Consumeable extends Item {
     public int getConsumeableHealth(){
         return health;
     }
+
+    @Override
+    public String toString() {
+        return name + " (" + description + ") " + "[" + health + "health]";
+    }
+
 }
