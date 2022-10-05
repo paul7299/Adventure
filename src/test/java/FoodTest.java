@@ -26,7 +26,7 @@ class FoodTest {
 
         ArrayList <Item> testlist = player.showInventory();
         //Food f1 = (Food) testlist.get(0);
-       int f1h = f1.getFoodHealth();
+       int f1h = f1.getConsumeableHealth();
        int p1h = player.getPlayerHealth();
 
        p1h += f1h;

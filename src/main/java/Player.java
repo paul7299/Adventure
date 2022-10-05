@@ -150,9 +150,9 @@ public class Player {
             return "You don't have this item\n";
         }
         else if (foodToEat instanceof Food) {
-              inventory.remove(foodToEat);
-              playerHealth += ((Food) foodToEat).getFoodHealth();
-              return "You have eaten " + foodToEat.getItemName() + "\n";
+          inventory.remove(foodToEat);
+          playerHealth += ((Food) foodToEat).getConsumeableHealth();
+          return "You have eaten " + foodToEat.getItemName() + "\n";
           } else {
               return "You cannot eat this\n";
           }
@@ -165,7 +165,7 @@ public class Player {
       }
       else if (liquidToDrink instanceof Liquid) {
           inventory.remove(liquidToDrink);
-          playerHealth += ((Liquid) liquidToDrink).getLiquidHealth();
+          playerHealth += ((Liquid) liquidToDrink).getConsumeableHealth();
           return "You have drinked " + liquidToDrink.getItemName() + "\n";
       } else {
           return "You cannot drink this\n";
