@@ -1,47 +1,170 @@
+import java.util.ArrayList;
+
 public class Player {
-    //TODO skal have currentRoom og goEast/North/South/West()
-    Room currentRoom;
-    public void goEast() {
-        if (currentRoom.getRoomEast() == null) {
-            System.out.println("You cannot go east from here");
-        } else {
-            currentRoom = currentRoom.getRoomEast();
-        }
-    }
-    public void goNorth() {
-        if (currentRoom.getRoomNorth() == null) {
-            System.out.println("You cannot go north from here");
-        } else {
-            currentRoom = currentRoom.getRoomNorth();
-        }
-    }
-    public void goSouth() {
-        if (currentRoom.getRoomSouth() == null) {
-            System.out.println("You cannot go south from here");
-        } else {
-            currentRoom = currentRoom.getRoomSouth();
-        }
-    }
-    public void goWest() {
-        if (currentRoom.getRoomWest() == null) {
-            System.out.println("You cannot go west from here");
-        } else {
-            currentRoom = currentRoom.getRoomWest();
-        }
-    }
-    //udvides eventuelt til at sige hvilke døre der er og man har gået igennem
-    public String look() {
-        return currentRoom.getRoomDescription();
+
+    private int playerHealth;
+    private Room currentRoom;
+    private ArrayList<Item> inventory = new ArrayList<>();
+
+    public ArrayList<Item> showInventory() {
+        return inventory;
     }
 
-    //TODO skift til getCurrentRoomNameFromPlayer(), skal kalde på player.getCurrentRoomName
+    // Constructor
+    public Player(Room startRoom) {
+        this.currentRoom = startRoom;
+        this.playerHealth = 50;
+    }
+
+    public String goNorth() {
+        String goingNorthResult;
+        if (currentRoom.getRoomNorth() == null) {
+            goingNorthResult = "* You cannot go north from here *";
+        } else {
+            goingNorthResult = "* Going north *";
+            currentRoom = currentRoom.getRoomNorth();
+        }
+        return goingNorthResult;
+    }
+
+    public String goSouth() {
+        String goingSouthResult;
+        if (currentRoom.getRoomSouth() == null) {
+            goingSouthResult = "* You cannot go south from here *";
+        } else {
+            goingSouthResult = "* Going south *";
+            currentRoom = currentRoom.getRoomSouth();
+        }
+        return goingSouthResult;
+    }
+
+    public String goEast() {
+        String goingEastResult;
+        if (currentRoom.getRoomEast() == null) {
+            goingEastResult = "* You cannot go east from here *";
+        } else {
+            goingEastResult = "* Going east *";
+            currentRoom = currentRoom.getRoomEast();
+        }
+        return goingEastResult;
+    }
+
+    public String goWest() {
+        String goingWestResult;
+        if (currentRoom.getRoomWest() == null) {
+            goingWestResult = "* You cannot go west from here *";
+        } else {
+            goingWestResult = "* Going west *";
+            currentRoom = currentRoom.getRoomWest();
+        }
+        return goingWestResult;
+    }
+
+    public String look() {
+        if (currentRoom.getItemsInRoom().isEmpty())
+            return currentRoom.getRoomDescription() + "\n" + "there are no items in the room";
+        else
+            return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom();
+
+    }
+
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
 
-    public Room getCurrentRoom(){
+    public void setHasVisitedToTrue() {
+        currentRoom.setHasVisitedToTrue();
+    }
+
+    public Room getCurrentRoom() {
         return currentRoom;
     }
 
+    public boolean getHasVisitedStatus() {
+        return currentRoom.getHasVisited();
+    }
+
+    public int getPlayerHealth(){
+        return playerHealth;
+    }
+
+    public Item searchForItem(String searchName) {
+        for (Item n : currentRoom.getItemsInRoom()) {
+            if (n.getItemName().contains(searchName)) {
+                return n;
+            }
+        }
+        return null;
+    }
+
+    public Item searchForItemInInventory(String searchName) {
+        for (Item n : showInventory()) {
+            if (n.getItemName().contains(searchName)) {
+                return n;
+            }
+        }
+        return null;
+    }
+
+    // TODO Asger
+    public String pickUpItem(String name) {
+        Item itemToTransfer = searchForItem(name);
+        String e;
+        if (itemToTransfer == null) {
+            e = "No item found";
+        } else {
+            inventory.add(itemToTransfer);
+            currentRoom.getItemsInRoom().remove(itemToTransfer);
+            e = ("You have picked up " + itemToTransfer.getItemName());
+        }
+        return e;
+    }
+
+    // TODO Asger
+    public String dropItem(String name) {
+        Item itemToTransfer = searchForItem(name);
+        if (itemToTransfer == null) {
+            return "No item found";
+        } else {
+            inventory.remove(itemToTransfer);
+            currentRoom.getItemsInRoom().add(itemToTransfer);
+            return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName());
+        }
+    }
+
+    public String[] getCurrentRoomDoors() {
+        String doorNorth = null;
+        String doorSouth = null;
+        String doorEast = null;
+        String doorWest = null;
+
+        if (currentRoom.getRoomNorth() != null) {
+            doorNorth = ("There is a door North");
+        }
+        if (currentRoom.getRoomSouth() != null) {
+            doorSouth = ("There is a door South");
+        }
+        if (currentRoom.getRoomEast() != null) {
+            doorEast = ("There is a door East");
+        }
+        if (currentRoom.getRoomWest() != null) {
+            doorWest = ("There is a door West");
+        }
+        return new String[]{doorNorth, doorSouth, doorEast, doorWest};
+    }
+
+  public String eatFood(String name){
+        Item foodToEat = searchForItemInInventory(name);
+        if(foodToEat == null){
+            return "You don't have this item";
+        }
+        else if (foodToEat instanceof Food) {
+              inventory.remove(foodToEat);
+              playerHealth += ((Food) foodToEat).getFoodHealth();
+              return "You have eaten " + foodToEat.getItemName();
+          } else {
+              return "You cannot eat this";
+          }
+  }
 
 }

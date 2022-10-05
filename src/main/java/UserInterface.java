@@ -1,11 +1,12 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
-   private AdventureController adventureController = new AdventureController();
-   private Scanner sc = new Scanner(System.in);
+    private AdventureController adventureController;
+    private Scanner sc = new Scanner(System.in);
 
     public void startProgram() {
-        adventureController.createMap();
+        adventureController = new AdventureController();
 
         System.out.println("""
                 Welcome to the game! Let's begin
@@ -16,56 +17,100 @@ public class UserInterface {
                 """);
 
 
-        String userInput = "x";
+        String userInput = " ";
 
         while (!userInput.equalsIgnoreCase("exit")) {
-            printCurrentRoomName();
+
+            System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
+
             if (!adventureController.hasVisitedStatus()) {
-                System.out.println(adventureController.look());
+                System.out.println(adventureController.playerLook());
                 adventureController.setHasVisitedStatusToTrue();
             }
+            if (adventureController.hasVisitedStatus()) {
+                for (String s : adventureController.getCurrentRoomDoors()) {
+                    if (s != null) System.out.println(s);
+                }
+
             System.out.println("Choose an action");
             userInput = readString();
 
             command(userInput);
+
+
+            }
+
         }
     }
 
-    private void command(String userInput){
+    private void command(String userInput) {
 
         switch (userInput) {
             case "north", "n":
-                System.out.println("Going north");
-                adventureController.goNorth();
+                System.out.println(adventureController.playerGoNorth());
                 break;
             case "south", "s":
-                System.out.println("Going south");
-                adventureController.goSouth();
+                System.out.println(adventureController.playerGoSouth());
                 break;
             case "east", "e":
-                System.out.println("Going east");
-                adventureController.goEast();
+                System.out.println(adventureController.playerGoEast());
                 break;
             case "west", "w":
-                System.out.println("going west");
-                adventureController.goWest();
+                System.out.println(adventureController.playerGoWest());
                 break;
             case "look", "l":
                 System.out.println("You are observing the room:");
-                System.out.println(adventureController.look());
+                System.out.println("\t" + adventureController.playerLook());
                 adventureController.getCurrentRoomDoors();
                 break;
-            case "help":
+            case "help", "h":
                 System.out.println(printHelp());
                 break;
             case "exit":
                 System.out.println("*Exiting game*");
                 System.exit(0);
                 break;
+            case "take", "t":
+                System.out.println("Which item do you want to pick up?");
+                String takeName = sc.nextLine();
+                System.out.println(adventureController.pickUpItem(takeName));
+                break;
+            case "drop":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                System.out.println("Which item do you want to drop?");
+                String dropName = sc.nextLine();
+                System.out.println(adventureController.dropItem(dropName));
+        }
+                break;
+            case "inventory", "i":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("Your inventory contains: " + adventureController.showInventory());
+                }
+                break;
+            case "eat food", "eat":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("What do you want to eat?");
+                    String eatName = sc.nextLine();
+                    System.out.println(adventureController.eatFood(eatName));
+                    System.out.println("\n" + adventureController.showHealth());
+                }
+                break;
+            case "show health", "health":
+                System.out.println(adventureController.showHealth());
+                break;
             default:
                 System.out.println("*Wrong input*");
                 break;
-            }
+        }
 
     }
 
@@ -75,22 +120,23 @@ public class UserInterface {
         return stringToLowercase.toLowerCase();
     }
 
-    public void printCurrentRoomName() {
-        System.out.println("You are in " + adventureController.getCurrentRoomName());
-    }
 
     public String printHelp() {
-        return
-                """
-                         * Help - list of commands: *
-                         - Go north:        north / n
-                         - Go south:        south / s
-                         - Go east:         east / e
-                         - Go west:         west / w
-                         - Look around:     look / l
-                         - Exit:            exit / e
-                        """;
+        return """
+                 * Help - list of commands: *
+                 - Go north:        north / n
+                 - Go south:        south / s
+                 - Go east:         east / e
+                 - Go west:         west / w
+                 - Look around:     look / l
+                 - Take item        take / t
+                 - Drop item        drop / d
+                 - view inventory   inventory / i
+                 - Eat food         Eat food / eat 
+                 - Player health    Show health / health 
+                 - Exit:            exit
+                """;
     }
-
 }
+
 

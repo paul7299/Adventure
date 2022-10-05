@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
+    <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -49,10 +57,13 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/paulk/KEA Programmer/TLLoevkilde Adventure&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -84,6 +95,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FoodTest.eatFood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Adventure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FoodTest" />
+      <option name="METHOD_NAME" value="eatFood" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodTest.pickUpFood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Adventure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FoodTest" />
+      <option name="METHOD_NAME" value="pickUpFood" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoomTest.setRooms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Adventure" />
       <option name="PACKAGE_NAME" value="" />
@@ -97,9 +128,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FoodTest.pickUpFood" />
+        <item itemvalue="JUnit.FoodTest.eatFood" />
         <item itemvalue="JUnit.RoomTest.setRooms" />
-        <item itemvalue="JUnit.AdventureTest.goEast" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AdventureTest.goEast" />
       </list>
     </recent_temporary>
@@ -115,8 +146,7 @@
       <workItem from="1664185957055" duration="2357000" />
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
-      <workItem from="1664398361019" duration="600000" />
-      <workItem from="1664960293195" duration="308000" />
+      <workItem from="1664451044886" duration="3796000" />
     </task>
     <task id="LOCAL−00001" summary="1st commit">
       <created>1664186218398</created>
@@ -245,7 +275,125 @@
       <option name="project" value="LOCAL" />
       <updated>1664361481209</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactoring færdiggjort">
+      <created>1664454995892</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664454995892</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Changes by Asger_studie">
+      <created>1664455015561</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455015561</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Changes by jonat">
+      <created>1664455020522</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455020522</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Changes by paulk">
+      <created>1664455029467</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455029467</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactoring færdiggjort">
+      <created>1664455487256</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455487256</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Changes by paulk">
+      <created>1664455492943</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455492943</updated>
+    </task>
+    <task id="LOCAL−00026" summary="1">
+      <created>1664456064499</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1664456064499</updated>
+    </task>
+    <task id="LOCAL−00027" summary="1">
+      <created>1664456095672</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1664456095672</updated>
+    </task>
+    <task id="LOCAL−00028" summary="1">
+      <created>1664456662463</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1664456662463</updated>
+    </task>
+    <task id="LOCAL−00029" summary="Refactored all go-methods according to opgave 2">
+      <created>1664795362997</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1664795362997</updated>
+    </task>
+    <task id="LOCAL−00030" summary="Changes by Let me iiiiiiiiiin!">
+      <created>1664795418533</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1664795418533</updated>
+    </task>
+    <task id="LOCAL−00031" summary="Changes by Asger_studie">
+      <created>1664795432750</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1664795432750</updated>
+    </task>
+    <task id="LOCAL−00032" summary="Refactored all go-methods according to opgave 2">
+      <created>1664795449240</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1664795449240</updated>
+    </task>
+    <task id="LOCAL−00033" summary="Refactored all go-methods according to opgave 2">
+      <created>1664797539977</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1664797539977</updated>
+    </task>
+    <task id="LOCAL-00034" summary="1">
+      <created>1664883568007</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664883568007</updated>
+    </task>
+    <task id="LOCAL-00035" summary="test af food klassen">
+      <created>1664887339251</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1664887339251</updated>
+    </task>
+    <task id="LOCAL-00036" summary="eat food og player health metoder tilføjet i AdventureController og implementeret i switch case i ui">
+      <created>1664888795392</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664888795392</updated>
+    </task>
+    <task id="LOCAL-00037" summary="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item">
+      <created>1664889712460</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664889712460</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,16 +417,38 @@
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
     <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
     <MESSAGE value="test push" />
-    <MESSAGE value="1" />
     <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
-    <MESSAGE value="Changes by paulk" />
     <MESSAGE value="Tilføjet hvem der står for TODOs" />
-    <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Omdøb Adventure til AdventureController, og omdøbt adventure objektet i UserInterface til adventureController" />
     <MESSAGE value="Omdøbt getHelp til printHelp()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Omdøbt getHelp til printHelp()" />
+    <MESSAGE value="Changes by jonat" />
+    <MESSAGE value="Refactoring færdiggjort" />
+    <MESSAGE value="Changes by paulk" />
+    <MESSAGE value="Changes by Let me iiiiiiiiiin!" />
+    <MESSAGE value="Changes by Asger_studie" />
+    <MESSAGE value="Refactored all go-methods according to opgave 2" />
+    <MESSAGE value="1" />
+    <MESSAGE value="test af food klassen" />
+    <MESSAGE value="eat food og player health metoder tilføjet i AdventureController og implementeret i switch case i ui" />
+    <MESSAGE value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
+    <option name="LAST_COMMIT_MESSAGE" value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Player" memberName="currentRoom" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
