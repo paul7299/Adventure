@@ -88,17 +88,8 @@ public class Player {
         return playerHealth;
     }
 
-    public Item searchForItem(String searchName) {
-        for (Item n : currentRoom.getItemsInRoom()) {
-            if (n.getItemName().contains(searchName)) {
-                return n;
-            }
-        }
-        return null;
-    }
-
-    public Item searchForItemInInventory(String searchName) {
-        for (Item n : showInventory()) {
+    public Item searchForItem(String searchName, ArrayList<Item> arrayList) {
+        for (Item n : arrayList) {
             if (n.getItemName().contains(searchName)) {
                 return n;
             }
@@ -108,7 +99,7 @@ public class Player {
 
     // TODO Asger
     public String pickUpItem(String name) {
-        Item itemToTransfer = searchForItem(name);
+        Item itemToTransfer = searchForItem(name, currentRoom.getItemsInRoom());
         String e;
         if (itemToTransfer == null) {
             e = "No item found";
@@ -122,7 +113,7 @@ public class Player {
 
     // TODO Asger
     public String dropItem(String name) {
-        Item itemToTransfer = searchForItem(name);
+        Item itemToTransfer = searchForItem(name, inventory);
         if (itemToTransfer == null) {
             return "No item found";
         } else {
@@ -154,7 +145,7 @@ public class Player {
     }
 
   public String eatFood(String name){
-        Item foodToEat = searchForItemInInventory(name);
+        Item foodToEat = searchForItem(name, inventory);
         if(foodToEat == null){
             return "You don't have this item";
         }
