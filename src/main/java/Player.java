@@ -19,9 +19,9 @@ public class Player {
     public String goNorth() {
         String goingNorthResult;
         if (currentRoom.getRoomNorth() == null) {
-            goingNorthResult = "* You cannot go north from here *";
+            goingNorthResult = "* You cannot go north from here *\n";
         } else {
-            goingNorthResult = "* Going north *";
+            goingNorthResult = "* Going north *\n";
             currentRoom = currentRoom.getRoomNorth();
         }
         return goingNorthResult;
@@ -30,9 +30,9 @@ public class Player {
     public String goSouth() {
         String goingSouthResult;
         if (currentRoom.getRoomSouth() == null) {
-            goingSouthResult = "* You cannot go south from here *";
+            goingSouthResult = "* You cannot go south from here *\n";
         } else {
-            goingSouthResult = "* Going south *";
+            goingSouthResult = "* Going south *\n";
             currentRoom = currentRoom.getRoomSouth();
         }
         return goingSouthResult;
@@ -41,9 +41,9 @@ public class Player {
     public String goEast() {
         String goingEastResult;
         if (currentRoom.getRoomEast() == null) {
-            goingEastResult = "* You cannot go east from here *";
+            goingEastResult = "* You cannot go east from here *\n";
         } else {
-            goingEastResult = "* Going east *";
+            goingEastResult = "* Going east *\n";
             currentRoom = currentRoom.getRoomEast();
         }
         return goingEastResult;
@@ -52,9 +52,9 @@ public class Player {
     public String goWest() {
         String goingWestResult;
         if (currentRoom.getRoomWest() == null) {
-            goingWestResult = "* You cannot go west from here *";
+            goingWestResult = "* You cannot go west from here *\n";
         } else {
-            goingWestResult = "* Going west *";
+            goingWestResult = "* Going west *\n";
             currentRoom = currentRoom.getRoomWest();
         }
         return goingWestResult;
@@ -62,9 +62,9 @@ public class Player {
 
     public String look() {
         if (currentRoom.getItemsInRoom().isEmpty())
-            return currentRoom.getRoomDescription() + "\n" + "there are no items in the room";
+            return currentRoom.getRoomDescription() + "\n" + "there are no items in the room\n";
         else
-            return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom();
+            return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom() + "\n";
 
     }
 
@@ -88,17 +88,8 @@ public class Player {
         return playerHealth;
     }
 
-    public Item searchForItem(String searchName) {
-        for (Item n : currentRoom.getItemsInRoom()) {
-            if (n.getItemName().contains(searchName)) {
-                return n;
-            }
-        }
-        return null;
-    }
-
-    public Item searchForItemInInventory(String searchName) {
-        for (Item n : showInventory()) {
+    public Item searchForItem(String searchName, ArrayList<Item> arrayList) {
+        for (Item n : arrayList) {
             if (n.getItemName().contains(searchName)) {
                 return n;
             }
@@ -108,27 +99,27 @@ public class Player {
 
     // TODO Asger
     public String pickUpItem(String name) {
-        Item itemToTransfer = searchForItem(name);
+        Item itemToTransfer = searchForItem(name, currentRoom.getItemsInRoom());
         String e;
         if (itemToTransfer == null) {
-            e = "No item found";
+            e = "No item found\n";
         } else {
             inventory.add(itemToTransfer);
             currentRoom.getItemsInRoom().remove(itemToTransfer);
-            e = ("You have picked up " + itemToTransfer.getItemName());
+            e = ("You have picked up " + itemToTransfer.getItemName() + "\n");
         }
         return e;
     }
 
     // TODO Asger
     public String dropItem(String name) {
-        Item itemToTransfer = searchForItem(name);
+        Item itemToTransfer = searchForItem(name, inventory);
         if (itemToTransfer == null) {
-            return "No item found";
+            return "No item found\n";
         } else {
             inventory.remove(itemToTransfer);
             currentRoom.getItemsInRoom().add(itemToTransfer);
-            return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName());
+            return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         }
     }
 
@@ -154,17 +145,31 @@ public class Player {
     }
 
   public String eatFood(String name){
-        Item foodToEat = searchForItemInInventory(name);
+        Item foodToEat = searchForItem(name, inventory);
         if(foodToEat == null){
-            return "You don't have this item";
+            return "You don't have this item\n";
         }
         else if (foodToEat instanceof Food) {
               inventory.remove(foodToEat);
               playerHealth += ((Food) foodToEat).getFoodHealth();
-              return "You have eaten " + foodToEat.getItemName();
+              return "You have eaten " + foodToEat.getItemName() + "\n";
           } else {
-              return "You cannot eat this";
+              return "You cannot eat this\n";
           }
+  }
+
+  public String drinkLiquid(String name){
+      Item liquidToDrink = searchForItem(name, inventory);
+      if(liquidToDrink == null){
+          return "You don't have this item\n";
+      }
+      else if (liquidToDrink instanceof Liquid) {
+          inventory.remove(liquidToDrink);
+          playerHealth += ((Liquid) liquidToDrink).getLiquidHealth();
+          return "You have drinked " + liquidToDrink.getItemName() + "\n";
+      } else {
+          return "You cannot drink this\n";
+      }
   }
 
 }
