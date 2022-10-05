@@ -59,7 +59,7 @@ public class UserInterface {
                 System.out.println(adventureController.playerGoWest());
                 break;
             case "look", "l":
-                System.out.println("You are observing the room:");
+                System.out.println("You are observing the room: ");
                 System.out.println("\t" + adventureController.playerLook());
                 adventureController.getCurrentRoomDoors();
                 break;
@@ -101,6 +101,17 @@ public class UserInterface {
                     System.out.println("What do you want to eat?");
                     String eatName = sc.nextLine();
                     System.out.println(adventureController.eatFood(eatName));
+                    System.out.println("\n" + adventureController.showHealth());
+                }
+                break;
+            case "drink liquid", "drink":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("What do you want to drink?");
+                    String drinkName = sc.nextLine();
+                    System.out.println(adventureController.drinkLiquid(drinkName));
                     System.out.println("\n" + adventureController.showHealth());
                 }
                 break;

@@ -66,6 +66,10 @@ public class AdventureController {
         return player.eatFood(name);
     }
 
+    public String drinkLiquid(String name){
+        return player.drinkLiquid(name);
+    }
+
     public String showHealth(){
         int health = player.getPlayerHealth();
         return "You have " + health + " health left";
