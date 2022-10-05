@@ -76,20 +76,35 @@ public class UserInterface {
                 System.out.println(adventureController.pickUpItem(takeName));
                 break;
             case "drop":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
                 System.out.println("Which item do you want to drop?");
                 String dropName = sc.nextLine();
                 System.out.println(adventureController.dropItem(dropName));
+        }
                 break;
             case "inventory", "i":
-                System.out.println("Your inventory contains: " + adventureController.showInventory());
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("Your inventory contains: " + adventureController.showInventory());
+                }
                 break;
             case "eat food", "eat":
-                System.out.println("What do you want to eat?");
-                String eatName = sc.nextLine();
-                System.out.println(adventureController.eatFood(eatName));
-                System.out.println("\n" + adventureController.showHealth());
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("What do you want to eat?");
+                    String eatName = sc.nextLine();
+                    System.out.println(adventureController.eatFood(eatName));
+                    System.out.println("\n" + adventureController.showHealth());
+                }
                 break;
-            case "player health", "health":
+            case "show health", "health":
                 System.out.println(adventureController.showHealth());
                 break;
             default:
@@ -118,7 +133,7 @@ public class UserInterface {
                  - Drop item        drop / d
                  - view inventory   inventory / i
                  - Eat food         Eat food / eat 
-                 - Player health    Player health / health 
+                 - Player health    Show health / health 
                  - Exit:            exit
                 """;
     }
