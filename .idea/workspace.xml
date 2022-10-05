@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Omdøbt getHelp til printHelp()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +115,8 @@
       <workItem from="1664185957055" duration="2357000" />
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
+      <workItem from="1664398361019" duration="600000" />
+      <workItem from="1664960293195" duration="308000" />
     </task>
     <task id="LOCAL−00001" summary="1st commit">
       <created>1664186218398</created>
