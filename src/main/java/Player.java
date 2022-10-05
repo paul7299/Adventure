@@ -12,14 +12,9 @@ public class Player {
 
     // Constructor
     public Player(Room startRoom) {
-        currentRoom = startRoom;
-     //   currentRoom.setHasVisitedToTrue();
+        this.currentRoom = startRoom;
+        this.playerHealth = 50;
     }
-
-    //Loadbearing Constructor
-    public Player() {
-    }
-
 
     public String goNorth() {
         String goingNorthResult;
@@ -89,8 +84,21 @@ public class Player {
         return currentRoom.getHasVisited();
     }
 
+    public int getPlayerHealth(){
+        return playerHealth;
+    }
+
     public Item searchForItem(String searchName) {
         for (Item n : currentRoom.getItemsInRoom()) {
+            if (n.getItemName().contains(searchName)) {
+                return n;
+            }
+        }
+        return null;
+    }
+
+    public Item searchForItemInInventory(String searchName) {
+        for (Item n : showInventory()) {
             if (n.getItemName().contains(searchName)) {
                 return n;
             }
@@ -145,8 +153,18 @@ public class Player {
         return new String[]{doorNorth, doorSouth, doorEast, doorWest};
     }
 
-    public int getPlayerHealth(){
-        return playerHealth;
-    }
+  public String eatFood(String name){
+        Item foodToEat = searchForItemInInventory(name);
+        if(foodToEat == null){
+            return "You don't have this item";
+        }
+        else if (foodToEat instanceof Food) {
+              inventory.remove(foodToEat);
+              playerHealth += ((Food) foodToEat).getFoodHealth();
+              return "You have eaten " + foodToEat.getItemName();
+          } else {
+              return "You cannot eat this";
+          }
+  }
 
 }

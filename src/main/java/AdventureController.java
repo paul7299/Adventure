@@ -61,5 +61,14 @@ public class AdventureController {
     public String dropItem(String name) {
         return player.dropItem(name);
     }
+
+    public String eatFood(String name){
+        return player.eatFood(name);
+    }
+
+    public String showHealth(){
+        int health = player.getPlayerHealth();
+        return "You have " + health + " health left";
+    }
 }
 
