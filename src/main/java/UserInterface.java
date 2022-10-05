@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -18,19 +19,27 @@ public class UserInterface {
 
         String userInput = " ";
 
-
         while (!userInput.equalsIgnoreCase("exit")) {
 
-            System.out.println("You are in " + adventureController.getplayerCurrentRoomName());
+            System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
 
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
                 adventureController.setHasVisitedStatusToTrue();
             }
+            if (adventureController.hasVisitedStatus()) {
+                for (String s : adventureController.getCurrentRoomDoors()) {
+                    if (s != null) System.out.println(s);
+                }
+
             System.out.println("Choose an action");
             userInput = readString();
 
             command(userInput);
+
+
+            }
+
         }
     }
 
@@ -71,8 +80,17 @@ public class UserInterface {
                 String dropName = sc.nextLine();
                 System.out.println(adventureController.dropItem(dropName));
                 break;
-            case "View i", "i":
-                System.out.println("Your inventory contains: " + adventureController.player.showInventory());
+            case "inventory", "i":
+                System.out.println("Your inventory contains: " + adventureController.showInventory());
+                break;
+            case "eat food", "eat":
+                System.out.println("What do you want to eat?");
+                String eatName = sc.nextLine();
+                System.out.println(adventureController.eatFood(eatName));
+                System.out.println("\n" + adventureController.showHealth());
+                break;
+            case "player health", "health":
+                System.out.println(adventureController.showHealth());
                 break;
             default:
                 System.out.println("*Wrong input*");
@@ -81,28 +99,29 @@ public class UserInterface {
 
     }
 
-        //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-        public String readString () {
-            String stringToLowercase = sc.nextLine();
-            return stringToLowercase.toLowerCase();
-        }
+    //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
+    public String readString() {
+        String stringToLowercase = sc.nextLine();
+        return stringToLowercase.toLowerCase();
+    }
 
 
-        public String printHelp () {
-            return
-                    """
-                             * Help - list of commands: *
-                             - Go north:        north / n
-                             - Go south:        south / s
-                             - Go east:         east / e
-                             - Go west:         west / w
-                             - Look around:     look / l
-                             - Take item        take / t
-                             - Drop item        drop / d
-                             - view inventory   view i / i
-                             - Exit:            exit
-                            """;
-        }
+    public String printHelp() {
+        return """
+                 * Help - list of commands: *
+                 - Go north:        north / n
+                 - Go south:        south / s
+                 - Go east:         east / e
+                 - Go west:         west / w
+                 - Look around:     look / l
+                 - Take item        take / t
+                 - Drop item        drop / d
+                 - view inventory   inventory / i
+                 - Eat food         Eat food / eat 
+                 - Player health    Player health / health 
+                 - Exit:            exit
+                """;
+    }
 }
 
 
