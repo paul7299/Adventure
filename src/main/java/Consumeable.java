@@ -7,7 +7,6 @@ public class Consumeable extends Item {
         this.health = health;
     }
 
-
     public int getConsumeableHealth(){
         return health;
     }
