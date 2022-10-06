@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="eat food og player health metoder tilføjet i AdventureController og implementeret i switch case i ui">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="tilføjet consumeable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Consumeable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Consumeable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
-    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="Changes by jonat" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Consumeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Consumeable.java" afterDir="false" />
+    </list>
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
-    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Changes by paulk" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Consumeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Consumeable.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,6 +40,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Consumeable.java">
+      <ranges>
+        <range start1="9" end1="10" start2="9" end2="9" changelist="2096efe7-2e59-4a5e-88fa-b49b50f35d95" />
+        <range start1="13" end1="13" start2="12" end2="18" changelist="914e2303-015d-4792-b84b-fb9731334753" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -402,7 +419,63 @@
       <option name="project" value="LOCAL" />
       <updated>1664961069340</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Lavet liquid færdig">
+      <created>1664961948716</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1664961948716</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Lavet liquid færdig">
+      <created>1664961963467</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1664961963467</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Lavet liquid færdig">
+      <created>1664961972395</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1664961972395</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Lavet liquid færdig">
+      <created>1664961977068</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1664961977068</updated>
+    </task>
+    <task id="LOCAL-00044" summary="tilføjet consumeable">
+      <created>1664964173705</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1664964173705</updated>
+    </task>
+    <task id="LOCAL-00045" summary="tilføjet consumeable">
+      <created>1664964182434</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1664964182434</updated>
+    </task>
+    <task id="LOCAL-00046" summary="tilføjet consumeable">
+      <created>1664964191367</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1664964191367</updated>
+    </task>
+    <task id="LOCAL-00047" summary="tilføjet consumeable">
+      <created>1664964199802</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1664964199802</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,8 +493,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1st commit" />
-    <MESSAGE value="Oprettet Main, Room, UI og Adventure objekter" />
     <MESSAGE value="Lavet test af setRooms" />
     <MESSAGE value="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu" />
     <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
@@ -435,7 +506,6 @@
     <MESSAGE value="Omdøbt getHelp til printHelp()" />
     <MESSAGE value="Changes by jonat" />
     <MESSAGE value="Refactoring færdiggjort" />
-    <MESSAGE value="Changes by paulk" />
     <MESSAGE value="Changes by Let me iiiiiiiiiin!" />
     <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Refactored all go-methods according to opgave 2" />
@@ -445,7 +515,10 @@
     <MESSAGE value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
     <MESSAGE value="WORKSPACE YEEEES" />
     <MESSAGE value="Liquid klassen oprettet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Liquid klassen oprettet" />
+    <MESSAGE value="Changes by paulk" />
+    <MESSAGE value="Lavet liquid færdig" />
+    <MESSAGE value="tilføjet consumeable" />
+    <option name="LAST_COMMIT_MESSAGE" value="tilføjet consumeable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
