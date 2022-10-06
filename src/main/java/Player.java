@@ -86,7 +86,7 @@ public class Player {
         return currentRoom.getHasVisited();
     }
 
-    public int getPlayerHealth(){
+    public int getPlayerHealth() {
         return playerHealth;
     }
 
@@ -102,15 +102,13 @@ public class Player {
 
     public String pickUpItem(String name) {
         Item itemToTransfer = searchForItem(name, currentRoom.getItemsInRoom());
-        String e;
         if (itemToTransfer == null) {
-            e = "No item found\n";
+            return "No item found\n";
         } else {
             inventory.add(itemToTransfer);
             currentRoom.getItemsInRoom().remove(itemToTransfer);
-            e = ("You have picked up " + itemToTransfer.getItemName() + "\n");
+            return ("You have picked up " + itemToTransfer.getItemName() + "\n");
         }
-        return e;
     }
 
     public String dropItem(String name) {
@@ -118,6 +116,7 @@ public class Player {
         if (itemToTransfer == null) {
             return "No item found\n";
         } else {
+            currentWeapon = null;
             inventory.remove(itemToTransfer);
             currentRoom.getItemsInRoom().add(itemToTransfer);
             return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
@@ -145,32 +144,65 @@ public class Player {
         return new String[]{doorNorth, doorSouth, doorEast, doorWest};
     }
 
-  public String eatFood(String name){
+    public String eatFood(String name) {
         Item foodToEat = searchForItem(name, inventory);
-        if(foodToEat == null){
+        if (foodToEat == null) {
             return "You don't have this item\n";
+        } else if (foodToEat instanceof Food) {
+            inventory.remove(foodToEat);
+            playerHealth += ((Food) foodToEat).getConsumeableHealth();
+            return "You have eaten " + foodToEat.getItemName() + "\n";
+        } else {
+            return "You cannot eat this\n";
         }
-        else if (foodToEat instanceof Food) {
-          inventory.remove(foodToEat);
-          playerHealth += ((Food) foodToEat).getConsumeableHealth();
-          return "You have eaten " + foodToEat.getItemName() + "\n";
-          } else {
-              return "You cannot eat this\n";
-          }
-  }
+    }
 
-  public String drinkLiquid(String name){
-      Item liquidToDrink = searchForItem(name, inventory);
-      if(liquidToDrink == null){
-          return "You don't have this item\n";
-      }
-      else if (liquidToDrink instanceof Liquid) {
-          inventory.remove(liquidToDrink);
-          playerHealth += ((Liquid) liquidToDrink).getConsumeableHealth();
-          return "You have drinked " + liquidToDrink.getItemName() + "\n";
-      } else {
-          return "You cannot drink this\n";
-      }
-  }
+    public String drinkLiquid(String name) {
+        Item liquidToDrink = searchForItem(name, inventory);
+        if (liquidToDrink == null) {
+            return "You don't have this item\n";
+        } else if (liquidToDrink instanceof Liquid) {
+            inventory.remove(liquidToDrink);
+            playerHealth += ((Liquid) liquidToDrink).getConsumeableHealth();
+            return "You have drinked " + liquidToDrink.getItemName() + "\n";
+        } else {
+            return "You cannot drink this\n";
+        }
+    }
 
+    public String equipWeapon(String name) {
+        Item weaponToEquip = searchForItem(name, inventory);
+        if (weaponToEquip == null) {
+            return "You don't have this item\n";
+        } else if (weaponToEquip instanceof Weapon) {
+            currentWeapon = (Weapon) weaponToEquip;
+            return "You have equipped " + weaponToEquip.getItemName() + "\n";
+        } else {
+            return "You cannot equip this\n";
+        }
+    }
+
+    public String attack() {
+        if (currentWeapon != null) {
+            if (currentWeapon.canUse()) {
+                if (currentWeapon instanceof RangedWeapon) {
+                    ((RangedWeapon) currentWeapon).useAmmo();
+                }
+                return "Your attack with the " + currentWeapon.getItemName() + " was successful\n";
+            } else {
+                return "You are out of ammo for this weapon\n";
+            }
+        } else {
+            return "You do not have a weapon equipped\n";
+        }
+    }
+
+    public String showCurrentAmmo() {
+        if (currentWeapon != null) {
+            return currentWeapon.getAmmo();
+        } else {
+            return "You have nothing equipped";
+        }
+    }
 }
+

@@ -136,6 +136,9 @@ public class UserInterface {
             }
 
         }
+        else{
+            System.out.println("input needs to be at least 3 chars");
+        }
     }
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
