@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 public class AdventureController {
     Room startRoom;
     Player player;
@@ -60,6 +59,19 @@ public class AdventureController {
 
     public String dropItem(String name) {
         return player.dropItem(name);
+    }
+
+    public String eatFood(String name){
+        return player.eatFood(name);
+    }
+
+    public String drinkLiquid(String name){
+        return player.drinkLiquid(name);
+    }
+
+    public String showHealth(){
+        int health = player.getPlayerHealth();
+        return "You have " + health + " health left";
     }
 }
 

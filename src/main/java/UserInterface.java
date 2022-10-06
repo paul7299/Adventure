@@ -12,17 +12,19 @@ public class UserInterface {
                 Welcome to the game! Let's begin
                 You are stuck in a maze. The objective of the game is to reach room 5.
                 You navigate through the game using the commands Go north, Go east, Go south and Go west.
-                To view your current room, type "look"
+                To view your current room, type "look".
                 If you forget the commands, type "help".
+                If you want to pick up an item; type "take" and specify which item you want to take.
+                If you want to drop an item; type "drop" and specify which item you want to drop.
+                If you want to view your inventory, type "inventory".
+                If you want to drink or eat an consumable, type either "drink" or "eat" and specify which consumable afterwards.
+                If you want to view your health, type "show health".
+                If you want to quit the game, type "exit". 
                 """);
 
-
         String userInput = " ";
-
         while (!userInput.equalsIgnoreCase("exit")) {
-
             System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
-
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
                 adventureController.setHasVisitedStatusToTrue();
@@ -31,20 +33,13 @@ public class UserInterface {
                 for (String s : adventureController.getCurrentRoomDoors()) {
                     if (s != null) System.out.println(s);
                 }
-
             System.out.println("Choose an action");
             userInput = readString();
-
             command(userInput);
-
-
             }
-
         }
     }
-
     private void command(String userInput) {
-
         switch (userInput) {
             case "north", "n":
                 System.out.println(adventureController.playerGoNorth());
@@ -59,7 +54,7 @@ public class UserInterface {
                 System.out.println(adventureController.playerGoWest());
                 break;
             case "look", "l":
-                System.out.println("You are observing the room:");
+                System.out.println("You are observing the room: ");
                 System.out.println("\t" + adventureController.playerLook());
                 adventureController.getCurrentRoomDoors();
                 break;
@@ -76,36 +71,58 @@ public class UserInterface {
                 System.out.println(adventureController.pickUpItem(takeName));
                 break;
             case "drop":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
                 System.out.println("Which item do you want to drop?");
                 String dropName = sc.nextLine();
                 System.out.println(adventureController.dropItem(dropName));
+        }
                 break;
             case "inventory", "i":
-                System.out.println("Your inventory contains: " + adventureController.showInventory());
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("Your inventory contains: " + adventureController.showInventory());
+                }
                 break;
             case "eat food", "eat":
-                System.out.println("What do you want to eat?");
-                String eatName = sc.nextLine();
-                System.out.println(adventureController.eatFood(eatName));
-                System.out.println("\n" + adventureController.showHealth());
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("What do you want to eat?");
+                    String eatName = sc.nextLine();
+                    System.out.println(adventureController.eatFood(eatName));
+                    System.out.println("\n" + adventureController.showHealth());
+                }
                 break;
-            case "player health", "health":
+            case "drink liquid", "drink":
+                if(adventureController.showInventory().isEmpty()){
+                    System.out.println("Your inventory is empty");
+                }
+                else {
+                    System.out.println("What do you want to drink?");
+                    String drinkName = sc.nextLine();
+                    System.out.println(adventureController.drinkLiquid(drinkName));
+                    System.out.println("\n" + adventureController.showHealth());
+                }
+                break;
+            case "show health", "health":
                 System.out.println(adventureController.showHealth());
                 break;
             default:
                 System.out.println("*Wrong input*");
                 break;
         }
-
     }
-
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
-
-
     public String printHelp() {
         return """
                  * Help - list of commands: *
@@ -118,7 +135,8 @@ public class UserInterface {
                  - Drop item        drop / d
                  - view inventory   inventory / i
                  - Eat food         Eat food / eat 
-                 - Player health    Player health / health 
+                 - Drink liquid     Drink liquid / drink 
+                 - Player health    Show health / health 
                  - Exit:            exit
                 """;
     }
