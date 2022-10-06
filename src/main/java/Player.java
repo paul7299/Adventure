@@ -4,6 +4,8 @@ public class Player {
 
     private int playerHealth;
     private Room currentRoom;
+    private Weapon currentWeapon;
+
     private ArrayList<Item> inventory = new ArrayList<>();
 
     public ArrayList<Item> showInventory() {
@@ -88,6 +90,7 @@ public class Player {
         return playerHealth;
     }
 
+    //TODO ret contains i metoden til at minimum 3 bogstaver skal matche søge ordet
     public Item searchForItem(String searchName, ArrayList<Item> arrayList) {
         for (Item n : arrayList) {
             if (n.getItemName().contains(searchName)) {
@@ -97,7 +100,6 @@ public class Player {
         return null;
     }
 
-    // TODO Asger
     public String pickUpItem(String name) {
         Item itemToTransfer = searchForItem(name, currentRoom.getItemsInRoom());
         String e;
@@ -111,7 +113,6 @@ public class Player {
         return e;
     }
 
-    // TODO Asger
     public String dropItem(String name) {
         Item itemToTransfer = searchForItem(name, inventory);
         if (itemToTransfer == null) {
