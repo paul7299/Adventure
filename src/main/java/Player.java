@@ -1,3 +1,5 @@
+import org.w3c.dom.ranges.Range;
+
 import java.util.ArrayList;
 
 public class Player {
@@ -16,6 +18,7 @@ public class Player {
     public Player(Room startRoom) {
         this.currentRoom = startRoom;
         this.playerHealth = 50;
+        this.currentWeapon = null;
     }
 
     public String goNorth() {
