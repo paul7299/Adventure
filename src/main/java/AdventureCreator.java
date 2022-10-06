@@ -46,6 +46,10 @@ public class AdventureCreator {
         room4.getItemsInRoom().add(new Food("apple", "Pink lady apple", 10));
         room1.getItemsInRoom().add(new Liquid("beer", "a large tuborg", -10));
         room1.getItemsInRoom().add(new Liquid("water", "bottled water", 10));
+
+        room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 2));
+        room1.getItemsInRoom().add(new RangedWeapon("bow", "A hunters bow with a quiver", 2, 4));
+
     }
 
     //Denne metode bruges i AdventureController

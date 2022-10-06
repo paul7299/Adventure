@@ -1,13 +1,8 @@
-public class Liquid extends Item {
+public class Liquid extends Consumeable {
 
-    private int health;
+
 
     public Liquid(String name, String description, int health) {
-        super(name, description);
-        this.health = health;
+        super(name, description, health);
     }
-    public int getLiquidHealth(){
-        return health;
-    }
-
 }

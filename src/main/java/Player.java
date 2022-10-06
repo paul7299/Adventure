@@ -1,9 +1,13 @@
+import org.w3c.dom.ranges.Range;
+
 import java.util.ArrayList;
 
 public class Player {
 
     private int playerHealth;
     private Room currentRoom;
+    private Weapon currentWeapon;
+
     private ArrayList<Item> inventory = new ArrayList<>();
 
     public ArrayList<Item> showInventory() {
@@ -14,6 +18,7 @@ public class Player {
     public Player(Room startRoom) {
         this.currentRoom = startRoom;
         this.playerHealth = 50;
+        this.currentWeapon = null;
     }
 
     public String goNorth() {
@@ -84,10 +89,11 @@ public class Player {
         return currentRoom.getHasVisited();
     }
 
-    public int getPlayerHealth(){
+    public int getPlayerHealth() {
         return playerHealth;
     }
 
+    //TODO ret contains i metoden til at minimum 3 bogstaver skal matche søge ordet
     public Item searchForItem(String searchName, ArrayList<Item> arrayList) {
         for (Item n : arrayList) {
             if (n.getItemName().contains(searchName)) {
@@ -97,26 +103,23 @@ public class Player {
         return null;
     }
 
-    // TODO Asger
     public String pickUpItem(String name) {
         Item itemToTransfer = searchForItem(name, currentRoom.getItemsInRoom());
-        String e;
         if (itemToTransfer == null) {
-            e = "No item found\n";
+            return "No item found\n";
         } else {
             inventory.add(itemToTransfer);
             currentRoom.getItemsInRoom().remove(itemToTransfer);
-            e = ("You have picked up " + itemToTransfer.getItemName() + "\n");
+            return ("You have picked up " + itemToTransfer.getItemName() + "\n");
         }
-        return e;
     }
 
-    // TODO Asger
     public String dropItem(String name) {
         Item itemToTransfer = searchForItem(name, inventory);
         if (itemToTransfer == null) {
             return "No item found\n";
         } else {
+            currentWeapon = null;
             inventory.remove(itemToTransfer);
             currentRoom.getItemsInRoom().add(itemToTransfer);
             return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
@@ -144,32 +147,65 @@ public class Player {
         return new String[]{doorNorth, doorSouth, doorEast, doorWest};
     }
 
-  public String eatFood(String name){
+    public String eatFood(String name) {
         Item foodToEat = searchForItem(name, inventory);
-        if(foodToEat == null){
+        if (foodToEat == null) {
             return "You don't have this item\n";
+        } else if (foodToEat instanceof Food) {
+            inventory.remove(foodToEat);
+            playerHealth += ((Food) foodToEat).getConsumeableHealth();
+            return "You have eaten " + foodToEat.getItemName() + "\n";
+        } else {
+            return "You cannot eat this\n";
         }
-        else if (foodToEat instanceof Food) {
-              inventory.remove(foodToEat);
-              playerHealth += ((Food) foodToEat).getFoodHealth();
-              return "You have eaten " + foodToEat.getItemName() + "\n";
-          } else {
-              return "You cannot eat this\n";
-          }
-  }
+    }
 
-  public String drinkLiquid(String name){
-      Item liquidToDrink = searchForItem(name, inventory);
-      if(liquidToDrink == null){
-          return "You don't have this item\n";
-      }
-      else if (liquidToDrink instanceof Liquid) {
-          inventory.remove(liquidToDrink);
-          playerHealth += ((Liquid) liquidToDrink).getLiquidHealth();
-          return "You have drinked " + liquidToDrink.getItemName() + "\n";
-      } else {
-          return "You cannot drink this\n";
-      }
-  }
+    public String drinkLiquid(String name) {
+        Item liquidToDrink = searchForItem(name, inventory);
+        if (liquidToDrink == null) {
+            return "You don't have this item\n";
+        } else if (liquidToDrink instanceof Liquid) {
+            inventory.remove(liquidToDrink);
+            playerHealth += ((Liquid) liquidToDrink).getConsumeableHealth();
+            return "You have drinked " + liquidToDrink.getItemName() + "\n";
+        } else {
+            return "You cannot drink this\n";
+        }
+    }
 
+    public String equipWeapon(String name) {
+        Item weaponToEquip = searchForItem(name, inventory);
+        if (weaponToEquip == null) {
+            return "You don't have this item\n";
+        } else if (weaponToEquip instanceof Weapon) {
+            currentWeapon = (Weapon) weaponToEquip;
+            return "You have equipped " + weaponToEquip.getItemName() + "\n";
+        } else {
+            return "You cannot equip this\n";
+        }
+    }
+
+    public String attack() {
+        if (currentWeapon != null) {
+            if (currentWeapon.canUse()) {
+                if (currentWeapon instanceof RangedWeapon) {
+                    ((RangedWeapon) currentWeapon).useAmmo();
+                }
+                return "Your attack with the " + currentWeapon.getItemName() + " was successful\n";
+            } else {
+                return "You are out of ammo for this weapon\n";
+            }
+        } else {
+            return "You do not have a weapon equipped\n";
+        }
+    }
+
+    public String showCurrentAmmo() {
+        if (currentWeapon != null) {
+            return currentWeapon.getAmmo();
+        } else {
+            return "You have nothing equipped";
+        }
+    }
 }
+
