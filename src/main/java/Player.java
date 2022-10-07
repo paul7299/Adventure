@@ -185,6 +185,8 @@ public class Player {
         }
     }
 
+    // TODO ^kan man droppe et item man har equipped? -paul
+
     public String attack() {
         if (currentWeapon != null) {
             if (currentWeapon.canUse()) {

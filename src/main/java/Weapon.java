@@ -1,5 +1,5 @@
 public abstract class Weapon extends Item {
-
+ 
     protected int damage;
 
     public Weapon(String name, String description, int damage) {
