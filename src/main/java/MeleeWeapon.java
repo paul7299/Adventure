@@ -5,8 +5,8 @@ public class MeleeWeapon extends Weapon{
     }
 
     //Sender altid true, da melee weapons altid kan bruges
-    public boolean canUse(){
-        return true;
+    public String canUse(){
+        return "You swing the " + name + " like a badass";
     }
 
     @Override

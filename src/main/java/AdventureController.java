@@ -71,7 +71,7 @@ public class AdventureController {
 
     public String showHealth(){
         int health = player.getPlayerHealth();
-        return "You have " + health + " health left";
+        return "You have " + health + " health.";
     }
 
     public String attack(){

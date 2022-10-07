@@ -4,15 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="weapon klasser oprettet og tilføjet melee og long range weapon items i rummene, plus robusthed med at man minimum skal indtaste 3 chars for at kunne bruge command">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Fikset drop så den interagerer ordentligt med current weapon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Consumeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Consumeable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MeleeWeapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MeleeWeapon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RangedWeapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RangedWeapon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Weapon.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
     <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
-    <list id="231cd376-cd50-4b76-a28b-ff1ba191d250" name="Changes by Mohamed" comment="Changes by Mohamed" />
-    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
+    <list id="231cd376-cd50-4b76-a28b-ff1ba191d250" name="Changes by Mohamed" comment="" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +58,6 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -145,6 +160,12 @@
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
       <workItem from="1664451044886" duration="3796000" />
+    </task>
+    <task id="LOCAL−00001" summary="1st commit">
+      <created>1664186218398</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1664186218398</updated>
     </task>
     <task id="LOCAL−00002" summary="Oprettet Main, Room, UI og Adventure objekter">
       <created>1664186894202</created>
@@ -455,28 +476,7 @@
       <option name="project" value="LOCAL" />
       <updated>1664964199802</updated>
     </task>
-    <task id="LOCAL-00048" summary="weapon klasser oprettet og tilføjet melee og long range weapon items i rummene, plus robusthed med at man minimum skal indtaste 3 chars for at kunne bruge command">
-      <created>1665064648985</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1665064648985</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Changes by Asger_studie">
-      <created>1665064663643</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1665064663643</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Changes by Mohamed">
-      <created>1665064674245</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1665064674245</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +494,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TODO// metode for alle retninger og set room for alle rooms" />
     <MESSAGE value="test push" />
     <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
@@ -506,6 +505,7 @@
     <MESSAGE value="Changes by jonat" />
     <MESSAGE value="Refactoring færdiggjort" />
     <MESSAGE value="Changes by Let me iiiiiiiiiin!" />
+    <MESSAGE value="Changes by Asger_studie" />
     <MESSAGE value="Refactored all go-methods according to opgave 2" />
     <MESSAGE value="1" />
     <MESSAGE value="test af food klassen" />
@@ -516,10 +516,10 @@
     <MESSAGE value="Changes by paulk" />
     <MESSAGE value="Lavet liquid færdig" />
     <MESSAGE value="tilføjet consumeable" />
-    <MESSAGE value="weapon klasser oprettet og tilføjet melee og long range weapon items i rummene, plus robusthed med at man minimum skal indtaste 3 chars for at kunne bruge command" />
-    <MESSAGE value="Changes by Asger_studie" />
-    <MESSAGE value="Changes by Mohamed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Mohamed" />
+    <MESSAGE value="ELSKER WORKSPACE YEEEEEEEEEEEEEEEEES" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/paul7299/Adventure&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
+    <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fikset drop så den interagerer ordentligt med current weapon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -530,7 +530,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/AdventureController.java</url>
-          <line>10</line>
+          <line>9</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
