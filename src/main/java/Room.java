@@ -17,14 +17,7 @@ public class Room {
         this.hasVisited = false; //hasVisited sættes false ved default fordi man ikke har besøgt et rum til at starte med
         itemsInRoom = new ArrayList<Item>();
     }
-
-
-    // TODO vi bruger ikke disse 2 metoder?
-     /* public void addItemToRoom(String name){
-        itemsInRoom.add(new Item(name));
-    } */
-
-
+//TODO reducér clutter
     public ArrayList<Item> getItemsInRoom() {
         return itemsInRoom;
     }
