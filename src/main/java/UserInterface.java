@@ -131,7 +131,7 @@ public class UserInterface {
                     System.out.println(adventureController.showHealth());
                     break;
                 default:
-                    System.out.println("*Wrong input*");
+                    System.out.println("* Wrong input *");
                     break;
             }
 

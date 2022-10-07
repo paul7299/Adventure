@@ -188,22 +188,20 @@ public class Player {
     }
 
     public String attack() {
+        String message;
         if (currentWeapon != null) {
-            if (currentWeapon.canUse()) {
-                return "Your attack with the " + currentWeapon.getItemName() + " was successful\n";
-            } else {
-                return "You are out of ammo for this weapon\n";
-            }
+            message = currentWeapon.canUse();
         } else {
-            return "You do not have a weapon equipped\n";
+            message = "* You do not have a weapon equipped *\n";
         }
+        return message;
     }
 
     public String showCurrentAmmo() {
         if (currentWeapon != null) {
             return currentWeapon.getAmmo();
         } else {
-            return "You have nothing equipped";
+            return "* You have nothing equipped* ";
         }
     }
 }
