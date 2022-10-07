@@ -20,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Weapon.class" afterDir="false" />
     </list>
     <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
     <list id="231cd376-cd50-4b76-a28b-ff1ba191d250" name="Changes by Mohamed" comment="" />
     <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig">
@@ -49,26 +50,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/RangedWeapon.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="15" end1="17" start2="16" end2="19" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="18" end1="19" start2="20" end2="21" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="21" end1="22" start2="23" end2="24" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="23" end1="24" start2="25" end2="26" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Player.java">
-      <ranges>
-        <range start1="190" end1="190" start2="190" end2="191" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="191" end1="196" start2="192" end2="193" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="197" end1="198" start2="194" end2="195" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-        <range start1="199" end1="199" start2="196" end2="197" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="205" end1="206" start2="203" end2="204" changelist="914e2303-015d-4792-b84b-fb9731334753" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -77,7 +58,6 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -548,6 +528,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/AdventureController.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
