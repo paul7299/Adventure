@@ -119,9 +119,11 @@ public class Player {
         if (itemToTransfer == null) {
             return "No item found\n";
         } else {
-            currentWeapon = null;
             inventory.remove(itemToTransfer);
             currentRoom.getItemsInRoom().add(itemToTransfer);
+            if(currentWeapon == itemToTransfer){
+                currentWeapon = null;
+            }
             return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         }
     }
@@ -188,9 +190,6 @@ public class Player {
     public String attack() {
         if (currentWeapon != null) {
             if (currentWeapon.canUse()) {
-                if (currentWeapon instanceof RangedWeapon) {
-                    ((RangedWeapon) currentWeapon).useAmmo();
-                }
                 return "Your attack with the " + currentWeapon.getItemName() + " was successful\n";
             } else {
                 return "You are out of ammo for this weapon\n";

@@ -11,15 +11,13 @@ public class RangedWeapon extends Weapon {
         return name + ":\t" + ammo + " ammo";
     }
 
-    public void useAmmo(){
-        ammo--;
-    }
 
     //Metoden tjekker at der er ammunation i våbnet. Hvis ammunation er 0 eller under returneres false.
     public boolean canUse() {
         boolean isUseable;
         if (ammo > 0) {
             isUseable = true;
+            ammo--;
         } else {
             isUseable = false;
         }
