@@ -13,15 +13,30 @@ public class RangedWeapon extends Weapon {
     }
 
 
+    public String attackMessage(String enemyName){
+        /*String message;
+        if(canUse()){*/
+           String message ="* You shot " + enemyName + " with the " + name + " for " + damage + " damage *\n";
+        /*}
+        else{
+            message = "* " + name + " does not have more ammo *\n";
+        }*/
+        return message;
+    }
+
+    public String failMessage(){
+        return "* " + name + " does not have more ammo *\n";
+    }
+
     //Metoden tjekker at der er ammunation i våbnet. Hvis ammunation er 0 eller under returneres false.
     @Override
-    public String canUse() {
-        String attack;
+    public Boolean canUse() {
+        boolean attack;
         if (ammo > 0) {
-            attack = "* You shot with the " + name + " *\n";
+            attack = true;
             ammo--;
         } else {
-            attack = "* " + name + " does not have more ammo *\n";
+            attack = false;
         }
         return attack;
     }

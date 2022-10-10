@@ -1,6 +1,6 @@
-public class MeleeWeapon extends Weapon{
+public class MeleeWeapon extends Weapon {
 
-    public MeleeWeapon (String name, String description, int damage){
+    public MeleeWeapon(String name, String description, int damage) {
         super(name, description, damage);
     }
 
@@ -8,6 +8,18 @@ public class MeleeWeapon extends Weapon{
     public String canUse(){
         return "You swing the " + name + " like a badass";
     }
+
+    @Override
+    public Boolean canUse() {
+        return true;
+    }
+
+
+    @Override
+    public String failMessage(){
+    return "Attack with " + name + " failed";
+    }
+
 
     @Override
     public String getAmmo() {

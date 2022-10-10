@@ -56,4 +56,10 @@ public class AdventureCreator {
     public Room getRoom1() {
         return room1;
     }
+
+    //Hjælpemetode til at oprette enemies og samtidig tilføje dem til rummets liste. Sparer en masse plads og tid.
+    private void createEnemy(String enemyname, Weapon enemyWeapon, Room room){
+        Enemy enemy = new Enemy(enemyname, enemyWeapon, room);
+        room.getEnemiesInRoom().add(enemy);
+    }
 }

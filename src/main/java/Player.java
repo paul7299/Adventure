@@ -189,6 +189,7 @@ public class Player {
 
     // TODO ^kan man droppe et item man har equipped? -paul
 
+    //Attack hvis man ikke vælger et target
     public String attack() {
         String message;
         if (currentWeapon != null) {
