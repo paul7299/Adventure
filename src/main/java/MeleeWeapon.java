@@ -5,8 +5,8 @@ public class MeleeWeapon extends Weapon {
     }
 
     //Sender altid true, da melee weapons altid kan bruges
-    public String canUse(){
-        return "You swing the " + name + " like a badass";
+    public String attackMessage(String enemyName) {
+        return "You swung the " + name + " at " + enemyName + " for " + damage + " damage";
     }
 
     @Override

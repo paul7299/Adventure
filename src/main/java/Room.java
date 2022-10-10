@@ -10,6 +10,7 @@ public class Room {
     private Room roomWest;
     private Boolean hasVisited; //Denne bolean vil sige noget om man har besøget et rum før
     private ArrayList<Item> itemsInRoom;
+    private ArrayList<Enemy> enemiesInRoom;
 
     public Room(String roomName, String roomDescription) {
         this.roomName = roomName;
@@ -20,6 +21,10 @@ public class Room {
 //TODO reducér clutter
     public ArrayList<Item> getItemsInRoom() {
         return itemsInRoom;
+    }
+
+    public ArrayList<Enemy> getEnemiesInRoom() {
+        return enemiesInRoom;
     }
 
     public Room getRoomEast() {

@@ -15,4 +15,8 @@ public abstract class Weapon extends Item {
 
     public abstract String getAmmo();
 
+    public int getDamage() {
+        return damage;
+    }
+
 }
