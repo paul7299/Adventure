@@ -7,7 +7,7 @@ public abstract class Weapon extends Item {
         this.damage = damage;
     }
 
-    public abstract boolean canUse();
+    public abstract String canUse();
 
     public abstract String getAmmo();
 

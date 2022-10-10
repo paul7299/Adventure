@@ -26,6 +26,7 @@ public class UserInterface {
                 """);
 
         String userInput = " ";
+
         while (!userInput.equalsIgnoreCase("exit")) {
             System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
             if (!adventureController.hasVisitedStatus()) {
@@ -36,6 +37,7 @@ public class UserInterface {
                 for (String s : adventureController.getCurrentRoomDoors()) {
                     if (s != null) System.out.println(s);
                 }
+
             System.out.println("Choose an action");
             userInput = readString();
             command(userInput);
@@ -131,7 +133,7 @@ public class UserInterface {
                     System.out.println(adventureController.showHealth());
                     break;
                 default:
-                    System.out.println("*Wrong input*");
+                    System.out.println("* Wrong input *");
                     break;
             }
 

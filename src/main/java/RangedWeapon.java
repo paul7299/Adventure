@@ -7,22 +7,22 @@ public class RangedWeapon extends Weapon {
         this.ammo = ammo;
     }
 
+    @Override
     public String getAmmo(){
         return name + ":\t" + ammo + " ammo";
     }
 
-    public void useAmmo(){
-        ammo--;
-    }
 
     //Metoden tjekker at der er ammunation i våbnet. Hvis ammunation er 0 eller under returneres false.
-    public boolean canUse() {
-        boolean isUseable;
+    @Override
+    public String canUse() {
+        String attack;
         if (ammo > 0) {
-            isUseable = true;
+            attack = "* You show with the " + name + " *\n";
+            ammo--;
         } else {
-            isUseable = false;
+            attack = "*" + name + "\tdoes not have more ammo *\n";
         }
-        return isUseable;
+        return attack;
     }
 }
