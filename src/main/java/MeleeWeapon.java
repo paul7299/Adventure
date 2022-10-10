@@ -11,6 +11,6 @@ public class MeleeWeapon extends Weapon{
 
     @Override
     public String getAmmo() {
-        return name + ":\tdoes not use ammo\n";
+        return name + ": does not use ammo\n";
     }
 }

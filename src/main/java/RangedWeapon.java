@@ -9,7 +9,7 @@ public class RangedWeapon extends Weapon {
 
     @Override
     public String getAmmo(){
-        return name + ":\t" + ammo + " ammo";
+        return name + ": " + ammo + " ammo";
     }
 
 
@@ -18,10 +18,10 @@ public class RangedWeapon extends Weapon {
     public String canUse() {
         String attack;
         if (ammo > 0) {
-            attack = "* You show with the " + name + " *\n";
+            attack = "* You shot with the " + name + " *\n";
             ammo--;
         } else {
-            attack = "*" + name + "\tdoes not have more ammo *\n";
+            attack = "* " + name + " does not have more ammo *\n";
         }
         return attack;
     }
