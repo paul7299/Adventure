@@ -19,6 +19,10 @@ public class Enemy {
         return enemyWeapon;
     }
 
+    public int getEnemyWeaponDamage(){
+        return enemyWeapon.getDamage();
+    }
+
     public void setEnemyHealth(int enemyHealth) {
         this.enemyHealth = enemyHealth;
     }
@@ -32,9 +36,9 @@ public class Enemy {
     }
     public String hasEnemyDied() {
 
-        if (enemyHealth <= 0) {
+        if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
-            currentRoom.getItemsInRoom().add(itemToTransfer);
+            currentRoom.getItemsInRoom().add(itemToTransfer); //Fjendens våben er nu et item i rummet der kan samles op
             return (enemyName + " has died, and dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         } else {
             return (enemyName + " has " + enemyHealth + " health left\n");

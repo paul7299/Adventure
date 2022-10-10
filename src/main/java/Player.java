@@ -121,7 +121,7 @@ public class Player {
         } else {
             inventory.remove(itemToTransfer);
             currentRoom.getItemsInRoom().add(itemToTransfer);
-            if(currentWeapon == itemToTransfer){
+            if (currentWeapon == itemToTransfer) {
                 currentWeapon = null;
             }
             return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
@@ -189,36 +189,80 @@ public class Player {
 
     // TODO ^kan man droppe et item man har equipped? -paul
 
+
+    //TODO Har lavet hjælpe metoder til attack for at gøre koden pænere og have færre gentagelser.
+    // Diskuter om man kan lide den eller den skal have et bedre navn
     //Attack hvis man ikke vælger et target
-    public String attack() {
-        String message;
-        if (currentWeapon != null) {
-            message = currentWeapon.attackMessage();
+    public StringBuilder attack() {
+        StringBuilder sb = new StringBuilder();
+
+        if (currentWeapon != null) {    //Tjekker om man har et våben klar
+            if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
+                if (currentRoom.getEnemiesInRoom().isEmpty()) { //Hvis der ikke er fjender i rummet
+                    sb.append("* You hit the air with " + currentWeapon.getItemName() + " *");
+                } else if (!currentRoom.getEnemiesInRoom().isEmpty()) { //Hvis der er fjender (Der er ikke tomt)
+                    for (Enemy n : currentRoom.getEnemiesInRoom()) {
+                  /*      //Tager væk fra fjendens liv, der kommer en besked om man har angrebet...
+                        // ...og spillet tjekker og fortæller om fjenden døde eller ej (hasEnemyDied)
+                        n.setEnemyHealth(n.getEnemyHealth() - currentWeapon.getDamage());
+                        sb.append(currentWeapon.attackMessage(n.getEnemyName()));
+                        sb.append("\n" + n.hasEnemyDied());
+                        if (n.getEnemyHealth() > 0) { //If løkke tjekker om fjenden er i live. Hvis de er så angribes spilleren.
+                            playerHealth -= n.getEnemyWeaponDamage();
+                            sb.append(" Enemy damage you for " + n.getEnemyWeaponDamage() + " damage");
+                        }*/
+                        sb.append(attackSequence(n));
+                        break; //Break for at man kun angriber den første fjende i et rum.
+                    }
+                }
+            } else {
+                sb.append(currentWeapon.failMessage()); //Fejl besked hvis canUse() retunerer false.
+            }
         } else {
-            message = "* You do not have a weapon equipped *\n";
+            sb.append("* You do not have a weapon equipped *\n"); //Hvis currentWeapon er null
         }
-        return message;
+        return sb;
     }
 
     //Attack hvis man vælger et target
     public StringBuilder attack(String enemySearchName) {
         StringBuilder sb = new StringBuilder();
-        if (currentWeapon != null){
-            if (currentWeapon.canUse()) {
+
+        if (currentWeapon != null) { //Tjekker om man har et våben klar
+            if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
                 for (Enemy n : currentRoom.getEnemiesInRoom()) {
                     if (enemySearchName.contains(n.getEnemyName())) {
+                     /*   //Tager væk fra fjendens liv, der kommer en besked om man har angrebet...
+                        // ...og spillet tjekker og fortæller om fjenden døde eller ej (hasEnemyDied)
                         n.setEnemyHealth(n.getEnemyHealth() - currentWeapon.getDamage());
                         sb.append(currentWeapon.attackMessage(n.getEnemyName()));
                         sb.append("\n" + n.hasEnemyDied());
+                        if (n.getEnemyHealth() > 0) { //If løkke tjekker om fjenden er i live. Hvis de er så angribes spilleren.
+                            playerHealth -= n.getEnemyWeaponDamage();
+                            sb.append(" Enemy damage you for " + n.getEnemyWeaponDamage() + " damage");
+                        }*/
+                        sb.append(attackSequence(n));
                     }
                 }
+            } else {
+                sb.append(currentWeapon.failMessage());
             }
-            else {
-            sb.append(currentWeapon.failMessage());
-            }
-    }
-        else {
+        } else {
             sb.append("* You do not have a weapon equipped *\n");
+        }
+        return sb;
+    }
+
+    private StringBuilder attackSequence(Enemy n){
+        StringBuilder sb = new StringBuilder();
+        //Tager væk fra fjendens liv, der kommer en besked om man har angrebet...
+        // ...og spillet tjekker og fortæller om fjenden døde eller ej (hasEnemyDied)
+        n.setEnemyHealth(n.getEnemyHealth() - currentWeapon.getDamage());
+        sb.append(currentWeapon.attackMessage(n.getEnemyName()));
+        sb.append("\n" + n.hasEnemyDied());
+        if (n.getEnemyHealth() > 0) { //If løkke tjekker om fjenden er i live. Hvis de er så angribes spilleren.
+            playerHealth -= n.getEnemyWeaponDamage();
+            sb.append(" Enemy damage you for " + n.getEnemyWeaponDamage() + " damage");
         }
         return sb;
     }
