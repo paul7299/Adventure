@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class UserInterface {
     private AdventureController adventureController;
     private Scanner sc = new Scanner(System.in);
-
     public void startProgram() {
         adventureController = new AdventureController();
 
@@ -13,7 +12,6 @@ public class UserInterface {
                 You are stuck in a maze. The objective of the game is to reach room 5.
                 You navigate through the game using the commands Go north, Go east, Go south and Go west.
                 To view your current room, type "look".
-                If you forget the commands, type "help".
                 If you want to pick up an item; type "take" and specify which item you want to take.
                 If you want to drop an item; type "drop" and specify which item you want to drop.
                 If you want to view your inventory, type "inventory".
@@ -23,6 +21,7 @@ public class UserInterface {
                 If you want to view your current amount of ammo, type "show ammo"
                 If you want to view your health, type "show health".
                 If you want to quit the game, type "exit". 
+                If you forget the commands, type "help".
                 """);
 
         String userInput = " ";
