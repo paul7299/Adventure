@@ -192,18 +192,43 @@ public class Player {
     public String attack() {
         String message;
         if (currentWeapon != null) {
-            message = currentWeapon.canUse();
+            message = currentWeapon.attackMessage();
         } else {
             message = "* You do not have a weapon equipped *\n";
         }
         return message;
     }
 
+    //Attack hvis man vælger et target
+    public StringBuilder attack(String enemySearchName) {
+        StringBuilder sb = new StringBuilder();
+        if (currentWeapon != null){
+            if (currentWeapon.canUse()) {
+                for (Enemy n : currentRoom.getEnemiesInRoom()) {
+                    if (enemySearchName.contains(n.getEnemyName())) {
+                        n.setEnemyHealth(n.getEnemyHealth() - currentWeapon.getDamage());
+                        sb.append(currentWeapon.attackMessage(n.getEnemyName()));
+                        sb.append("\n" + n.hasEnemyDied());
+                    }
+                }
+            }
+            else {
+            sb.append(currentWeapon.failMessage());
+            }
+    }
+        else {
+            sb.append("* You do not have a weapon equipped *\n");
+        }
+        return sb;
+    }
+
+    // TODO ^ Skal sættes ind i UI med sout(stringbuilder)
+
     public String showCurrentAmmo() {
         if (currentWeapon != null) {
             return currentWeapon.getAmmo();
         } else {
-            return "* You have nothing equipped* ";
+            return "* You have nothing equipped * ";
         }
     }
 }
