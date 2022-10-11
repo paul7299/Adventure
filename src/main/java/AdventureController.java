@@ -45,7 +45,7 @@ public class AdventureController {
         return player.getHasVisitedStatus();
     }
 
-    public String playerLook() {
+    public StringBuilder playerLook() {
         return player.look();
     }
 

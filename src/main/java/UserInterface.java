@@ -73,14 +73,14 @@ public class UserInterface {
                 case "take":
                     System.out.println("Which item do you want to pick up?");
                     String takeName = sc.nextLine();
-                    System.out.println(adventureController.pickUpItem(takeName));
+                    System.out.println(adventureController.pickUpItem(takeName.toLowerCase()));
                     break;
                 case "drop":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
                         System.out.println("Which item do you want to drop?");
-                        String dropName = sc.nextLine();
+                        String dropName = readString();
                         System.out.println(adventureController.dropItem(dropName));
                     }
                     break;
@@ -96,7 +96,7 @@ public class UserInterface {
                         System.out.println("Your inventory is empty");
                     } else {
                         System.out.println("What do you want to eat?");
-                        String eatName = sc.nextLine();
+                        String eatName = readString();
                         System.out.println(adventureController.eatFood(eatName));
                         System.out.println("\n" + adventureController.showHealth());
                     }

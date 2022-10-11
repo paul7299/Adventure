@@ -17,6 +17,7 @@ public class Room {
         this.roomDescription = roomDescription;
         this.hasVisited = false; //hasVisited sættes false ved default fordi man ikke har besøgt et rum til at starte med
         itemsInRoom = new ArrayList<Item>();
+        enemiesInRoom = new ArrayList<Enemy>();
     }
 //TODO reducér clutter
     public ArrayList<Item> getItemsInRoom() {
