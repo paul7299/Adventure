@@ -82,10 +82,6 @@ public class Player {
         }
         return a;
     }
-
-
-
-
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
@@ -93,11 +89,6 @@ public class Player {
     public void setHasVisitedToTrue() {
         currentRoom.setHasVisitedToTrue();
     }
-
-    public Room getCurrentRoom() {
-        return currentRoom;
-    }
-
     public boolean getHasVisitedStatus() {
         return currentRoom.getHasVisited();
     }

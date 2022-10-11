@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="Lavet videre på attack. Kodet attack uden input. Lavet en hjælpe metode så det er pænere. Har håndteret at metoden tjekker om fjenden er død, og at den angriber dig hvis de er i live. Et par todo noter.">
+    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="små justeringer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +37,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -467,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665393048989</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="små justeringer">
+      <created>1665514268882</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1665514268882</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
@@ -510,7 +512,8 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/paul7299/Adventure&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
     <MESSAGE value="tostring override i item" />
-    <option name="LAST_COMMIT_MESSAGE" value="tostring override i item" />
+    <MESSAGE value="små justeringer" />
+    <option name="LAST_COMMIT_MESSAGE" value="små justeringer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,10 +15,6 @@ public class Enemy {
         return enemyName;
     }
 
-    public Weapon getEnemyWeapon(){
-        return enemyWeapon;
-    }
-
     public int getEnemyWeaponDamage(){
         return enemyWeapon.getDamage();
     }
@@ -31,9 +27,6 @@ public class Enemy {
         return enemyHealth;
     }
 
-    public void setEnemyName(){
-        this.enemyName = ("dead" + enemyName);
-    }
     public String hasEnemyDied() {
         if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
