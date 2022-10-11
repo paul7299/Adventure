@@ -50,7 +50,17 @@ public class UserInterface {
 
     private void command(String userInput) {
         if (userInput.length() >= 3) {
-            switch (userInput) {
+            String[] listOfWord = userInput.split(" ");
+
+            String firstInput = listOfWord[0];
+
+            String secondInput = "";
+            // Checks if the array is bigger than 1
+            if (listOfWord.length > 1) {
+                secondInput = listOfWord[1];
+            }
+
+            switch (firstInput) {
                 case "north":
                     System.out.println(adventureController.playerGoNorth());
                     break;
@@ -76,17 +86,19 @@ public class UserInterface {
                     System.exit(0);
                     break;
                 case "take":
-                    System.out.println("Which item do you want to pick up?");
+                   /* System.out.println("Which item do you want to pick up?");
                     String takeName = sc.nextLine();
-                    System.out.println(adventureController.pickUpItem(takeName.toLowerCase()));
+                    System.out.println(adventureController.pickUpItem(takeName.toLowerCase()));*/
+                    System.out.println(adventureController.pickUpItem(secondInput));
                     break;
                 case "drop":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("Which item do you want to drop?");
+                       /* System.out.println("Which item do you want to drop?");
                         String dropName = readString();
-                        System.out.println(adventureController.dropItem(dropName));
+                        System.out.println(adventureController.dropItem(dropName));*/
+                        System.out.println(adventureController.dropItem(secondInput));
                     }
                     break;
                 case "inventory":
@@ -100,9 +112,10 @@ public class UserInterface {
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("What do you want to eat?");
+                      /*  System.out.println("What do you want to eat?");
                         String eatName = readString();
-                        System.out.println(adventureController.eatFood(eatName));
+                        System.out.println(adventureController.eatFood(eatName));*/
+                        System.out.println(adventureController.eatFood(secondInput));
                         System.out.println("\n" + adventureController.showHealth());
                     }
                     break;
@@ -110,9 +123,10 @@ public class UserInterface {
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("What do you want to drink?");
+                       /* System.out.println("What do you want to drink?");
                         String drinkName = sc.nextLine();
-                        System.out.println(adventureController.drinkLiquid(drinkName));
+                        System.out.println(adventureController.drinkLiquid(drinkName));*/
+                        System.out.println(adventureController.drinkLiquid(secondInput));
                         System.out.println("\n" + adventureController.showHealth());
                     }
                     break;
@@ -120,15 +134,19 @@ public class UserInterface {
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("Which weapon you want to equip?");
+                 /*       System.out.println("Which weapon you want to equip?");
                         String equipName = sc.nextLine();
-                        System.out.println(adventureController.equipWeapon(equipName));
+                        System.out.println(adventureController.equipWeapon(equipName));*/
+                        System.out.println(adventureController.equipWeapon(secondInput));
+
                     }
                     break;
                 case "attack":
-                    //  System.out.println("Who will you attack");
-                    // string enemyToAttack = sc.nextLine();
+                    if(secondInput.isEmpty()){
                     System.out.println(adventureController.attack());
+                    }else{
+                        System.out.println(adventureController.attack(secondInput));
+                    }
                     break;
                 case "show ammo", "ammo":
                     System.out.println(adventureController.showCurrentAmmo());
