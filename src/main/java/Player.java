@@ -65,13 +65,26 @@ public class Player {
         return goingWestResult;
     }
 
-    public String look() {
+    public StringBuilder look() {
+        StringBuilder a = new StringBuilder();
         if (currentRoom.getItemsInRoom().isEmpty())
-            return currentRoom.getRoomDescription() + "\n" + "there are no items in the room\n";
-        else
-            return currentRoom.getRoomDescription() + "\n" + "In the room you can see the following: " + currentRoom.getItemsInRoom() + "\n";
-
+            a.append(currentRoom.getRoomDescription() + "\n" + "There is nothing in the room");
+        else {
+            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:"
+                    + currentRoom.getItemsInRoom());
+        }
+        if(currentRoom.getEnemiesInRoom().isEmpty()){
+            a.append("\n");
+            a.append("There are no enemies in the room");
+        }
+        else{
+            a.append("\nThere's enemies in the room: " + currentRoom.getEnemiesInRoom());
+        }
+        return a;
     }
+
+
+
 
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
@@ -262,7 +275,9 @@ public class Player {
         sb.append("\n" + n.hasEnemyDied());
         if (n.getEnemyHealth() > 0) { //If løkke tjekker om fjenden er i live. Hvis de er så angribes spilleren.
             playerHealth -= n.getEnemyWeaponDamage();
-            sb.append(" Enemy damage you for " + n.getEnemyWeaponDamage() + " damage");
+            sb.append(" Enemy has attacked you for " + n.getEnemyWeaponDamage() + " damage");
+        } else {
+            currentRoom.getEnemiesInRoom().remove(n);
         }
         return sb;
     }

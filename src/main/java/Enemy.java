@@ -35,7 +35,6 @@ public class Enemy {
         this.enemyName = ("dead" + enemyName);
     }
     public String hasEnemyDied() {
-
         if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
             currentRoom.getItemsInRoom().add(itemToTransfer); //Fjendens våben er nu et item i rummet der kan samles op
@@ -43,6 +42,10 @@ public class Enemy {
         } else {
             return (enemyName + " has " + enemyHealth + " health left\n");
         }
+    }
 
+    @Override
+    public String toString() {
+        return enemyName;
     }
 }
