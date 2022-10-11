@@ -50,10 +50,19 @@ public class AdventureCreator {
         room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 2));
         room1.getItemsInRoom().add(new RangedWeapon("bow", "A hunters bow with a quiver", 2, 4));
 
+        // Opretter enemy og dens weapon
+        MeleeWeapon bigStick = new MeleeWeapon("Big Stick", "So big", 10);
+        createEnemy("A Norwegian troll", bigStick, room4);
     }
 
     //Denne metode bruges i AdventureController
     public Room getRoom1() {
         return room1;
+    }
+
+    //Hjælpemetode til at oprette enemies og samtidig tilføje dem til rummets liste. Sparer en masse plads og tid.
+    private void createEnemy(String enemyname, Weapon enemyWeapon, Room room){
+        Enemy enemy = new Enemy(enemyname, enemyWeapon, room);
+        room.getEnemiesInRoom().add(enemy);
     }
 }
