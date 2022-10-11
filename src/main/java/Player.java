@@ -17,7 +17,7 @@ public class Player {
     // Constructor
     public Player(Room startRoom) {
         this.currentRoom = startRoom;
-        this.playerHealth = 50;
+        this.playerHealth = 1;
         this.currentWeapon = null;
     }
 

@@ -27,6 +27,9 @@ public class UserInterface {
         String userInput = " ";
 
         while (!userInput.equalsIgnoreCase("exit")) {
+            if (adventureController.isPlayerDead()) {
+                gameOver();
+            }
             System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
