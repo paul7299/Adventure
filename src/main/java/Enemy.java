@@ -45,4 +45,6 @@ public class Enemy {
         }
 
     }
+    // ^TODO forsvinder enemy når den dør?
+
 }
