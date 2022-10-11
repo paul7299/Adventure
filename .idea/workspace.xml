@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="enemy">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Lavet liquid færdig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
     </list>
-    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
-    <list id="37747d95-85c0-49ce-b02b-6d38123475bd" name="Changes by Mohamed" comment="Changes by Mohamed" />
-    <list id="32be26e7-761f-49ed-873b-f52c84a1adfb" name="Changes by paulk" comment="Changes by paulk" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +143,18 @@
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
       <workItem from="1664451044886" duration="3796000" />
-      <workItem from="1665439147608" duration="15000" />
+    </task>
+    <task id="LOCAL−00001" summary="1st commit">
+      <created>1664186218398</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1664186218398</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Oprettet Main, Room, UI og Adventure objekter">
+      <created>1664186894202</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1664186894202</updated>
     </task>
     <task id="LOCAL-00003" summary="Lavet test af setRooms">
       <created>1664190151502</created>
@@ -454,28 +466,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665393048989</updated>
     </task>
-    <task id="LOCAL-00049" summary="enemy">
-      <created>1665397845345</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1665397845345</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Changes by Mohamed">
-      <created>1665397857289</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1665397857289</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Changes by paulk">
-      <created>1665397866130</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1665397866130</updated>
-    </task>
-    <option name="localTasksCounter" value="52" />
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,6 +484,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="slettet en lille ting" />
+    <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
     <MESSAGE value="Tilføjet hvem der står for TODOs" />
@@ -509,16 +502,14 @@
     <MESSAGE value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
     <MESSAGE value="WORKSPACE YEEEES" />
     <MESSAGE value="Liquid klassen oprettet" />
+    <MESSAGE value="Changes by paulk" />
     <MESSAGE value="Lavet liquid færdig" />
     <MESSAGE value="tilføjet consumeable" />
     <MESSAGE value="ELSKER WORKSPACE YEEEEEEEEEEEEEEEEES" />
     <MESSAGE value="Merge branch 'main' of https://github.com/paul7299/Adventure&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
     <MESSAGE value="tostring override i item" />
-    <MESSAGE value="enemy" />
-    <MESSAGE value="Changes by Mohamed" />
-    <MESSAGE value="Changes by paulk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by paulk" />
+    <option name="LAST_COMMIT_MESSAGE" value="tostring override i item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

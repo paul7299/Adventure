@@ -74,8 +74,12 @@ public class AdventureController {
         return "You have " + health + " health.";
     }
 
-    public String attack(){
+    public StringBuilder attack(){
         return player.attack();
+    }
+
+    public StringBuilder attack(String enemyName){
+        return player.attack(enemyName);
     }
 
     public String equipWeapon(String name){
@@ -85,6 +89,9 @@ public class AdventureController {
     public String showCurrentAmmo(){
         return player.showCurrentAmmo();
     }
+
+    //TODO metode der kigger på om player er død. Forstiller mig den skal kaldes samtidig med attack i controller.
+    // returnerer void og giver mulighed for at stoppe spillet eller starte forfra.
 
 }
 
