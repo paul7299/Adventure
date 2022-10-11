@@ -75,7 +75,7 @@ public class UserInterface {
                     break;
                 case "look":
                     System.out.println("You are observing the room: ");
-                    System.out.println("\t" + adventureController.playerLook());
+                    System.out.println(adventureController.playerLook());
                     adventureController.getCurrentRoomDoors();
                     break;
                 case "help":
