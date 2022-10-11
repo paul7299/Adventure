@@ -65,4 +65,7 @@ public class AdventureCreator {
         Enemy enemy = new Enemy(enemyname, enemyWeapon, room);
         room.getEnemiesInRoom().add(enemy);
     }
+
+    // ^ TODO Jeg tror room er udenfor ønsket scope i denne metode
+
 }

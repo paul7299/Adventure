@@ -48,4 +48,6 @@ public class Enemy {
     public String toString() {
         return enemyName;
     }
+    // ^TODO forsvinder enemy når den dør?
+
 }

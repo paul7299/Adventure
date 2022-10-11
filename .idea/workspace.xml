@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="enemy kan dø og droppe sit våben i room">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AdventureCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
-    </list>
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="spm" />
+    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
-    <list id="c2f3f436-9140-4880-81fc-2466b9c627d4" name="Changes by Mohamed" comment="Changes by others">
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list id="231cd376-cd50-4b76-a28b-ff1ba191d250" name="Changes by Mohamed" comment="" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,20 +30,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-        <range start1="29" end1="29" start2="30" end2="33" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
-        <range start1="39" end1="42" start2="43" end2="46" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-        <range start1="45" end1="45" start2="49" end2="50" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-        <range start1="46" end1="47" start2="51" end2="52" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-        <range start1="138" end1="140" start2="143" end2="144" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-        <range start1="143" end1="143" start2="147" end2="148" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-        <range start1="148" end1="148" start2="153" end2="174" changelist="c2f3f436-9140-4880-81fc-2466b9c627d4" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,6 +141,18 @@
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
       <workItem from="1664451044886" duration="3796000" />
+    </task>
+    <task id="LOCAL−00001" summary="1st commit">
+      <created>1664186218398</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1664186218398</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Oprettet Main, Room, UI og Adventure objekter">
+      <created>1664186894202</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1664186894202</updated>
     </task>
     <task id="LOCAL-00003" summary="Lavet test af setRooms">
       <created>1664190151502</created>
@@ -473,28 +464,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665393048989</updated>
     </task>
-    <task id="LOCAL-00049" summary="enemy kan dø og droppe sit våben i room">
-      <created>1665495589612</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1665495589612</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Changes by others">
-      <created>1665495623294</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1665495623294</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Changes by paulk">
-      <created>1665495649062</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1665495649062</updated>
-    </task>
-    <option name="localTasksCounter" value="52" />
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,6 +482,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="slettet en lille ting" />
+    <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
     <MESSAGE value="Tilføjet hvem der står for TODOs" />
@@ -528,16 +500,14 @@
     <MESSAGE value="eat metoden er gjort mere robust, så man stadig kan se inventory men man får fejl hvis man vil eate et item" />
     <MESSAGE value="WORKSPACE YEEEES" />
     <MESSAGE value="Liquid klassen oprettet" />
+    <MESSAGE value="Changes by paulk" />
     <MESSAGE value="Lavet liquid færdig" />
     <MESSAGE value="tilføjet consumeable" />
     <MESSAGE value="ELSKER WORKSPACE YEEEEEEEEEEEEEEEEES" />
     <MESSAGE value="Merge branch 'main' of https://github.com/paul7299/Adventure&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
     <MESSAGE value="tostring override i item" />
-    <MESSAGE value="enemy kan dø og droppe sit våben i room" />
-    <MESSAGE value="Changes by others" />
-    <MESSAGE value="Changes by paulk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by paulk" />
+    <option name="LAST_COMMIT_MESSAGE" value="tostring override i item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
