@@ -97,8 +97,6 @@ public class AdventureController {
         else
         return false;
     }
-    //TODO metode der kigger på om player er død. Forstiller mig den skal kaldes samtidig med attack i controller.
-    // returnerer void og giver mulighed for at stoppe spillet eller starte forfra.
 
 }
 
