@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class UserInterface {
     private AdventureController adventureController;
     private Scanner sc = new Scanner(System.in);
+
     public void startProgram() {
         adventureController = new AdventureController();
 
@@ -40,14 +41,15 @@ public class UserInterface {
                     if (s != null) System.out.println(s);
                 }
 
-            System.out.println("Choose an action");
-            userInput = readString();
-            command(userInput);
+                System.out.println("Choose an action");
+                userInput = readString();
+                command(userInput);
             }
         }
     }
+
     private void command(String userInput) {
-        if(userInput.length() >= 3){
+        if (userInput.length() >= 3) {
             switch (userInput) {
                 case "north":
                     System.out.println(adventureController.playerGoNorth());
@@ -139,16 +141,37 @@ public class UserInterface {
                     break;
             }
 
-        }
-        else{
+        } else {
             System.out.println("input needs to be at least 3 chars");
         }
     }
+
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
+
+    public void gameOver() {
+        System.out.println(
+                            """
+                            You have died
+                            Choose what to do
+                            1. Play again
+                            2. exit game
+                            """);
+        int i = sc.nextInt();
+        switch (i) {
+            case 1:
+                startProgram();
+                break;
+            case 2:
+                System.out.println("Thank you for playing");
+                System.exit(0);
+                break;
+        }
+    }
+
     public String printHelp() {
         return """
                  * Help - list of commands: *
