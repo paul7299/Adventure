@@ -15,7 +15,7 @@ public class Room {
     public Room(String roomName, String roomDescription) {
         this.roomName = roomName;
         this.roomDescription = roomDescription;
-        this.hasVisited = false; //hasVisited sættes false ved default fordi man ikke har besøgt et rum til at starte med
+        hasVisited = false; //hasVisited sættes false ved default fordi man ikke har besøgt et rum til at starte med
         itemsInRoom = new ArrayList<Item>();
         enemiesInRoom = new ArrayList<Enemy>();
     }

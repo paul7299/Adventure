@@ -47,7 +47,7 @@ public class AdventureCreator {
         room1.getItemsInRoom().add(new Liquid("beer", "a large tuborg", -10));
         room1.getItemsInRoom().add(new Liquid("water", "bottled water", 10));
 
-        room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 2));
+        room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 15));
         room1.getItemsInRoom().add(new RangedWeapon("bow", "A hunters bow with a quiver", 2, 4));
 
         // Opretter enemy og dens weapon
