@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="små justeringer">
+    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="slettet metoder som ikke bruges">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,12 +139,6 @@
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
       <workItem from="1664451044886" duration="3796000" />
-    </task>
-    <task id="LOCAL−00001" summary="1st commit">
-      <created>1664186218398</created>
-      <option name="number" value="LOCAL−00001" />
-      <option name="presentableId" value="LOCAL−00001" />
-      <updated>1664186218398</updated>
     </task>
     <task id="LOCAL−00002" summary="Oprettet Main, Room, UI og Adventure objekter">
       <created>1664186894202</created>
@@ -470,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665514268882</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="slettet metoder som ikke bruges">
+      <created>1665515968615</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1665515968615</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
     <MESSAGE value="Tilføjet hvem der står for TODOs" />
@@ -513,7 +512,8 @@
     <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
     <MESSAGE value="tostring override i item" />
     <MESSAGE value="små justeringer" />
-    <option name="LAST_COMMIT_MESSAGE" value="små justeringer" />
+    <MESSAGE value="slettet metoder som ikke bruges" />
+    <option name="LAST_COMMIT_MESSAGE" value="slettet metoder som ikke bruges" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
