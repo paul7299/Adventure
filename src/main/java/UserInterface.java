@@ -1,40 +1,37 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-//Vores UserInterface står for at håndtere alt kommunikation mellem programmet og brugeren
 public class UserInterface {
-    private final Scanner sc = new Scanner(System.in);
-    
     private AdventureController adventureController;
-    
-    // startProgram() står for at udskrive reglerne for spillet og videresende brugerens input til vores @command metode.
-    // Derudover udskriver den også information om det rum man går ind i.
+    private Scanner sc = new Scanner(System.in);
+
     public void startProgram() {
-        
         adventureController = new AdventureController();
-        
+
         System.out.println("""
+                
                 Welcome to the game! Let's begin
-                You are stuck in a maze. The objective of the game is to reach room 5.
-                You navigate through the game using the commands Go north, Go east, Go south and Go west.
-                To view your current room, type "look".
-                If you want to pick up an item; type "take" and specify which item you want to take.
-                If you want to drop an item; type "drop" and specify which item you want to drop.
-                If you want to view your inventory, type "inventory".
-                If you want to drink or eat an consumable, type either "drink" or "eat" and specify which consumable afterwards.
-                If you want to equip a weapon from your inventory, type "equip weapon"
-                If you want to attack with your equipped weapon, type "attack"
-                If you want to view your current amount of ammo, type "show ammo"
-                If you want to view your health, type "show health".
-                If you want to quit the game, type "exit". 
-                If you forget the commands, type "help".
+                You navigate through the game using the commands north, east, south and west.
+                type help to see all the comands.
+                
+                You are watching a football game with your friends. 
+                the break is about to come and it is your turn to get beers for the group, but there is a problem.
+                there is a shortage of beer at the away stand where you are seated, 
+                therfore you must go to the home stand and get the beers.
+                
+                you heard from a guy behind you that the best beers are served at section 9.
+                but remember this is a derby game and the hate is real between the fans, navigate carefully.
+                come on go! the break just stared.
                 """);
-        
+
         String userInput = " ";
-        
+
         while (!userInput.equalsIgnoreCase("exit")) {
             if (adventureController.isPlayerDead()) {
                 gameOver();
+            }
+            if(adventureController.hasWon()){
+                hasWon();
             }
             System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
             if (!adventureController.hasVisitedStatus()) {
@@ -45,29 +42,32 @@ public class UserInterface {
                 for (String s : adventureController.getCurrentRoomDoors()) {
                     if (s != null) System.out.println(s);
                 }
-                
+
+                room9Message();
+                room5Message();
+
                 System.out.println("Choose an action");
                 userInput = readString();
                 command(userInput);
             }
         }
     }
-    
+
     //command står for håndteringen af brugerens input, og indeholder de forskellige valgmuligheder brugeren har i spillet
     //Den sikrer at brugerens input minimum er 3 tegn langt, og returnerer fejl, hvis brugerens input ikke er forstået.
     private void command(String userInput) {
-        
+
         if (userInput.length() >= 3) {
             String[] listOfWord = userInput.split(" ");
-            
+
             String firstInput = listOfWord[0];
-            
+
             String secondInput = "";
             // Checks if the array is bigger than 1
             if (listOfWord.length > 1) {
                 secondInput = listOfWord[1];
             }
-            
+
             switch (firstInput) {
                 case "north":
                     System.out.println(adventureController.playerGoNorth());
@@ -94,19 +94,21 @@ public class UserInterface {
                     System.exit(0);
                     break;
                 case "take":
-                   /* System.out.println("Which item do you want to pick up?");
-                    String takeName = sc.nextLine();
-                    System.out.println(adventureController.pickUpItem(takeName.toLowerCase()));*/
-                    System.out.println(adventureController.pickUpItem(secondInput));
+                    if (!secondInput.equals("")) {
+                        System.out.println(adventureController.pickUpItem(secondInput));
+                    } else {
+                        System.out.println("*You have to type in what you want to take after the take-command*");
+                    }
                     break;
                 case "drop":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                       /* System.out.println("Which item do you want to drop?");
-                        String dropName = readString();
-                        System.out.println(adventureController.dropItem(dropName));*/
-                        System.out.println(adventureController.dropItem(secondInput));
+                        if (!secondInput.equals("")) {
+                            System.out.println(adventureController.dropItem(secondInput));
+                        } else {
+                            System.out.println("*You have to type in what you want to drop after the drop-command*");
+                        }
                     }
                     break;
                 case "inventory":
@@ -116,89 +118,148 @@ public class UserInterface {
                         System.out.println("Your inventory contains: " + adventureController.showInventory());
                     }
                     break;
-                case "eat food", "eat":
+                case "eat":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                      /*  System.out.println("What do you want to eat?");
-                        String eatName = readString();
-                        System.out.println(adventureController.eatFood(eatName));*/
-                        System.out.println(adventureController.eatFood(secondInput));
+                        if (!secondInput.equals("")) {
+                            System.out.println(adventureController.eatFood(secondInput));
+                        } else {
+                            System.out.println("*You have to type in what you want to eat after the eat-command*");
+                        }
                         System.out.println("\n" + adventureController.showHealth());
                     }
                     break;
-                case "drink liquid", "drink":
+                case "drink":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                       /* System.out.println("What do you want to drink?");
-                        String drinkName = sc.nextLine();
-                        System.out.println(adventureController.drinkLiquid(drinkName));*/
-                        System.out.println(adventureController.drinkLiquid(secondInput));
+                        if (!secondInput.equals("")) {
+                            System.out.println(adventureController.drinkLiquid(secondInput));
+                        } else {
+                            System.out.println("*You have to type in what you want to drink after the drink-command*");
+                        }
                         System.out.println("\n" + adventureController.showHealth());
                     }
                     break;
-                case "equip weapon", "equip":
+                case "equip":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                 /*       System.out.println("Which weapon you want to equip?");
-                        String equipName = sc.nextLine();
-                        System.out.println(adventureController.equipWeapon(equipName));*/
-                        System.out.println(adventureController.equipWeapon(secondInput));
-                        
+                        if (!secondInput.equals("")) {
+                            System.out.println(adventureController.equipWeapon(secondInput));
+                        } else {
+                            System.out.println("*You have to type in what you want to equip after the equip-command*");
+                        }
                     }
                     break;
                 case "attack":
-                    if (secondInput.isEmpty()) {
-                        System.out.println(adventureController.attack());
-                    } else {
+                    if(secondInput.equals("")){
+                    System.out.println(adventureController.attack());
+                    }else{
                         System.out.println(adventureController.attack(secondInput));
                     }
                     break;
-                case "show ammo", "ammo":
+                case "ammo":
                     System.out.println(adventureController.showCurrentAmmo());
                     break;
-                case "show health", "health":
+                case "health":
                     System.out.println(adventureController.showHealth());
                     break;
                 default:
                     System.out.println("* Wrong input *");
                     break;
             }
-            
         } else {
             System.out.println("input needs to be at least 3 chars");
         }
     }
-    
+
     //readString omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
-    
-    //gameOver udskriver når spillet er slut, og spilleren får mulighed for at prøve igen eller exit game.
-    public void gameOver() {
-        System.out.println("""
-                You have died
-                Choose what to do
+
+    private void gameOver() {
+        System.out.println(
+                """
+                        You have died
+                        Choose what to do
+                        1. Play again
+                        2. exit game
+                        """);
+        int i = 0;
+
+        while (i != 1 && i !=2){
+            i = sc.nextInt();
+            switch (i) {
+                case 1:
+                    startProgram();
+                    break;
+                case 2:
+                    System.out.println("Thank you for playing");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("invalid input");
+            }
+    }
+    }
+
+    private void room9Message(){
+        if(adventureController.hasVisitedRoom9()){
+            System.out.println("""
+                    You got to section 9 where the bar is.
+                    The home fans are heckling and threatening you.
+                    The bartender tells you that he is out of Tuborg!
+                    But! There's a hidden away bar in section 5! They should have extra Tuborg!!
+                    Meanwhile, a masked fan is shouting your way with a baton!
+                    """);
+        }
+    }
+
+    private void room5Message(){
+        if(adventureController.hasVisitedRoom5()){
+            System.out.println("""
+                    You got to section 5 where the hidden bar is.
+                    You can smell the Tuborg! But there's a problem!
+                    The last Tuborg was taken by a drunk fan in front of you!
+                    He has a glass bottle in one hand and the Tuborg in the other.
+                    Show him that you deserve the last Tuborg!
+                    """);
+        }
+    }
+
+    private void hasWon(){
+        System.out.println(
+                """
+                You got the tuborg and got to your seat before the 2nd half started!
+                You sit back and ready to enjoy the game with a fresh tuborg!
+                Unfortunately, the game ends in a boring 0-0...
+                
+                Choose what to do:
                 1. Play again
                 2. exit game
                 """);
-        int i = sc.nextInt();
-        switch (i) {
-            case 1:
-                startProgram();
-                break;
-            case 2:
-                System.out.println("Thank you for playing");
-                System.exit(0);
-                break;
+        int i = 0;
+
+        while (i != 1 && i !=2){
+            i = sc.nextInt();
+            switch (i) {
+                case 1:
+                    startProgram();
+                    break;
+                case 2:
+                    System.out.println("Thank you for playing");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid input");
+            }
         }
     }
-    
-    //printHelp returnerer alle kommandoer spilleren har mulighed for at at benytte
+
     public String printHelp() {
         return """
                  * Help - list of commands: *
@@ -213,9 +274,9 @@ public class UserInterface {
                  - Eat food         Eat food / eat 
                  - equip weapon     equip weapon/ equip
                  - attack           attack
-                 - Show ammo        Show ammo/ ammo
-                 - Drink liquid     Drink liquid / drink 
-                 - Player health    Show health / health 
+                 - Show ammo        ammo
+                 - Drink liquid     drink 
+                 - Player health    health 
                  - Exit:            exit
                 """;
     }

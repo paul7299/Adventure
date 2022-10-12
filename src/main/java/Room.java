@@ -69,6 +69,7 @@ public class Room {
     }
 
 
+
 //TODO Paul ik akut, lav setRoom op på Tines metode
     //Starter mmed at bruge en setter eks. seteast til at forbinde det valte rum med et rum i paramteren
     // Tjekker at det valgte rum (this) ikke er forbundet til parameter rummet (eks. setEast), this er ikke west

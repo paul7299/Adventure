@@ -2,6 +2,7 @@
 // Den placerer også rummene i forhold til hinanden, så hvert rum selv ved hvor det befinder sig relativt til de andre.
 
 public class AdventureCreator {
+
     private Room room1;
     private Room room2;
     private Room room3;
@@ -11,18 +12,18 @@ public class AdventureCreator {
     private Room room7;
     private Room room8;
     private Room room9;
-    
+
     public void createMap() {
-        room1 = new Room("Room 1", "The first room.");
-        room2 = new Room("Room 2", "The second room.");
-        room3 = new Room("Room 3", "The third room.");
-        room4 = new Room("Room 4", "The fourth room.");
-        room5 = new Room("Room 5", "The fifth room.");
-        room6 = new Room("Room 6", "The sixth room.");
-        room7 = new Room("Room 7", "The seventh room.");
-        room8 = new Room("Room 8", "The eight room.");
-        room9 = new Room("Room 9", "The ninth room.");
-        
+        room1 = new Room("Section 1", "The away fan section where you are seated. No one will bother you here");
+        room2 = new Room("Section 2", "Another away fan section. No one will bother you here");
+        room3 = new Room("Section 3", "A home section, reserved for families.");
+        room4 = new Room("Section 4", "Another away fan section, reserved for families. You can get healthy snacks here.");
+        room5 = new Room("Section 5", "A hidden away bar area, there should be Tuborg here!");
+        room6 = new Room("Section 6", "A home fan section, lots of tourists sit here.");
+        room7 = new Room("Section 7", "A home fan section, lots of music and flags here.");
+        room8 = new Room("Section 8", "A home section, the hardcore fans sit here");
+        room9 = new Room("Section 9", "A home section, hardcore fans sit here. There's a bar that might have Tuborg!");
+
         room1.setRooms(null, room4, room2, null);
         room2.setRooms(null, null, room3, room1);
         room3.setRooms(null, room6, null, room2);
@@ -32,44 +33,48 @@ public class AdventureCreator {
         room7.setRooms(room4, null, room8, null);
         room8.setRooms(room5, null, room9, room7);
         room9.setRooms(room6, null, null, room8);
-        
-        room1.getItemsInRoom().add(new Item("lamp", "an incrediby boring lamp"));
-        room1.getItemsInRoom().add(new Item("coins", "10 danish crowns"));
-        room2.getItemsInRoom().add(new Item("terning", "a danish terning"));
-        room3.getItemsInRoom().add(new Item("a tuborg", "a green bottle of stale beer"));
-        room4.getItemsInRoom().add(new Item("an axe", "an old rusty axe"));
-        room5.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
-        room6.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
-        room7.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
-        room8.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
-        room9.getItemsInRoom().add(new Item("lamp", "an incredibly boring lamp"));
-        
-        room1.getItemsInRoom().add(new Food("hotdog", "juicy hotdog", -10));
-        room4.getItemsInRoom().add(new Food("apple", "Pink lady apple", 10));
-        room1.getItemsInRoom().add(new Liquid("beer", "a large tuborg", -10));
-        room1.getItemsInRoom().add(new Liquid("water", "bottled water", 10));
-        
-        room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 10));
-        room1.getItemsInRoom().add(new RangedWeapon("bow", "A hunters bow with a quiver", 15, 10));
-        
+
+        room1.getItemsInRoom().add(new Item("empty beer", "an empty beer"));
+        room6.getItemsInRoom().add(new Item("coins", "10 danish crowns"));
+        room4.getItemsInRoom().add(new Item("football scarf", "old scarf from the 90s"));
+        room2.getItemsInRoom().add(new Item("dice", "danish dice"));
+
+        room1.getItemsInRoom().add(new Food("hotdog", "A fat, juicy hotdog", -5));
+        room4.getItemsInRoom().add(new Food("apple", "A bag of apples for kids", 10));
+        room4.getItemsInRoom().add(new Liquid("milk","A small carton of milk", 15));
+        room1.getItemsInRoom().add(new Liquid("beer", "Alcohol free beer", 10));
+        room4.getItemsInRoom().add(new Liquid("soda", "A can of soda", -10));
+
+        room7.getItemsInRoom().add(new MeleeWeapon("drumstick", "A big drumstick used by the home fans", 100));
+        room9.getItemsInRoom().add(new RangedWeapon("Firework", "A roman candle, the preferred weapon for violent fans worldwide!", 15, 10));
+
         // Opretter enemy og dens weapon
-        MeleeWeapon bigStick = new MeleeWeapon("Big Stick", "So big", 10);
-        createEnemy("troll", bigStick, room4);
-        RangedWeapon crossBow = new RangedWeapon("Crossbow", "the penetrator", 15, 6);
-        createEnemy("ogre", crossBow, room4);
+        MeleeWeapon shoe = new MeleeWeapon("Shoe", "A worn out Nike shoe", 2);
+        createEnemy("blondie",shoe, room8);
+        MeleeWeapon baton = new MeleeWeapon("baton", "A baton that's been stolen from security", 15);
+        createEnemy("masked", baton,room9);
+        MeleeWeapon bottle = new MeleeWeapon("bottle", "A glass bottle that's been smuggled in", 15);
+        createEnemy("drunk", bottle, room5);
+        room5.getEnemiesInRoom().get(0).setItem("tuborg", "A cold, fresh tuborg");
     }
-    
+
     //Denne metode bruges i AdventureController
     public Room getRoom1() {
         return room1;
     }
-    
+
     //Hjælpemetode til at oprette enemies og samtidig tilføje dem til rummets liste. Sparer en masse plads og tid.
-    private void createEnemy(String enemyname, Weapon enemyWeapon, Room room) {
+    private void createEnemy(String enemyname, Weapon enemyWeapon, Room room){
         Enemy enemy = new Enemy(enemyname, enemyWeapon, room);
         room.getEnemiesInRoom().add(enemy);
     }
-    
-    // ^ TODO Jeg tror room er udenfor ønsket scope i denne metode
-    
+
+
+    public boolean getRoom5VisitedStatus() {
+        return room5.getHasVisited();
+    }
+
+    public boolean getRoom9VisitedStatus() {
+        return room9.getHasVisited();
+    }
 }
