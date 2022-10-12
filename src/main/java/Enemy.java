@@ -1,4 +1,4 @@
-public class Enemy {
+public class    Enemy {
 
     private String enemyName;
     private Weapon enemyWeapon;
@@ -15,10 +15,6 @@ public class Enemy {
         return enemyName;
     }
 
-    public Weapon getEnemyWeapon(){
-        return enemyWeapon;
-    }
-
     public int getEnemyWeaponDamage(){
         return enemyWeapon.getDamage();
     }
@@ -31,19 +27,19 @@ public class Enemy {
         return enemyHealth;
     }
 
-    public void setEnemyName(){
-        this.enemyName = ("dead" + enemyName);
-    }
     public String hasEnemyDied() {
-
         if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
-            currentRoom.getItemsInRoom().add(itemToTransfer); //Fjendens våben er nu et item i rummet der kan samles op
+            currentRoom.getItemsInRoom().add(itemToTransfer);
             return (enemyName + " has died, and dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         } else {
             return (enemyName + " has " + enemyHealth + " health left\n");
         }
+    }
 
+    @Override
+    public String toString() {
+        return enemyName;
     }
     // ^TODO forsvinder enemy når den dør?
 

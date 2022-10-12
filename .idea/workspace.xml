@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="spm" />
-    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
-    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="små justeringer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Liquid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Liquid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+    </list>
+    <list id="0860bfc8-bf9e-446c-bc57-c2b1581067cb" name="Changes by jonat" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    </list>
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
-    <list id="231cd376-cd50-4b76-a28b-ff1ba191d250" name="Changes by Mohamed" comment="" />
-    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +41,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+      <ranges>
+        <range start1="0" end1="2" start2="0" end2="0" changelist="0860bfc8-bf9e-446c-bc57-c2b1581067cb" />
+        <range start1="75" end1="76" start2="73" end2="74" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="78" end1="80" start2="76" end2="77" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="84" end1="84" start2="81" end2="82" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="91" end1="91" start2="89" end2="90" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="197" end1="199" start2="196" end2="196" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="202" end1="203" start2="199" end2="199" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="229" end1="230" start2="225" end2="226" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="251" end1="252" start2="247" end2="248" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="257" end1="259" start2="253" end2="253" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -39,6 +65,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -464,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665393048989</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="små justeringer">
+      <created>1665514268882</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1665514268882</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="slettet en lille ting" />
     <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
@@ -507,7 +540,8 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/paul7299/Adventure&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
     <MESSAGE value="tostring override i item" />
-    <option name="LAST_COMMIT_MESSAGE" value="tostring override i item" />
+    <MESSAGE value="små justeringer" />
+    <option name="LAST_COMMIT_MESSAGE" value="små justeringer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
