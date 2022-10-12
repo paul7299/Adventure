@@ -1,7 +1,7 @@
 public class Enemy {
-    
-    private final String enemyName;
-    private final Weapon enemyWeapon;
+
+    private String enemyName;
+    private Weapon enemyWeapon;
     private int enemyHealth;
     private final Room currentRoom;
     
@@ -30,7 +30,6 @@ public class Enemy {
     
     public String hasEnemyDied() {
         // hasEnemyDied Tjekker om fjenden er død ved at se om liv er under 0 og returnerer fjendens status
-
         if (enemyHealth <= 0) {
             Item itemToTransfer = enemyWeapon;
             currentRoom.getItemsInRoom().add(itemToTransfer);

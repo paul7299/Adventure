@@ -4,13 +4,12 @@ public class Player {
     private int playerHealth;
     private Room currentRoom;
     private Weapon currentWeapon;
-    
-    private final ArrayList<Item> inventory = new ArrayList<>();
-    
+
+    private ArrayList<Item> inventory = new ArrayList<>();
+
     public ArrayList<Item> showInventory() {
         return inventory;
     }
-    
     
     // Constructor
     public Player(Room startRoom) {
@@ -73,9 +72,10 @@ public class Player {
         if (currentRoom.getItemsInRoom().isEmpty())
             a.append(currentRoom.getRoomDescription() + "\n" + "There is nothing in the room");
         else {
-            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:" + currentRoom.getItemsInRoom());
+            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:"
+                    + currentRoom.getItemsInRoom());
         }
-        if (currentRoom.getEnemiesInRoom().isEmpty()) {
+        if(currentRoom.getEnemiesInRoom().isEmpty()){
             a.append("\n");
             a.append("There are no enemies in the room");
         } else {
@@ -209,6 +209,9 @@ public class Player {
     
     //TODO Har lavet hjælpe metoder til attack for at gøre koden pænere og have færre gentagelser.
     // Diskuter om man kan lide den eller den skal have et bedre navn
+
+
+
     //Attack hvis man ikke vælger et target
     public StringBuilder attack() {
         StringBuilder sb = new StringBuilder();
@@ -239,7 +242,7 @@ public class Player {
         if (currentWeapon != null) { //Tjekker om man har et våben klar
             if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
                 for (Enemy n : currentRoom.getEnemiesInRoom()) {
-                    if (enemySearchName.contains(n.getEnemyName())) {
+                    if (n.getEnemyName().contains(enemySearchName)) {
                         sb.append(attackSequence(n));
                     }
                 }
@@ -261,15 +264,13 @@ public class Player {
         sb.append("\n" + n.hasEnemyDied());
         if (n.getEnemyHealth() > 0) { //If løkke tjekker om fjenden er i live. Hvis de er så angribes spilleren.
             playerHealth -= n.getEnemyWeaponDamage();
-            sb.append(" Enemy has attacked you for " + n.getEnemyWeaponDamage() + " damage");
+            sb.append("Enemy has attacked you for " + n.getEnemyWeaponDamage() + " damage");
         } else {
             currentRoom.getEnemiesInRoom().remove(n);
         }
         return sb;
     }
-    
-    // TODO ^ Skal sættes ind i UI med sout(stringbuilder)
-    
+
     public String showCurrentAmmo() {
         if (currentWeapon != null) {
             return currentWeapon.getAmmo();
