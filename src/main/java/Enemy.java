@@ -35,6 +35,10 @@ public class    Enemy {
         if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
             currentRoom.getItemsInRoom().add(itemToTransfer);
+            if(item != null){
+                currentRoom.getItemsInRoom().add(item);
+                return (enemyName + " has died, and dropped " + item + " and " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
+            }
             return (enemyName + " has died, and dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         } else {
             return (enemyName + " has " + enemyHealth + " health left\n");

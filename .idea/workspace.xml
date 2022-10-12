@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="story updated">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Har lavet split metoden, kan skrive eksempel &quot;Take sword&quot; og det vil virke">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enemy.class" afterDir="false" />
     </list>
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
     <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
@@ -471,12 +473,12 @@
       <option name="project" value="LOCAL" />
       <updated>1665580228331</updated>
     </task>
-    <task id="LOCAL-00052" summary="story updated">
-      <created>1665602804049</created>
+    <task id="LOCAL-00052" summary="rettet objekter og metoder i forhold til public/private">
+      <created>1665597408596</created>
       <option name="number" value="00052" />
       <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
-      <updated>1665602804049</updated>
+      <updated>1665597408596</updated>
     </task>
     <option name="localTasksCounter" value="53" />
     <servers />
@@ -520,8 +522,8 @@
     <MESSAGE value="små justeringer" />
     <MESSAGE value="empty" />
     <MESSAGE value="Added comments" />
-    <MESSAGE value="story updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="story updated" />
+    <MESSAGE value="rettet objekter og metoder i forhold til public/private" />
+    <option name="LAST_COMMIT_MESSAGE" value="rettet objekter og metoder i forhold til public/private" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
