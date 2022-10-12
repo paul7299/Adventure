@@ -98,5 +98,30 @@ public class AdventureController {
         return false;
     }
 
+    public boolean hasVisitedRoom5(){
+        if(!adventureCreator.getRoom5VisitedStatus() && player.getCurrentRoomNameFromPlayer().contains("5")){
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public boolean hasVisitedRoom9(){
+        if(!adventureCreator.getRoom9VisitedStatus() &&  player.getCurrentRoomNameFromPlayer().contains("9")){
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public boolean hasWon(){
+        for(Item i : player.showInventory()){
+            if (i.name.contains("tuborg") && player.getCurrentRoomNameFromPlayer().contains("1")){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 

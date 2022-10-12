@@ -5,11 +5,14 @@ public class    Enemy {
     private int enemyHealth;
     private Room currentRoom;
 
+    private Item item;
+
     public Enemy(String enemyName, Weapon enemyWeapon, Room currentRoom){
     this.enemyName = enemyName;
     this.enemyHealth = 30;
     this.enemyWeapon = enemyWeapon;
     this.currentRoom = currentRoom;
+    item = null;
     }
     public String getEnemyName(){
         return enemyName;
@@ -30,11 +33,20 @@ public class    Enemy {
     public String hasEnemyDied() {
         if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
+            if(item != null){
+                currentRoom.getItemsInRoom().add(item);
+                return (enemyName + " has died, and dropped " + item + " and " +
+                        itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
+            }
             currentRoom.getItemsInRoom().add(itemToTransfer);
             return (enemyName + " has died, and dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         } else {
             return (enemyName + " has " + enemyHealth + " health left\n");
         }
+    }
+
+    public void setItem(String name, String description){
+        this.item = new Item(name,description);
     }
 
     @Override
