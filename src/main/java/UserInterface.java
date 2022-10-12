@@ -176,7 +176,7 @@ public class UserInterface {
     }
 
     //readString omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-    public String readString() {
+    private String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
@@ -260,7 +260,7 @@ public class UserInterface {
         }
     }
 
-    public String printHelp() {
+    private String printHelp() {
         return """
                  * Help - list of commands: *
                  - Go north:        north 
