@@ -271,6 +271,7 @@ public class Player {
         return sb;
     }
 
+    //showCurrentAmmo returnerer hvor meget ammo der er tilbage i det nuværende våben, hvis man har et våben equipped
     public String showCurrentAmmo() {
         if (currentWeapon != null) {
             return currentWeapon.getAmmo();

@@ -1,7 +1,7 @@
+//Comsumable nedarves fra Item, og deler sig så yderligere i Liquid og Food
 public class Consumeable extends Item {
-    /**
-     * Comsumable nedarves fra Item, og deler sig så yderligere i Liquid og Food
-     */
+
+
 
     protected int health;
 

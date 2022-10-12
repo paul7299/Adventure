@@ -28,9 +28,8 @@ public class Enemy {
         this.enemyHealth = enemyHealth;
     }
     
+    // hasEnemyDied Tjekker om fjenden er død ved at se om liv er under 0 og returnerer fjendens status
     public String hasEnemyDied() {
-        // hasEnemyDied Tjekker om fjenden er død ved at se om liv er under 0 og returnerer fjendens status
-
         if (enemyHealth <= 0) {
             Item itemToTransfer = enemyWeapon;
             currentRoom.getItemsInRoom().add(itemToTransfer);

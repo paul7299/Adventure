@@ -2,19 +2,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
+    private final Scanner sc = new Scanner(System.in);
     /**
      * Vores UserInterface står for at håndtere alt kommunikation mellem programmet og brugeren
      */
     private AdventureController adventureController;
-    private final Scanner sc = new Scanner(System.in);
-
+    
     public void startProgram() {
         /**
-         * @startProgram() står for at udskrive reglerne for spillet og videresende brugerens input til vores @command metode.
+         * startProgram() står for at udskrive reglerne for spillet og videresende brugerens input til vores @command metode.
          * Derudover udskriver den også information om det rum man går ind i.
          */
         adventureController = new AdventureController();
-
+        
         System.out.println("""
                 Welcome to the game! Let's begin
                 You are stuck in a maze. The objective of the game is to reach room 5.
@@ -31,9 +31,9 @@ public class UserInterface {
                 If you want to quit the game, type "exit". 
                 If you forget the commands, type "help".
                 """);
-
+        
         String userInput = " ";
-
+        
         while (!userInput.equalsIgnoreCase("exit")) {
             if (adventureController.isPlayerDead()) {
                 gameOver();
@@ -47,14 +47,14 @@ public class UserInterface {
                 for (String s : adventureController.getCurrentRoomDoors()) {
                     if (s != null) System.out.println(s);
                 }
-
+                
                 System.out.println("Choose an action");
                 userInput = readString();
                 command(userInput);
             }
         }
     }
-
+    
     private void command(String userInput) {
         /**
          * @command står for håndteringen af brugerens input, og indeholder de forskellige valgmuligheder brugeren har i spillet
@@ -62,15 +62,15 @@ public class UserInterface {
          */
         if (userInput.length() >= 3) {
             String[] listOfWord = userInput.split(" ");
-
+            
             String firstInput = listOfWord[0];
-
+            
             String secondInput = "";
             // Checks if the array is bigger than 1
             if (listOfWord.length > 1) {
                 secondInput = listOfWord[1];
             }
-
+            
             switch (firstInput) {
                 case "north":
                     System.out.println(adventureController.playerGoNorth());
@@ -149,13 +149,13 @@ public class UserInterface {
                         String equipName = sc.nextLine();
                         System.out.println(adventureController.equipWeapon(equipName));*/
                         System.out.println(adventureController.equipWeapon(secondInput));
-
+                        
                     }
                     break;
                 case "attack":
-                    if(secondInput.isEmpty()){
-                    System.out.println(adventureController.attack());
-                    }else{
+                    if (secondInput.isEmpty()) {
+                        System.out.println(adventureController.attack());
+                    } else {
                         System.out.println(adventureController.attack(secondInput));
                     }
                     break;
@@ -169,13 +169,13 @@ public class UserInterface {
                     System.out.println("* Wrong input *");
                     break;
             }
-
+            
         } else {
             System.out.println("input needs to be at least 3 chars");
         }
     }
-
-
+    
+    
     public String readString() {
         /**
          *@readString omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
@@ -183,18 +183,17 @@ public class UserInterface {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
-
+    
     public void gameOver() {
         /**
          * @gameOver udskriver når spillet er slut, og spilleren får mulighed for at prøve igen eller exit game.
          */
-        System.out.println(
-                            """
-                            You have died
-                            Choose what to do
-                            1. Play again
-                            2. exit game
-                            """);
+        System.out.println("""
+                You have died
+                Choose what to do
+                1. Play again
+                2. exit game
+                """);
         int i = sc.nextInt();
         switch (i) {
             case 1:
@@ -206,7 +205,7 @@ public class UserInterface {
                 break;
         }
     }
-
+    
     public String printHelp() {
         /**
          * @printHelp returnerer alle kommandoer spilleren har mulighed for at at benytte

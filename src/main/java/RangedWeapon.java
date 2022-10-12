@@ -1,7 +1,5 @@
+//RangedWeapon nedarver fra Weapon, som er en abstract Klasse. Derfor bruger vi Override flere steder.
 public class RangedWeapon extends Weapon {
-    /**
-     * RangedWeapon nedarver fra Weapon, som er en abstract Klasse. Derfor bruger vi Override flere steder.
-     */
     
     protected int ammo;
     

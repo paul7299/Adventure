@@ -1,7 +1,6 @@
+// MeleeWeapon nedarver fra Weapon, som er en abstract Klasse. Derfor bruger vi Override flere steder.
 public class MeleeWeapon extends Weapon {
-    /**
-     * MeleeWeapon nedarver fra Weapon, som er en abstract Klasse. Derfor bruger vi Override flere steder.
-     */
+
     
     public MeleeWeapon(String name, String description, int damage) {
         super(name, description, damage);
@@ -13,9 +12,10 @@ public class MeleeWeapon extends Weapon {
         return "You swung the " + name + " at " + enemyName + " for " + damage + " damage";
     }
     
+    //canUse returnerer altid true, da melee weapons altid kan bruges
     @Override
     public Boolean canUse() {
-        //returnerer altid true, da melee weapons altid kan bruges
+        
         return true;
     }
     

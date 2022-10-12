@@ -1,9 +1,8 @@
 import java.util.ArrayList;
+
+// AdventureController står for at videregive arbejdsopgaverne til alle de andre klasser.
+// Den indeholder ikke rigtig funktionel kode, og metoderne kalder blot metoderne i de specifikke klasser.
 public class AdventureController {
-    /**
-     * AdventureController står for at videregive arbejdsopgaverne til alle de andre klasser.
-     * Den indeholder ikke rigtig funktionel kode, og metoderne kalder blot metoderne i de specifikke klasser.
-     */
     private final Room startRoom;
     private final Player player;
     private final AdventureCreator adventureCreator;

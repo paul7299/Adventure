@@ -1,10 +1,7 @@
-public class AdventureCreator {
-    /**
-     * @AdventureCreater står for at oprette alle rummene, og placere både Items og Enemies i de specifikke rum
-     * Den placerer også rummene i forhold til hinanden, så hvert rum selv ved hvor det befinder sig relativt til de andre.
-     *
-     */
+// AdventureCreater står for at oprette alle rummene, og placere både Items og Enemies i de specifikke rum
+// Den placerer også rummene i forhold til hinanden, så hvert rum selv ved hvor det befinder sig relativt til de andre.
 
+public class AdventureCreator {
     private Room room1;
     private Room room2;
     private Room room3;

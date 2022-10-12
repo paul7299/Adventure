@@ -1,8 +1,6 @@
+//Item er klassen som både Consumable og Weapon nedarver fra.
+// Protected attributes bruges så det kun er klasserne der nedarver fra Item der har adgang til dem.
 public class Item {
-    /**
-     * Item er klassen som både Consumable og Weapon nedarver fra.
-     * Protected attributes bruges så det kun er klasserne der nedarver fra Item der har adgang til dem.
-     */
     protected String name;
     protected String description;
 
