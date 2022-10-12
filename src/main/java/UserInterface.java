@@ -34,6 +34,10 @@ public class UserInterface {
             if(adventureController.hasWon()){
                 hasWon();
             }
+
+            room9Message();
+            room5Message();
+
             System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
@@ -44,8 +48,7 @@ public class UserInterface {
                     if (s != null) System.out.println(s);
                 }
 
-                room9Message();
-                room5Message();
+
 
                 System.out.println("Choose an action");
                 userInput = readString();
