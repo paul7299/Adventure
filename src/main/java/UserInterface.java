@@ -53,7 +53,10 @@ public class UserInterface {
         }
     }
 
+    //command står for håndteringen af brugerens input, og indeholder de forskellige valgmuligheder brugeren har i spillet
+    //Den sikrer at brugerens input minimum er 3 tegn langt, og returnerer fejl, hvis brugerens input ikke er forstået.
     private void command(String userInput) {
+
         if (userInput.length() >= 3) {
             String[] listOfWord = userInput.split(" ");
 
@@ -172,7 +175,7 @@ public class UserInterface {
         }
     }
 
-    //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
+    //readString omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();

@@ -30,14 +30,10 @@ public class    Enemy {
         return enemyHealth;
     }
 
+    // hasEnemyDied Tjekker om fjenden er død ved at se om liv er under 0 og returnerer fjendens status
     public String hasEnemyDied() {
         if (enemyHealth <= 0) { //Tjekker om fjenden er død ved at se om liv er under 0
             Item itemToTransfer = enemyWeapon;
-            if(item != null){
-                currentRoom.getItemsInRoom().add(item);
-                return (enemyName + " has died, and dropped " + item + " and " +
-                        itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
-            }
             currentRoom.getItemsInRoom().add(itemToTransfer);
             return (enemyName + " has died, and dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         } else {
@@ -53,6 +49,4 @@ public class    Enemy {
     public String toString() {
         return enemyName;
     }
-    // ^TODO forsvinder enemy når den dør?
-
 }
