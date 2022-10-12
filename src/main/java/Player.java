@@ -205,8 +205,6 @@ public class Player {
         }
     }
 
-
-
     //Attack hvis man ikke vælger et target
     public StringBuilder attack() {
         StringBuilder sb = new StringBuilder();

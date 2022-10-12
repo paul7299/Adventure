@@ -58,7 +58,7 @@ public class AdventureCreator {
         room5.getEnemiesInRoom().get(0).setItem("tuborg", "A cold, fresh tuborg");
     }
 
-    //Denne metode bruges i AdventureController
+    //Denne metode bruges i AdventureController til at sætte room1 til players currentRoom.
     public Room getRoom1() {
         return room1;
     }
