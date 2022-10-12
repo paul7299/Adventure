@@ -1,6 +1,5 @@
 // MeleeWeapon nedarver fra Weapon, som er en abstract Klasse. Derfor bruger vi Override flere steder.
 public class MeleeWeapon extends Weapon {
-
     
     public MeleeWeapon(String name, String description, int damage) {
         super(name, description, damage);

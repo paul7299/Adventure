@@ -4,18 +4,18 @@ public class Player {
     private int playerHealth;
     private Room currentRoom;
     private Weapon currentWeapon;
-
-    private ArrayList<Item> inventory = new ArrayList<>();
-
-    public ArrayList<Item> showInventory() {
-        return inventory;
-    }
+    
+    private final ArrayList<Item> inventory = new ArrayList<>();
     
     // Constructor
     public Player(Room startRoom) {
         this.currentRoom = startRoom;
         this.playerHealth = 50;
         this.currentWeapon = null;
+    }
+    
+    public ArrayList<Item> showInventory() {
+        return inventory;
     }
     
     //Metoden der bruges til at gå nord fra ens nuværende rum. Hvis det ikke kan lade sig gøre, returnerer den det.
@@ -72,10 +72,9 @@ public class Player {
         if (currentRoom.getItemsInRoom().isEmpty())
             a.append(currentRoom.getRoomDescription() + "\n" + "There is nothing in the room");
         else {
-            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:"
-                    + currentRoom.getItemsInRoom());
+            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:" + currentRoom.getItemsInRoom());
         }
-        if(currentRoom.getEnemiesInRoom().isEmpty()){
+        if (currentRoom.getEnemiesInRoom().isEmpty()) {
             a.append("\n");
             a.append("There are no enemies in the room");
         } else {
@@ -209,9 +208,8 @@ public class Player {
     
     //TODO Har lavet hjælpe metoder til attack for at gøre koden pænere og have færre gentagelser.
     // Diskuter om man kan lide den eller den skal have et bedre navn
-
-
-
+    
+    
     //Attack hvis man ikke vælger et target
     public StringBuilder attack() {
         StringBuilder sb = new StringBuilder();

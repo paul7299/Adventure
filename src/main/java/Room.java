@@ -4,13 +4,13 @@ public class Room {
     
     private final String roomName;
     private final String roomDescription;
+    private final ArrayList<Item> itemsInRoom;
+    private final ArrayList<Enemy> enemiesInRoom;
     private Room roomNorth;
     private Room roomSouth;
     private Room roomEast;
     private Room roomWest;
     private Boolean hasVisited; //Denne bolean vil sige noget om man har besøget et rum før
-    private final ArrayList<Item> itemsInRoom;
-    private final ArrayList<Enemy> enemiesInRoom;
     
     public Room(String roomName, String roomDescription) {
         this.roomName = roomName;

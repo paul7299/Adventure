@@ -17,12 +17,11 @@ public class RangedWeapon extends Weapon {
     public String attackMessage(String enemyName) {
         /*String message;
         if(canUse()){*/
-        String message = "* You shot " + enemyName + " with the " + name + " for " + damage + " damage *\n";
         /*}
         else{
             message = "* " + name + " does not have more ammo *\n";
         }*/
-        return message;
+        return "* You shot " + enemyName + " with the " + name + " for " + damage + " damage *\n";
     }
     
     //Returnerer en fejlbesked hvis man er løbet tør for ammunition

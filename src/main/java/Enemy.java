@@ -1,9 +1,9 @@
 public class Enemy {
     
-    private final String enemyName;
-    private final Weapon enemyWeapon;
+    private String enemyName;
+    private Weapon enemyWeapon;
+    private Room currentRoom;
     private int enemyHealth;
-    private final Room currentRoom;
     
     public Enemy(String enemyName, Weapon enemyWeapon, Room currentRoom) {
         this.enemyName = enemyName;

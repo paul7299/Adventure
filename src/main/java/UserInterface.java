@@ -1,18 +1,16 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Vores UserInterface står for at håndtere alt kommunikation mellem programmet og brugeren
 public class UserInterface {
     private final Scanner sc = new Scanner(System.in);
-    /**
-     * Vores UserInterface står for at håndtere alt kommunikation mellem programmet og brugeren
-     */
+    
     private AdventureController adventureController;
     
+    // startProgram() står for at udskrive reglerne for spillet og videresende brugerens input til vores @command metode.
+    // Derudover udskriver den også information om det rum man går ind i.
     public void startProgram() {
-        /**
-         * startProgram() står for at udskrive reglerne for spillet og videresende brugerens input til vores @command metode.
-         * Derudover udskriver den også information om det rum man går ind i.
-         */
+        
         adventureController = new AdventureController();
         
         System.out.println("""
@@ -55,11 +53,10 @@ public class UserInterface {
         }
     }
     
+    //command står for håndteringen af brugerens input, og indeholder de forskellige valgmuligheder brugeren har i spillet
+    //Den sikrer at brugerens input minimum er 3 tegn langt, og returnerer fejl, hvis brugerens input ikke er forstået.
     private void command(String userInput) {
-        /**
-         * @command står for håndteringen af brugerens input, og indeholder de forskellige valgmuligheder brugeren har i spillet
-         * Den sikrer at brugerens input minimum er 3 tegn langt, og returnerer fejl, hvis brugerens input ikke er forstået.
-         */
+        
         if (userInput.length() >= 3) {
             String[] listOfWord = userInput.split(" ");
             
@@ -175,19 +172,14 @@ public class UserInterface {
         }
     }
     
-    
+    //readString omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
-        /**
-         *@readString omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
-         */
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
     
+    //gameOver udskriver når spillet er slut, og spilleren får mulighed for at prøve igen eller exit game.
     public void gameOver() {
-        /**
-         * @gameOver udskriver når spillet er slut, og spilleren får mulighed for at prøve igen eller exit game.
-         */
         System.out.println("""
                 You have died
                 Choose what to do
@@ -206,10 +198,8 @@ public class UserInterface {
         }
     }
     
+    //printHelp returnerer alle kommandoer spilleren har mulighed for at at benytte
     public String printHelp() {
-        /**
-         * @printHelp returnerer alle kommandoer spilleren har mulighed for at at benytte
-         */
         return """
                  * Help - list of commands: *
                  - Go north:        north 
