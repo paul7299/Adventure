@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="slettet metoder som ikke bruges">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="spm" />
+    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
+    <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
+    <list id="231cd376-cd50-4b76-a28b-ff1ba191d250" name="Changes by Mohamed" comment="" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,6 +142,12 @@
       <workItem from="1664201079179" duration="3704000" />
       <workItem from="1664363849041" duration="488000" />
       <workItem from="1664451044886" duration="3796000" />
+    </task>
+    <task id="LOCAL−00001" summary="1st commit">
+      <created>1664186218398</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1664186218398</updated>
     </task>
     <task id="LOCAL−00002" summary="Oprettet Main, Room, UI og Adventure objekter">
       <created>1664186894202</created>
@@ -463,14 +472,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665514268882</updated>
     </task>
-    <task id="LOCAL-00050" summary="slettet metoder som ikke bruges">
-      <created>1665515968615</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1665515968615</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,6 +490,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Push med ny fil struktur, og nogle kommentarer i koden" />
     <MESSAGE value="Lavet read string, gjorde cases lowercase, prøver mig af med en ekstra opgave" />
     <MESSAGE value="Tilføjet Player() og AdventureCreator klasserne. Har lavet TODO's for refactoring." />
     <MESSAGE value="Tilføjet hvem der står for TODOs" />
@@ -512,8 +515,7 @@
     <MESSAGE value="Fikset drop så den interagerer ordentligt med current weapon" />
     <MESSAGE value="tostring override i item" />
     <MESSAGE value="små justeringer" />
-    <MESSAGE value="slettet metoder som ikke bruges" />
-    <option name="LAST_COMMIT_MESSAGE" value="slettet metoder som ikke bruges" />
+    <option name="LAST_COMMIT_MESSAGE" value="små justeringer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

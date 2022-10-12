@@ -1,4 +1,4 @@
-public class Enemy {
+public class    Enemy {
 
     private String enemyName;
     private Weapon enemyWeapon;
