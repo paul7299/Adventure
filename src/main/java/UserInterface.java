@@ -238,6 +238,7 @@ public class UserInterface {
     private void hasWon(){
         System.out.println(
                 """
+                Congratulation!
                 You got the tuborg and got to your seat before the 2nd half started!
                 You sit back and ready to enjoy the game with a fresh tuborg!
                 Unfortunately, the game ends in a boring 0-0...

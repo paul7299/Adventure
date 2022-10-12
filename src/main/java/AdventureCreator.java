@@ -40,8 +40,8 @@ public class AdventureCreator {
         room4.getItemsInRoom().add(new Item("dice", "danish dice"));
 
         room1.getItemsInRoom().add(new Food("hotdog", "A fat, juicy hotdog", -5));
-        room1.getItemsInRoom().add(new Food("banana", "ripe banana", 10));
-        room2.getItemsInRoom().add(new Food("sandwich", "healthy vegatables sandwich", 10));
+        room1.getItemsInRoom().add(new Food("banana", "ripe banana", 15));
+        room2.getItemsInRoom().add(new Food("sandwich", "healthy vegatables sandwich", 15));
         room2.getItemsInRoom().add(new Liquid("soda", "A can of soda", -10));
         room3.getItemsInRoom().add(new Food("apple", "A bag of apples for kids", 10));
         room3.getItemsInRoom().add(new Liquid("milk","A small carton of milk", 15));
@@ -56,9 +56,9 @@ public class AdventureCreator {
         MeleeWeapon shoe = new MeleeWeapon("Shoe", "A worn out Nike shoe", 10);
         createEnemy("blondie",shoe, room8);
         MeleeWeapon baton = new MeleeWeapon("baton", "A baton that's been stolen from security", 15);
-        createEnemy("masked", baton,room9);
-        MeleeWeapon bottle = new MeleeWeapon("bottle", "A glass bottle that's been smuggled in", 20);
-        createEnemy("drunk", bottle, room5);
+        createEnemy("hooligan", baton,room9);
+        MeleeWeapon bottle = new MeleeWeapon("bottle", "A glass bottle that's been smuggled in", 15);
+        createEnemy("psycho", bottle, room5);
         room5.getEnemiesInRoom().get(0).setItem("tuborg", "A cold, fresh tuborg");
     }
 
