@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="små justeringer">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="små justeringer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Liquid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Liquid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+    </list>
+    <list id="0860bfc8-bf9e-446c-bc57-c2b1581067cb" name="Changes by jonat" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    </list>
+    <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig">
       <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +40,22 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Player.java">
+      <ranges>
+        <range start1="0" end1="2" start2="0" end2="0" changelist="0860bfc8-bf9e-446c-bc57-c2b1581067cb" />
+        <range start1="75" end1="76" start2="73" end2="74" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="78" end1="80" start2="76" end2="77" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="84" end1="84" start2="81" end2="82" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="91" end1="91" start2="89" end2="90" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="197" end1="199" start2="196" end2="196" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="202" end1="203" start2="199" end2="199" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="229" end1="230" start2="225" end2="226" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="251" end1="252" start2="247" end2="248" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+        <range start1="257" end1="259" start2="253" end2="253" changelist="6c789d9d-fac5-4d97-b720-74f9a668c37e" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

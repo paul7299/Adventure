@@ -1,5 +1,3 @@
-import org.w3c.dom.ranges.Range;
-
 import java.util.ArrayList;
 
 public class Player {
@@ -73,15 +71,15 @@ public class Player {
             a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:"
                     + currentRoom.getItemsInRoom());
         }
-        if(currentRoom.getEnemiesInRoom().isEmpty()){
+        if (currentRoom.getEnemiesInRoom().isEmpty()) {
             a.append("\n");
             a.append("There are no enemies in the room");
-        }
-        else{
+        } else {
             a.append("\nThere's enemies in the room: " + currentRoom.getEnemiesInRoom());
         }
         return a;
     }
+
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
@@ -89,6 +87,7 @@ public class Player {
     public void setHasVisitedToTrue() {
         currentRoom.setHasVisitedToTrue();
     }
+
     public boolean getHasVisitedStatus() {
         return currentRoom.getHasVisited();
     }
@@ -195,12 +194,9 @@ public class Player {
     // TODO ^kan man droppe et item man har equipped? -paul
 
 
-    //TODO Har lavet hjælpe metoder til attack for at gøre koden pænere og have færre gentagelser.
-    // Diskuter om man kan lide den eller den skal have et bedre navn
     //Attack hvis man ikke vælger et target
     public StringBuilder attack() {
         StringBuilder sb = new StringBuilder();
-
         if (currentWeapon != null) {    //Tjekker om man har et våben klar
             if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
                 if (currentRoom.getEnemiesInRoom().isEmpty()) { //Hvis der ikke er fjender i rummet
@@ -227,7 +223,7 @@ public class Player {
         if (currentWeapon != null) { //Tjekker om man har et våben klar
             if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
                 for (Enemy n : currentRoom.getEnemiesInRoom()) {
-                    if (enemySearchName.contains(n.getEnemyName())) {
+                    if (n.getEnemyName().contains(enemySearchName)) {
                         sb.append(attackSequence(n));
                     }
                 }
@@ -249,14 +245,12 @@ public class Player {
         sb.append("\n" + n.hasEnemyDied());
         if (n.getEnemyHealth() > 0) { //If løkke tjekker om fjenden er i live. Hvis de er så angribes spilleren.
             playerHealth -= n.getEnemyWeaponDamage();
-            sb.append(" Enemy has attacked you for " + n.getEnemyWeaponDamage() + " damage");
+            sb.append("Enemy has attacked you for " + n.getEnemyWeaponDamage() + " damage");
         } else {
             currentRoom.getEnemiesInRoom().remove(n);
         }
         return sb;
     }
-
-    // TODO ^ Skal sættes ind i UI med sout(stringbuilder)
 
     public String showCurrentAmmo() {
         if (currentWeapon != null) {
