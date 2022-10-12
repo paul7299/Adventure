@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 public class AdventureController {
-    Room startRoom;
-    Player player;
-    AdventureCreator adventureCreator;
+    private Room startRoom;
+    private Player player;
+    private AdventureCreator adventureCreator;
 
     public AdventureController() {
         adventureCreator = new AdventureCreator();
@@ -45,7 +45,7 @@ public class AdventureController {
         return player.getHasVisitedStatus();
     }
 
-    public String playerLook() {
+    public StringBuilder playerLook() {
         return player.look();
     }
 
@@ -90,8 +90,13 @@ public class AdventureController {
         return player.showCurrentAmmo();
     }
 
-    //TODO metode der kigger på om player er død. Forstiller mig den skal kaldes samtidig med attack i controller.
-    // returnerer void og giver mulighed for at stoppe spillet eller starte forfra.
+    public boolean isPlayerDead(){
+        if (player.getPlayerHealth() <= 0){
+        return true;
+        }
+        else
+        return false;
+    }
 
 }
 

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class UserInterface {
     private AdventureController adventureController;
     private Scanner sc = new Scanner(System.in);
+
     public void startProgram() {
         adventureController = new AdventureController();
 
@@ -27,6 +28,9 @@ public class UserInterface {
         String userInput = " ";
 
         while (!userInput.equalsIgnoreCase("exit")) {
+            if (adventureController.isPlayerDead()) {
+                gameOver();
+            }
             System.out.println("\nYou are in " + adventureController.getPlayerCurrentRoomName());
             if (!adventureController.hasVisitedStatus()) {
                 System.out.println(adventureController.playerLook());
@@ -37,15 +41,26 @@ public class UserInterface {
                     if (s != null) System.out.println(s);
                 }
 
-            System.out.println("Choose an action");
-            userInput = readString();
-            command(userInput);
+                System.out.println("Choose an action");
+                userInput = readString();
+                command(userInput);
             }
         }
     }
+
     private void command(String userInput) {
-        if(userInput.length() >= 3){
-            switch (userInput) {
+        if (userInput.length() >= 3) {
+            String[] listOfWord = userInput.split(" ");
+
+            String firstInput = listOfWord[0];
+
+            String secondInput = "";
+            // Checks if the array is bigger than 1
+            if (listOfWord.length > 1) {
+                secondInput = listOfWord[1];
+            }
+
+            switch (firstInput) {
                 case "north":
                     System.out.println(adventureController.playerGoNorth());
                     break;
@@ -60,7 +75,7 @@ public class UserInterface {
                     break;
                 case "look":
                     System.out.println("You are observing the room: ");
-                    System.out.println("\t" + adventureController.playerLook());
+                    System.out.println(adventureController.playerLook());
                     adventureController.getCurrentRoomDoors();
                     break;
                 case "help":
@@ -71,17 +86,19 @@ public class UserInterface {
                     System.exit(0);
                     break;
                 case "take":
-                    System.out.println("Which item do you want to pick up?");
+                   /* System.out.println("Which item do you want to pick up?");
                     String takeName = sc.nextLine();
-                    System.out.println(adventureController.pickUpItem(takeName));
+                    System.out.println(adventureController.pickUpItem(takeName.toLowerCase()));*/
+                    System.out.println(adventureController.pickUpItem(secondInput));
                     break;
                 case "drop":
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("Which item do you want to drop?");
-                        String dropName = sc.nextLine();
-                        System.out.println(adventureController.dropItem(dropName));
+                       /* System.out.println("Which item do you want to drop?");
+                        String dropName = readString();
+                        System.out.println(adventureController.dropItem(dropName));*/
+                        System.out.println(adventureController.dropItem(secondInput));
                     }
                     break;
                 case "inventory":
@@ -95,9 +112,10 @@ public class UserInterface {
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("What do you want to eat?");
-                        String eatName = sc.nextLine();
-                        System.out.println(adventureController.eatFood(eatName));
+                      /*  System.out.println("What do you want to eat?");
+                        String eatName = readString();
+                        System.out.println(adventureController.eatFood(eatName));*/
+                        System.out.println(adventureController.eatFood(secondInput));
                         System.out.println("\n" + adventureController.showHealth());
                     }
                     break;
@@ -105,9 +123,10 @@ public class UserInterface {
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("What do you want to drink?");
+                       /* System.out.println("What do you want to drink?");
                         String drinkName = sc.nextLine();
-                        System.out.println(adventureController.drinkLiquid(drinkName));
+                        System.out.println(adventureController.drinkLiquid(drinkName));*/
+                        System.out.println(adventureController.drinkLiquid(secondInput));
                         System.out.println("\n" + adventureController.showHealth());
                     }
                     break;
@@ -115,15 +134,19 @@ public class UserInterface {
                     if (adventureController.showInventory().isEmpty()) {
                         System.out.println("Your inventory is empty");
                     } else {
-                        System.out.println("Which weapon you want to equip?");
+                 /*       System.out.println("Which weapon you want to equip?");
                         String equipName = sc.nextLine();
-                        System.out.println(adventureController.equipWeapon(equipName));
+                        System.out.println(adventureController.equipWeapon(equipName));*/
+                        System.out.println(adventureController.equipWeapon(secondInput));
+
                     }
                     break;
                 case "attack":
-                    //  System.out.println("Who will you attack");
-                    // string enemyToAttack = sc.nextLine();
+                    if(secondInput.isEmpty()){
                     System.out.println(adventureController.attack());
+                    }else{
+                        System.out.println(adventureController.attack(secondInput));
+                    }
                     break;
                 case "show ammo", "ammo":
                     System.out.println(adventureController.showCurrentAmmo());
@@ -136,16 +159,37 @@ public class UserInterface {
                     break;
             }
 
-        }
-        else{
+        } else {
             System.out.println("input needs to be at least 3 chars");
         }
     }
+
     //Omdanner inputtet til lowercase så der ikke kommer fejl hvis man skrev med stort.
     public String readString() {
         String stringToLowercase = sc.nextLine();
         return stringToLowercase.toLowerCase();
     }
+
+    public void gameOver() {
+        System.out.println(
+                            """
+                            You have died
+                            Choose what to do
+                            1. Play again
+                            2. exit game
+                            """);
+        int i = sc.nextInt();
+        switch (i) {
+            case 1:
+                startProgram();
+                break;
+            case 2:
+                System.out.println("Thank you for playing");
+                System.exit(0);
+                break;
+        }
+    }
+
     public String printHelp() {
         return """
                  * Help - list of commands: *

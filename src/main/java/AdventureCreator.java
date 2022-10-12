@@ -47,12 +47,14 @@ public class AdventureCreator {
         room1.getItemsInRoom().add(new Liquid("beer", "a large tuborg", -10));
         room1.getItemsInRoom().add(new Liquid("water", "bottled water", 10));
 
-        room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 2));
-        room1.getItemsInRoom().add(new RangedWeapon("bow", "A hunters bow with a quiver", 2, 4));
+        room1.getItemsInRoom().add(new MeleeWeapon("sword", "A rusty old sword", 10));
+        room1.getItemsInRoom().add(new RangedWeapon("bow", "A hunters bow with a quiver", 15, 10));
 
         // Opretter enemy og dens weapon
         MeleeWeapon bigStick = new MeleeWeapon("Big Stick", "So big", 10);
-        createEnemy("A Norwegian troll", bigStick, room4);
+        createEnemy("troll", bigStick, room4);
+        RangedWeapon crossBow = new RangedWeapon("Crossbow", "the penetrator", 15, 6);
+        createEnemy("ogre", crossBow,room4);
     }
 
     //Denne metode bruges i AdventureController
@@ -65,4 +67,7 @@ public class AdventureCreator {
         Enemy enemy = new Enemy(enemyname, enemyWeapon, room);
         room.getEnemiesInRoom().add(enemy);
     }
+
+    // ^ TODO Jeg tror room er udenfor ønsket scope i denne metode
+
 }
