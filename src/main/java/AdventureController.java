@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 public class AdventureController {
-    private Room startRoom;
-    private Player player;
-    private AdventureCreator adventureCreator;
+    /**
+     * AdventureController står for at videregive arbejdsopgaverne til alle de andre klasser.
+     * Den indeholder ikke rigtig funktionel kode, og metoderne kalder blot metoderne i de specifikke klasser.
+     */
+    private final Room startRoom;
+    private final Player player;
+    private final AdventureCreator adventureCreator;
 
     public AdventureController() {
         adventureCreator = new AdventureCreator();
@@ -91,11 +95,7 @@ public class AdventureController {
     }
 
     public boolean isPlayerDead(){
-        if (player.getPlayerHealth() <= 0){
-        return true;
-        }
-        else
-        return false;
+        return player.getPlayerHealth() <= 0;
     }
 
 }

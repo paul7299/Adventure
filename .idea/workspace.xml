@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5128449-3d81-489c-99d6-e402f834d074" name="Changes" comment="små justeringer">
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="små justeringer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Consumeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Consumeable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AdventureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AdventureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MeleeWeapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MeleeWeapon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Weapon.class" afterDir="false" />
     </list>
+    <list id="e69926f4-db78-4423-b548-04f7641fb5c7" name="Changes by Asger_studie" comment="Changes by Asger_studie" />
+    <list id="2096efe7-2e59-4a5e-88fa-b49b50f35d95" name="Changes by jonat" comment="tilføjet consumeable" />
+    <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
+    <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +47,10 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/AdventureCreator.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/UserInterface.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

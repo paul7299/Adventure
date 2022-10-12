@@ -1,26 +1,25 @@
-import org.w3c.dom.ranges.Range;
-
 import java.util.ArrayList;
 
 public class Player {
-
     private int playerHealth;
     private Room currentRoom;
     private Weapon currentWeapon;
-
-    private ArrayList<Item> inventory = new ArrayList<>();
-
+    
+    private final ArrayList<Item> inventory = new ArrayList<>();
+    
     public ArrayList<Item> showInventory() {
         return inventory;
     }
-
+    
+    
     // Constructor
     public Player(Room startRoom) {
         this.currentRoom = startRoom;
         this.playerHealth = 50;
         this.currentWeapon = null;
     }
-
+    
+    //Metoden der bruges til at gå nord fra ens nuværende rum. Hvis det ikke kan lade sig gøre, returnerer den det.
     public String goNorth() {
         String goingNorthResult;
         if (currentRoom.getRoomNorth() == null) {
@@ -31,7 +30,8 @@ public class Player {
         }
         return goingNorthResult;
     }
-
+    
+    //Metoden der bruges til at gå syd fra ens nuværende rum. Hvis det ikke kan lade sig gøre, returnerer den det.
     public String goSouth() {
         String goingSouthResult;
         if (currentRoom.getRoomSouth() == null) {
@@ -42,7 +42,8 @@ public class Player {
         }
         return goingSouthResult;
     }
-
+    
+    //Metoden der bruges til at gå øst fra ens nuværende rum. Hvis det ikke kan lade sig gøre, returnerer den det.
     public String goEast() {
         String goingEastResult;
         if (currentRoom.getRoomEast() == null) {
@@ -53,7 +54,8 @@ public class Player {
         }
         return goingEastResult;
     }
-
+    
+    //Metoden der bruges til at gå vest fra ens nuværende rum. Hvis det ikke kan lade sig gøre, returnerer den det.
     public String goWest() {
         String goingWestResult;
         if (currentRoom.getRoomWest() == null) {
@@ -64,40 +66,41 @@ public class Player {
         }
         return goingWestResult;
     }
-
+    
+    //Metoden der bruges til at kigge sig omkring i det nuværende rum, der returnerer en samlet streng med både Items, beskrivelse af rummet samt fjender
     public StringBuilder look() {
         StringBuilder a = new StringBuilder();
         if (currentRoom.getItemsInRoom().isEmpty())
             a.append(currentRoom.getRoomDescription() + "\n" + "There is nothing in the room");
         else {
-            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:"
-                    + currentRoom.getItemsInRoom());
+            a.append(currentRoom.getRoomDescription() + "\n" + "In the room you can see the following:" + currentRoom.getItemsInRoom());
         }
-        if(currentRoom.getEnemiesInRoom().isEmpty()){
+        if (currentRoom.getEnemiesInRoom().isEmpty()) {
             a.append("\n");
             a.append("There are no enemies in the room");
-        }
-        else{
+        } else {
             a.append("\nThere's enemies in the room: " + currentRoom.getEnemiesInRoom());
         }
         return a;
     }
+    
     public String getCurrentRoomNameFromPlayer() {
         return currentRoom.getRoomName();
     }
-
+    
     public void setHasVisitedToTrue() {
         currentRoom.setHasVisitedToTrue();
     }
+    
     public boolean getHasVisitedStatus() {
         return currentRoom.getHasVisited();
     }
-
+    
     public int getPlayerHealth() {
         return playerHealth;
     }
-
-    //TODO ret contains i metoden til at minimum 3 bogstaver skal matche søge ordet
+    
+    //Bruges til at søge arraylists efter en specifik item
     public Item searchForItem(String searchName, ArrayList<Item> arrayList) {
         for (Item n : arrayList) {
             String itemName = n.getItemName().toLowerCase();
@@ -107,7 +110,8 @@ public class Player {
         }
         return null;
     }
-
+    
+    //Bruges til at samle et specifikt item op fra det nuværende rum. metoden fjerner Item fra rummet og tilføjer den til spillerens inventory
     public String pickUpItem(String name) {
         Item itemToTransfer = searchForItem(name, currentRoom.getItemsInRoom());
         if (itemToTransfer == null) {
@@ -118,7 +122,8 @@ public class Player {
             return ("You have picked up " + itemToTransfer.getItemName() + "\n");
         }
     }
-
+    
+    //Bruges til at droppe et specifikt item op fra det nuværende rum. metoden fjerner Item fra spillerens inventory og tilføjer den til rummet
     public String dropItem(String name) {
         Item itemToTransfer = searchForItem(name, inventory);
         if (itemToTransfer == null) {
@@ -132,13 +137,14 @@ public class Player {
             return ("You have dropped " + itemToTransfer.getItemName() + " in " + currentRoom.getRoomName() + "\n");
         }
     }
-
+    
+    //Bruges til at udskrive hvilke døre der er i det nuværende rum
     public String[] getCurrentRoomDoors() {
         String doorNorth = null;
         String doorSouth = null;
         String doorEast = null;
         String doorWest = null;
-
+        
         if (currentRoom.getRoomNorth() != null) {
             doorNorth = ("There is a door North");
         }
@@ -153,7 +159,9 @@ public class Player {
         }
         return new String[]{doorNorth, doorSouth, doorEast, doorWest};
     }
-
+    
+    // Metoden bruges til spise en Food der findes i inventory, og justere playerhealth alt efter hvad man intager
+    // Den sikrer at man kun kan spise Food
     public String eatFood(String name) {
         Item foodToEat = searchForItem(name, inventory);
         if (foodToEat == null) {
@@ -166,7 +174,9 @@ public class Player {
             return "You cannot eat this\n";
         }
     }
-
+    
+    // Metoden bruges til drikke en Liquid der findes i inventory, og justere playerhealth alt efter hvad man intager
+    // Den sikrer at man kun kan indtage Liquid
     public String drinkLiquid(String name) {
         Item liquidToDrink = searchForItem(name, inventory);
         if (liquidToDrink == null) {
@@ -179,7 +189,9 @@ public class Player {
             return "You cannot drink this\n";
         }
     }
-
+    
+    // Metoden bruges til equippe et våben der findes i inventory
+    // Den sikrer at man kun equippe et våben
     public String equipWeapon(String name) {
         Item weaponToEquip = searchForItem(name, inventory);
         if (weaponToEquip == null) {
@@ -191,16 +203,16 @@ public class Player {
             return "You cannot equip this\n";
         }
     }
-
+    
     // TODO ^kan man droppe et item man har equipped? -paul
-
-
+    
+    
     //TODO Har lavet hjælpe metoder til attack for at gøre koden pænere og have færre gentagelser.
     // Diskuter om man kan lide den eller den skal have et bedre navn
     //Attack hvis man ikke vælger et target
     public StringBuilder attack() {
         StringBuilder sb = new StringBuilder();
-
+        
         if (currentWeapon != null) {    //Tjekker om man har et våben klar
             if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
                 if (currentRoom.getEnemiesInRoom().isEmpty()) { //Hvis der ikke er fjender i rummet
@@ -219,11 +231,11 @@ public class Player {
         }
         return sb;
     }
-
+    
     //Attack hvis man vælger et target
     public StringBuilder attack(String enemySearchName) {
         StringBuilder sb = new StringBuilder();
-
+        
         if (currentWeapon != null) { //Tjekker om man har et våben klar
             if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
                 for (Enemy n : currentRoom.getEnemiesInRoom()) {
@@ -239,7 +251,7 @@ public class Player {
         }
         return sb;
     }
-
+    
     private StringBuilder attackSequence(Enemy n) {
         StringBuilder sb = new StringBuilder();
         //Tager væk fra fjendens liv, der kommer en besked om man har angrebet...
@@ -255,9 +267,9 @@ public class Player {
         }
         return sb;
     }
-
+    
     // TODO ^ Skal sættes ind i UI med sout(stringbuilder)
-
+    
     public String showCurrentAmmo() {
         if (currentWeapon != null) {
             return currentWeapon.getAmmo();
