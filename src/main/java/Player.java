@@ -71,16 +71,16 @@ public class Player {
     public StringBuilder look() {
         StringBuilder a = new StringBuilder();
         if (currentRoom.getItemsInRoom().isEmpty())
-            a.append(currentRoom.getRoomDescription() + "\n" + "There is nothing in the room");
+            a.append(currentRoom.getRoomDescription() + "\n" + "There is nothing in the section");
         else {
             a.append(currentRoom.getRoomDescription() + "\n" + "In the section you can see the following:"
                     + currentRoom.getItemsInRoom());
         }
         if (currentRoom.getEnemiesInRoom().isEmpty()) {
             a.append("\n");
-            a.append("There are no enemies in the room");
+            a.append("There are no enemies in the section");
         } else {
-            a.append("\nThere's enemies in the room: " + currentRoom.getEnemiesInRoom());
+            a.append("\nThere's enemies in the section: " + currentRoom.getEnemiesInRoom());
         }
         return a;
     }
@@ -147,16 +147,16 @@ public class Player {
         String doorWest = null;
 
         if (currentRoom.getRoomNorth() != null) {
-            doorNorth = ("There is a door North");
+            doorNorth = ("There is a section North");
         }
         if (currentRoom.getRoomSouth() != null) {
-            doorSouth = ("There is a door South");
+            doorSouth = ("There is a section South");
         }
         if (currentRoom.getRoomEast() != null) {
-            doorEast = ("There is a door East");
+            doorEast = ("There is a section East");
         }
         if (currentRoom.getRoomWest() != null) {
-            doorWest = ("There is a door West");
+            doorWest = ("There is a section West");
         }
         return new String[]{doorNorth, doorSouth, doorEast, doorWest};
     }

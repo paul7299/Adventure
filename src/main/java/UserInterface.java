@@ -21,6 +21,7 @@ public class UserInterface {
                 
                 you heard from a guy behind you that the best beers are served at section 9.
                 but remember this is a derby game and the hate is real between the fans, navigate carefully.
+                make sure you come back to section 1 fast, at least before the break is finished.
                 come on go! the break just stared.
                 """);
 
@@ -82,7 +83,7 @@ public class UserInterface {
                     System.out.println(adventureController.playerGoWest());
                     break;
                 case "look":
-                    System.out.println("You are observing the room: ");
+                    System.out.println("You are observing the section: ");
                     System.out.println(adventureController.playerLook());
                     adventureController.getCurrentRoomDoors();
                     break;
@@ -268,12 +269,12 @@ public class UserInterface {
                  - Go east:         east 
                  - Go west:         west 
                  - Look around:     look 
-                 - Take item        take 
-                 - Drop item        drop 
+                 - Take item        take + item name
+                 - Drop item        drop + item name
                  - view inventory   inventory 
-                 - Eat food         Eat food / eat 
-                 - equip weapon     equip weapon/ equip
-                 - attack           attack
+                 - Eat food         eat + item name
+                 - equip weapon     equip + item name
+                 - attack           attack + enemy 
                  - Show ammo        ammo
                  - Drink liquid     drink 
                  - Player health    health 

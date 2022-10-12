@@ -16,8 +16,8 @@ public class AdventureCreator {
     public void createMap() {
         room1 = new Room("Section 1", "The away fan section where you are seated. No one will bother you here");
         room2 = new Room("Section 2", "Another away fan section. No one will bother you here");
-        room3 = new Room("Section 3", "A home section, reserved for families.");
-        room4 = new Room("Section 4", "Another away fan section, reserved for families. You can get healthy snacks here.");
+        room3 = new Room("Section 3", "Another away fan section, reserved for families.");
+        room4 = new Room("Section 4", "A home section, reserved for families.");
         room5 = new Room("Section 5", "A hidden away bar area, there should be Tuborg here!");
         room6 = new Room("Section 6", "A home fan section, lots of tourists sit here.");
         room7 = new Room("Section 7", "A home fan section, lots of music and flags here.");
@@ -35,25 +35,29 @@ public class AdventureCreator {
         room9.setRooms(room6, null, null, room8);
 
         room1.getItemsInRoom().add(new Item("empty beer", "an empty beer"));
-        room6.getItemsInRoom().add(new Item("coins", "10 danish crowns"));
-        room4.getItemsInRoom().add(new Item("football scarf", "old scarf from the 90s"));
-        room2.getItemsInRoom().add(new Item("dice", "danish dice"));
+        room2.getItemsInRoom().add(new Item("coins", "10 danish crowns"));
+        room3.getItemsInRoom().add(new Item("football scarf", "old scarf from the 90s"));
+        room4.getItemsInRoom().add(new Item("dice", "danish dice"));
 
         room1.getItemsInRoom().add(new Food("hotdog", "A fat, juicy hotdog", -5));
-        room4.getItemsInRoom().add(new Food("apple", "A bag of apples for kids", 10));
-        room4.getItemsInRoom().add(new Liquid("milk","A small carton of milk", 15));
-        room1.getItemsInRoom().add(new Liquid("beer", "Alcohol free beer", 10));
-        room4.getItemsInRoom().add(new Liquid("soda", "A can of soda", -10));
+        room1.getItemsInRoom().add(new Food("banana", "ripe banana", 10));
+        room2.getItemsInRoom().add(new Food("sandwich", "healthy vegatables sandwich", 10));
+        room2.getItemsInRoom().add(new Liquid("soda", "A can of soda", -10));
+        room3.getItemsInRoom().add(new Food("apple", "A bag of apples for kids", 10));
+        room3.getItemsInRoom().add(new Liquid("milk","A small carton of milk", 15));
+        room4.getItemsInRoom().add(new Food("carrots", "A bag of carrots for kids", 10));
+        room4.getItemsInRoom().add(new Liquid("juice","A small carton of juice", 15));
 
-        room7.getItemsInRoom().add(new MeleeWeapon("drumstick", "A big drumstick used by the home fans", 100));
-        room9.getItemsInRoom().add(new RangedWeapon("Firework", "A roman candle, the preferred weapon for violent fans worldwide!", 15, 10));
+
+        room7.getItemsInRoom().add(new MeleeWeapon("drumstick", "A big drumstick used by the home fans", 10));
+        room6.getItemsInRoom().add(new RangedWeapon("Firework", "A roman candle, the preferred weapon for violent fans worldwide!", 15, 4));
 
         // Opretter enemy og dens weapon
-        MeleeWeapon shoe = new MeleeWeapon("Shoe", "A worn out Nike shoe", 2);
+        MeleeWeapon shoe = new MeleeWeapon("Shoe", "A worn out Nike shoe", 10);
         createEnemy("blondie",shoe, room8);
         MeleeWeapon baton = new MeleeWeapon("baton", "A baton that's been stolen from security", 15);
         createEnemy("masked", baton,room9);
-        MeleeWeapon bottle = new MeleeWeapon("bottle", "A glass bottle that's been smuggled in", 15);
+        MeleeWeapon bottle = new MeleeWeapon("bottle", "A glass bottle that's been smuggled in", 20);
         createEnemy("drunk", bottle, room5);
         room5.getEnemiesInRoom().get(0).setItem("tuborg", "A cold, fresh tuborg");
     }
