@@ -234,7 +234,8 @@ public class Player {
 
         if (currentWeapon != null) { //Tjekker om man har et våben klar
             if (currentWeapon.canUse()) { //Tjekker om våbnet kan bruges Her om et ranged våben har ammo.
-                for (Enemy n : currentRoom.getEnemiesInRoom()) {
+                for (int i = currentRoom.getEnemiesInRoom().size()-1; i>=0; i--) {
+                    Enemy n = currentRoom.getEnemiesInRoom().get(i);
                     if (n.getEnemyName().contains(enemySearchName)) {
                         sb.append(attackSequence(n));
                     }
