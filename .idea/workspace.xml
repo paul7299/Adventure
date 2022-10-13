@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="Har lavet split metoden, kan skrive eksempel &quot;Take sword&quot; og det vil virke">
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdventureCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserInterface.class" afterDir="false" />
+    <list default="true" id="6c789d9d-fac5-4d97-b720-74f9a668c37e" name="Changes" comment="små ændringer i text">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="85294b13-0b64-4501-887d-e15068d3aa21" name="Changes by Let me iiiiiiiiiin!" comment="" />
     <list id="914e2303-015d-4792-b84b-fb9731334753" name="Changes by paulk" comment="Lavet liquid færdig" />
@@ -148,13 +146,6 @@
       <workItem from="1664363849041" duration="488000" />
       <workItem from="1664451044886" duration="3796000" />
       <workItem from="1665579499274" duration="1240000" />
-    </task>
-    <task id="LOCAL-00004" summary="lavet startProgram og manuel testet brugergrænseflade. Den leder ikke til noget nu">
-      <created>1664190990671</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1664190990671</updated>
     </task>
     <task id="LOCAL-00005" summary="TODO// metode for alle retninger og set room for alle rooms">
       <created>1664270961723</created>
@@ -480,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665597408596</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="små ændringer i text">
+      <created>1665610071390</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1665610071390</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tilføjet hvem der står for TODOs" />
     <MESSAGE value="Omdøb Adventure til AdventureController, og omdøbt adventure objektet i UserInterface til adventureController" />
     <MESSAGE value="Omdøbt getHelp til printHelp()" />
     <MESSAGE value="Changes by jonat" />
@@ -523,7 +520,8 @@
     <MESSAGE value="empty" />
     <MESSAGE value="Added comments" />
     <MESSAGE value="rettet objekter og metoder i forhold til public/private" />
-    <option name="LAST_COMMIT_MESSAGE" value="rettet objekter og metoder i forhold til public/private" />
+    <MESSAGE value="små ændringer i text" />
+    <option name="LAST_COMMIT_MESSAGE" value="små ændringer i text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
