@@ -13,6 +13,8 @@ public class AdventureCreator {
     private Room room8;
     private Room room9;
 
+
+
     public void createMap() {
         room1 = new Room("Section 1", "The away fan section where you are seated. No one will bother you here");
         room2 = new Room("Section 2", "Another away fan section. No one will bother you here");
